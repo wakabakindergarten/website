@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>預かり保育 | わかば幼稚園</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Yomogi&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#edf6e3;--ink:#1d2b21;--sub:#5a6b5f;--line:#c6dbb0;--leaf:#3f8f3a;--deep:#1e4d2b;--mist:#dbecc8;--sprout:#f3c94a;--dusk:#f2a865;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{height:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;line-height:1.85}
+.wrap{max-width:840px;margin:0 auto;padding:36px 20px 56px}
+a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:999px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:13px}
+.hand{font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400}
+
+.top{position:relative;border-radius:26px;overflow:hidden;min-height:380px;display:flex;align-items:flex-end;padding:30px;margin-bottom:22px;background:#1e4d2b url(images/1b41192a608a.jpg) center top/cover}
+.top::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,14,0) 25%,rgba(8,24,14,.78))}
+.top>div{position:relative}
+.top h1{margin:0;color:#c9f2a8;font-size:clamp(38px,6.5vw,60px);line-height:1.2;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+.top p{margin:8px 0 0;color:#f0f7ea;font-size:15.5px}
+.top .chips{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+.top .chips span{background:rgba(255,255,255,.92);color:var(--deep);font-weight:900;font-size:13px;border-radius:999px;padding:2px 14px}
+.top .chips span.y{background:var(--sprout);color:#3a2e00}
+
+.sh{display:flex;align-items:center;gap:8px;margin:0 0 14px;color:var(--deep);font-size:clamp(23px,3vw,28px);line-height:1.4}
+.sh svg{width:32px;flex:none;color:var(--leaf)}
+.sec{background:#fff;border:2px solid var(--line);border-radius:26px;padding:26px;margin-bottom:22px}
+
+/* intro */
+.intro{display:grid;grid-template-columns:1fr 250px;gap:22px;align-items:center}
+.intro p{margin:0 0 8px;font-size:15.5px}
+.intro .q{font-size:14px;color:var(--sub)}
+.intro .ph{position:relative}
+.intro .ph img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px}
+.intro .ph img+img{position:absolute;width:56%;right:-10px;bottom:-18px;border:5px solid #fff;border-radius:16px;transform:rotate(4deg);box-shadow:0 6px 14px rgba(30,77,43,.18)}
+.intro .ph img:first-child{width:86%;transform:rotate(-2deg)}
+
+/* time & price ruler */
+.ruler-wrap{margin-top:4px}
+.rl-labels{position:relative;height:28px;font-weight:900;color:var(--deep);font-size:15px}
+.rl-labels span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.rl-labels span:first-child{transform:none}
+.rl-labels span:last-child{transform:translateX(-100%)}
+.rl{display:flex;height:84px;border-radius:20px;overflow:hidden;box-shadow:0 0 0 2px var(--line)}
+.rl>div{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.35}
+.rl small{font-size:12.5px;font-weight:700}
+.rl b{font-size:26px;font-weight:900}
+.rl b span{font-size:14px;margin-left:1px}
+.rl .s1{flex:2;background:linear-gradient(90deg,#fff4cf,#ffe8a8);color:#6a4e00}
+.rl .s2{flex:1;background:linear-gradient(90deg,#fbd5ad,#f2b98a);color:#7a3e10;border-left:3px dashed #fff}
+.rl-cap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:13.5px;color:var(--sub)}
+.rl-cap b{color:var(--deep)}
+.pill{display:inline-flex;align-items:center;gap:6px;background:var(--mist);color:var(--deep);border-radius:999px;padding:2px 12px;font-size:13px;font-weight:700}
+.pill svg{width:16px;height:16px}
+.bill{display:flex;gap:12px;align-items:center;margin-top:16px;background:#f7fbf2;border-radius:16px;padding:12px 16px;font-size:14.5px}
+.bill svg{flex:none;width:28px;height:28px;color:var(--leaf)}
+
+/* days */
+.days{display:grid;grid-template-columns:1fr 1.25fr;gap:14px}
+.yes,.no{border-radius:20px;padding:18px 20px}
+.yes{background:var(--mist)}
+.no{background:#f6f3ee;border:2px dashed #ddd2c2}
+.yes h3,.no h3{margin:0 0 8px;font-size:16px;font-weight:900;display:flex;align-items:center;gap:8px}
+.yes h3{color:var(--deep)}
+.no h3{color:#8a6a4a}
+.yes h3 i,.no h3 i{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
+.yes h3 i{background:var(--leaf);color:#fff}
+.no h3 i{background:#c9b49a;color:#fff}
+.yes h3 svg,.no h3 svg{width:16px;height:16px}
+.yes p{margin:0;font-size:16px;font-weight:700;color:var(--deep)}
+.no ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.no li{background:#fff;border-radius:999px;padding:2px 12px;font-size:13.5px;color:#6b5a48}
+
+/* summer */
+.summer{position:relative;overflow:hidden;background:linear-gradient(180deg,#e4f4fb,#f3fbff);border:2px solid #bfe0ee;border-radius:26px;padding:26px;margin-bottom:22px}
+.summer .sh{color:#1f5f7a;position:relative;z-index:1;padding-right:70px}
+.summer .sh svg{color:#f0a020}
+.summer .sun{position:absolute;right:-26px;top:-26px;width:130px;color:#ffd75e;opacity:.85}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;position:relative}
+.st>div{background:#fff;border-radius:18px;padding:14px 16px}
+.st small{display:block;font-size:12.5px;font-weight:900;color:#2b7a99}
+.st b{display:block;font-size:17px;color:var(--ink);line-height:1.5}
+.st span{display:block;font-size:12.5px;color:var(--sub);margin-top:2px;line-height:1.6}
+.sbar{margin-top:16px;position:relative}
+.sbar .bar{display:flex;height:40px;border-radius:14px;overflow:hidden;box-shadow:0 0 0 2px #bfe0ee;background:#fff}
+.sbar .m{flex:315;background:#9fd3e6;color:#0f4a60;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13.5px}
+.sbar .e{flex:120;background:repeating-linear-gradient(135deg,#fff 0 6px,#e6f3f8 6px 12px);color:#2b7a99;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12.5px;border-left:2px dashed #9fd3e6}
+.sbar .lb{position:relative;height:22px;margin-top:4px;font-size:12.5px;font-weight:700;color:#2b7a99}
+.sbar .lb span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.sbar .lb span:first-child{transform:none}
+.sbar .lb span:last-child{transform:translateX(-100%)}
+.summer .q{position:relative;margin:12px 0 0;font-size:13px;color:var(--sub)}
+
+.link{display:flex;justify-content:center;margin:0 0 6px}
+.link a{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:14px;border-radius:999px;padding:8px 20px;box-shadow:0 3px 0 var(--line)}
+.link a:hover{transform:translateY(1px);box-shadow:0 2px 0 var(--line)}
+
+/* contact */
+.ct{position:relative;overflow:hidden;background:#1e4d2b;color:#fff;border-radius:26px;padding:26px 28px 24px;margin:24px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px 30px;align-items:center}
+.ct>*{position:relative}
+.ct .ct-deco{position:absolute;right:-30px;bottom:-34px;width:210px;color:#3f8f3a;opacity:.35;transform:rotate(-12deg)}
+.ct h2{grid-column:1/-1;margin:0;font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400;font-size:clamp(22px,3vw,28px);color:#c9f2a8;line-height:1.4;display:flex;align-items:center;gap:8px}
+.ct h2 svg{width:34px;flex:none;color:#9fe68a}
+.ct-who{display:flex;gap:14px;align-items:center}
+.ct-who img{width:64px;height:64px;flex:none;border-radius:50%;background:#fff;padding:2px}
+.ct-who small{display:block;font-size:12px;color:#cfe4c6}
+.ct-who b{display:block;font-size:20px;font-weight:900;letter-spacing:.04em;line-height:1.4}
+.ct-addr{font-size:13px;color:#e6f2dd;margin:10px 0 0;line-height:1.7}
+.ct-call{background:rgba(255,255,255,.08);border:1px solid rgba(201,242,168,.35);border-radius:20px;padding:16px 18px;text-align:center}
+.ct-call span{display:block;font-size:13px;color:#c9f2a8;font-weight:700}
+.ct-tel{display:flex;align-items:center;justify-content:center;gap:10px;margin:8px 0;background:#fff;color:#1e4d2b;text-decoration:none;border-radius:999px;padding:10px 14px;font-size:clamp(21px,2.6vw,25px);font-weight:900;letter-spacing:.03em;white-space:nowrap;box-shadow:0 4px 0 #f3c94a}
+.ct-tel svg{width:22px;flex:none;color:#3f8f3a}
+.ct-tel:hover{transform:translateY(1px);box-shadow:0 3px 0 #f3c94a}
+.ct-call small{display:block;font-size:12.5px;color:#e6f2dd}
+
+@media(max-width:680px){
+ .top{min-height:420px;padding:22px;background-position:86% top}
+ .sec,.summer{padding:20px 16px}
+ .intro{grid-template-columns:1fr}
+ .intro .ph{max-width:300px;margin:4px auto 18px}
+ .days{grid-template-columns:1fr}
+ .st{grid-template-columns:1fr}
+ .summer .sun{width:84px;right:-22px;top:-22px;opacity:.55}
+ .summer .sh{padding-right:36px}
+ .rl{height:76px}
+ .rl b{font-size:21px}
+ .rl small{font-size:11.5px}
+ .sbar .m,.sbar .e{font-size:11.5px}
+}
+/* 見出しを見やすく太く */
+h1,h2,h3,h4{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif!important;letter-spacing:.02em}
+h1,h2{font-weight:900!important}
+h3.hand,h4.hand{font-weight:700!important}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">← 前へ</a>
+
+<header class="top"><div>
+<div class="chips"><span>対象：在園児のみ</span><span class="y">17時まで</span></div>
+<h1 class="hand">預かり保育</h1>
+<p>通常保育のあとも、園の先生が責任をもってお預かりします</p>
+</div></header>
+
+<section class="sec" aria-labelledby="h-about">
+<h2 class="sh hand" id="h-about"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>預かり保育について</h2>
+<div class="intro">
+<div><p>通常保育終了後に、園が責任をもって園児をお預かりし、園の先生がお世話するものです。在園児のみを対象にしています。</p>
+<p class="q">※預かり保育の時間は17時までとなっています。</p></div>
+<div class="ph"><img src="images/05640b55f2ae.jpg" alt="お部屋でおもちゃで遊ぶ子ども" loading="lazy"><img src="images/71675d27ea20.jpg" alt="遊戯室でボールやマットを使って遊ぶ子どもたち" loading="lazy"></div>
+</div>
+</section>
+
+<section class="sec" aria-labelledby="h-fee">
+<h2 class="sh hand" id="h-fee"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>時間と費用</h2>
+<p style="margin:0 0 12px;font-size:14px;color:var(--sub)">一回につき</p>
+<div class="ruler-wrap">
+<div class="rl-labels" aria-hidden="true"><span style="left:0">14:00</span><span style="left:66.67%">16:00</span><span style="left:100%">17:00</span></div>
+<div class="rl">
+<div class="s1"><small>16時まで</small><b>600<span>円</span></b></div>
+<div class="s2"><small>16時以降</small><b>＋100<span>円</span></b></div>
+</div>
+<div class="rl-cap"><span>通常保育が終わったあと、17時まで</span><span class="pill"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="9" cy="9.5" r=".8" fill="currentColor"/><circle cx="14.5" cy="8.5" r=".8" fill="currentColor"/><circle cx="15" cy="14" r=".8" fill="currentColor"/><circle cx="9.5" cy="15" r=".8" fill="currentColor"/></svg>おやつ代含む</span></div>
+</div>
+<div class="bill"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.5 12a1.5 1.5 0 0 1-1.5 1.3H7a1.5 1.5 0 0 1-1.5-1.3z"/><path d="M8.5 8V6.5a3.5 3.5 0 0 1 7 0V8"/><path d="M10 14h4"/></svg><span>毎月末に集計し、集金袋をお渡しします。</span></div>
+</section>
+
+<section class="sec" aria-labelledby="h-day">
+<h2 class="sh hand" id="h-day"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>預かり保育をする日</h2>
+<div class="days">
+<div class="yes"><h3><i><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>行う日</h3><p>14時降園の幼稚園通園日</p></div>
+<div class="no"><h3><i><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></i>行わない日</h3><ul><li>土曜日</li><li>日曜日</li><li>祝祭日</li><li>休園日（冬、春休み中など）</li></ul></div>
+</div>
+</section>
+
+<section class="summer" aria-labelledby="h-sum">
+<svg class="sun" viewBox="0 0 48 48" aria-hidden="true"><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M24 2v6M24 40v6M2 24h6M40 24h6M8.4 8.4l4.3 4.3M35.3 35.3l4.3 4.3M8.4 39.6l4.3-4.3M35.3 12.7l4.3-4.3"/></g><circle cx="24" cy="24" r="11" fill="currentColor"/></svg>
+<h2 class="sh hand" id="h-sum"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>夏期休暇期間の預かり保育</h2>
+<div class="st">
+<div><small>日程</small><b>お盆の週を除いた平日</b><span>合計15日間</span></div>
+<div><small>時間</small><b>8時45分〜14時まで</b><span>16時まで延長可</span></div>
+<div><small>費用</small><b>14時までの利用で1,000円</b><span>午前のみ・午後のみ・延長で料金は異なります</span></div>
+</div>
+<div class="sbar" aria-hidden="true">
+<div class="bar"><div class="m">8:45〜14:00　1,000円</div><div class="e">延長可</div></div>
+<div class="lb"><span style="left:0">8:45</span><span style="left:72.4%">14:00</span><span style="left:100%">16:00</span></div>
+</div>
+<p class="q">＊ご不明な点は園までお尋ねください。</p>
+</section>
+
+<div class="link"><a href="ichinichi.html">わかばの一日の流れを見る →</a></div>
+
+<section class="ct" aria-label="お問い合わせ先"><span class="ct-deco"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span>
+<h2><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>お気軽にお問い合わせください</h2>
+<div><div class="ct-who"><img src="images/0f056ef1c070.png" alt=""><div><small>学校法人わかば学園</small><b>わかば幼稚園</b></div></div>
+<p class="ct-addr">〒464-0032 名古屋市千種区猫洞通2丁目13番地<br>見学は随時受け付けています。</p></div>
+<div class="ct-call"><span>お電話でのお問い合わせ</span><a class="ct-tel" href="tel:0527823651"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>052-782-3651</a><small>受付時間　平日 9:00〜15:00</small></div>
+</section>
+</div>
+</body></html>

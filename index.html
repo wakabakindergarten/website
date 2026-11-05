@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="社会に出てからも伸びていく「生きる力」を持った子どもを育てる、千種区の幼稚園です。昭和28年の創立から、子どものことを一番に考える保育を続けています。">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>わかば幼稚園 | 出会いを大切にする保育</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Yomogi&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#edf6e3;--surface:#fff;--ink:#1d2b21;--sub:#5a6b5f;--leaf:#3f8f3a;--deep:#1e4d2b;--sprout:#f3c94a;--mist:#dbecc8;--line:#c6dbb0;--onleaf:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;line-height:1.85;font-size:16px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sprout);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.hand{font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400}
+.news-h h2.hand,#guide .sh h2.hand,#about .sh h2.hand,.visit h2.hand,#sns .ig-text h2,#access .sh h2.hand{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;font-weight:900;letter-spacing:.02em}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,#fff 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--deep);white-space:nowrap}
+.logo img{width:44px;height:44px;flex:none}
+.logo span{display:flex;flex-direction:column;line-height:1.2}
+.logo small{font-size:11px;color:var(--sub);font-weight:700}
+.logo b{font-size:19px;font-weight:900;letter-spacing:.04em}
+nav{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:700;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{text-decoration:none;white-space:nowrap;color:var(--sub);padding:6px 12px;border-radius:999px;transition:background .2s,color .2s}
+nav a:hover{background:var(--mist);color:var(--deep)}
+nav a.navjob{background:var(--leaf);color:#fff;margin-left:6px;box-shadow:0 3px 0 var(--deep)}
+nav a.navjob:hover{background:#4a9c44;color:#fff}
+nav a.navstu{background:#fff;color:var(--deep);border:2px solid var(--leaf);margin-left:6px;padding:4px 14px;box-shadow:0 3px 0 var(--line)}
+nav a.navstu:hover{background:#f4faee;color:var(--deep)}
+
+/* hero additions */
+.hero{position:relative;min-height:560px;display:flex;align-items:center;padding:72px 0 120px;overflow:hidden;color:#fff;background-color:#1e3a4a}
+.hero .wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:70px;z-index:1;color:var(--bg)}
+.hero p{max-width:30em;color:#f0f7ea;font-size:17px;margin:0}
+
+/* common section */
+section{padding:56px 0}
+.sh{display:flex;align-items:flex-end;gap:12px;margin:0 0 22px;flex-wrap:wrap}
+.sh h2{margin:0;display:flex;align-items:center;gap:10px;font-size:clamp(28px,4vw,38px);line-height:1.3;color:var(--deep)}
+.sh h2 svg{width:40px;flex:none;color:var(--leaf)}
+.sh span{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--leaf);padding-bottom:6px;text-transform:uppercase}
+
+/* news */
+#news{padding:0 0 30px;position:relative;z-index:3;margin-top:-62px}
+.news{background:#fff;border-radius:30px;box-shadow:0 14px 34px rgba(30,77,43,.12);display:grid;grid-template-columns:220px 1fr;overflow:hidden}
+.news-h{background:var(--deep);color:#fff;padding:28px 26px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;position:relative;overflow:hidden}
+.news-h h2{margin:0;font-size:34px;line-height:1.2;color:#c9f2a8}
+.news-h small{display:block;font-family:"Zen Maru Gothic",sans-serif;font-size:12px;letter-spacing:.16em;color:#9fd38a;margin-top:6px}
+.news-h p{margin:0;font-size:13px;color:#cfe4c6;line-height:1.7;position:relative}
+.news-all{position:relative;z-index:1;align-self:flex-start;display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--deep);font-weight:900;font-size:13.5px;text-decoration:none;border-radius:999px;padding:6px 16px;box-shadow:0 3px 0 var(--sprout);white-space:nowrap;transition:transform .15s}
+.news-all svg{width:14px;height:14px;color:var(--leaf)}
+.news-all:hover{transform:translateY(1px);box-shadow:0 2px 0 var(--sprout)}
+.news-h .deco{position:absolute;right:-26px;bottom:-24px;width:120px;color:#3f8f3a;opacity:.45;transform:rotate(-14deg)}
+.news ul{list-style:none;margin:0;padding:10px 28px;max-height:330px;overflow-y:auto;scrollbar-width:thin}
+.news li+li{border-top:1px dashed var(--line)}
+.news li a{display:grid;grid-template-columns:auto 1fr 26px;gap:14px;align-items:center;padding:14px 4px;text-decoration:none;color:inherit;border-radius:14px;transition:background .2s}
+.news li a:hover{background:#f4faee}
+.news time{font-size:13px;font-weight:900;color:var(--leaf);background:var(--mist);border-radius:999px;padding:2px 12px;white-space:nowrap}
+.news .tx{font-size:15px;line-height:1.7}
+.news .new{display:inline-block;background:var(--sprout);color:#3a2e00;font-size:11.5px;font-weight:900;border-radius:999px;padding:0 9px;margin-right:8px;vertical-align:2px}
+.news .go{width:26px;height:26px;border-radius:50%;background:var(--mist);color:var(--leaf);display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.news .go svg{width:14px;height:14px}
+.news li a:hover .go{background:var(--leaf);color:#fff}
+
+/* guide bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:14px;grid-auto-flow:dense}
+.tile{position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:18px 20px;border-radius:26px;text-decoration:none;color:#fff;overflow:hidden;background:linear-gradient(180deg,rgba(10,25,15,0) 35%,rgba(10,25,15,.8)),var(--pic) center/cover no-repeat;background-color:#1e4d2b;transition:transform .2s ease,box-shadow .2s ease}
+.tile:hover,.tile:focus-visible{transform:scale(1.05);box-shadow:0 14px 28px rgba(30,77,43,.25);z-index:2}
+.tile b{font-size:18px;font-weight:900;line-height:1.4;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.tile small{font-size:13px;color:#eef6ea;line-height:1.6;margin-top:2px}
+.tile .ar{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--deep);display:flex;align-items:center;justify-content:center;transition:background .2s}
+.tile .ar svg{width:15px;height:15px}
+.tile:hover .ar{background:var(--sprout)}
+.tile.big{grid-column:span 2;grid-row:span 2;padding:26px 28px}
+.tile.big b{font-weight:900;font-size:clamp(28px,3.4vw,36px);color:#fff;line-height:1.3}
+.tile.big small{font-size:15px}
+.tile.big .pill{align-self:flex-start;background:var(--sprout);color:#3a2e00;font-size:12.5px;font-weight:900;border-radius:999px;padding:1px 12px;margin-bottom:8px}
+.tile.big:hover{transform:scale(1.025)}
+.tile.faq{grid-column:span 2;background:var(--sprout);color:#3a2e00;flex-direction:row;align-items:center;justify-content:flex-start;gap:18px}
+.tile.faq b{text-shadow:none;font-size:22px}
+.tile.faq small{color:#5c4a00}
+.tile.faq .q{flex:none;width:76px;height:76px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-family:"Yomogi",cursive;font-size:44px;color:var(--leaf);box-shadow:0 4px 0 #d9ac2a}
+.tile.faq .ar{background:#fff}
+.tile.faq div{display:flex;flex-direction:column}
+
+/* about zigzag */
+.feat{display:grid;gap:34px}
+.ft{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center}
+.ft:nth-child(even) .ph{order:2}
+.ph{position:relative}
+.ph img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:46% 54% 42% 58% / 55% 45% 55% 45%;box-shadow:0 14px 30px rgba(30,77,43,.16)}
+.ph .dot{position:absolute;width:64px;height:64px;border-radius:50%;background:var(--sprout);opacity:.85;right:6%;bottom:-8px;z-index:-1}
+.ft:nth-child(even) .ph .dot{right:auto;left:6%;background:#bfe3a6}
+.ph{z-index:0}
+.ft .no{display:block;font-size:56px;line-height:1;color:var(--sprout);text-shadow:2px 2px 0 #fff}
+.ft h3{margin:4px 0 10px;font-size:clamp(24px,3vw,30px);color:var(--deep);line-height:1.35}
+.ft h3.hand{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;font-weight:700;letter-spacing:.02em}
+.ft p{margin:0 0 16px;font-size:15.5px;max-width:28em}
+.more{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:var(--deep);text-decoration:none;background:#fff;border:2px solid var(--leaf);border-radius:999px;padding:7px 18px;box-shadow:0 3px 0 var(--line);transition:transform .15s}
+.more:hover{transform:translateY(1px);box-shadow:0 2px 0 var(--line)}
+.more svg{width:14px;height:14px}
+
+/* visit */
+.visit{position:relative;overflow:hidden;background:var(--deep);color:#fff;border-radius:32px;padding:40px 44px;display:grid;grid-template-columns:1.3fr 1fr;gap:26px 40px;align-items:center}
+.visit>*{position:relative}
+.visit .deco{position:absolute;left:-40px;bottom:-50px;width:240px;color:#2f6e3c;opacity:.6;transform:rotate(16deg)}
+.visit h2{word-break:keep-all;margin:0 0 8px;font-size:clamp(28px,3.6vw,38px);color:#c9f2a8;line-height:1.3}
+.visit p{margin:0;color:#e0eedb;font-size:15px}
+.call{background:rgba(255,255,255,.08);border:1px solid rgba(201,242,168,.35);border-radius:22px;padding:18px;text-align:center}
+.call span{display:block;font-size:13px;color:#c9f2a8;font-weight:700}
+.call a{display:flex;align-items:center;justify-content:center;gap:10px;margin:8px 0;background:#fff;color:var(--deep);text-decoration:none;border-radius:999px;padding:11px 14px;font-size:clamp(22px,2.6vw,27px);font-weight:900;letter-spacing:.03em;white-space:nowrap;box-shadow:0 4px 0 var(--sprout)}
+.call a svg{width:22px;flex:none;color:var(--leaf)}
+.call a:hover{transform:translateY(1px);box-shadow:0 3px 0 var(--sprout)}
+.call small{font-size:12.5px;color:#e6f2dd}
+
+/* access */
+.acc{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:stretch}
+.map{position:relative;border-radius:26px;overflow:hidden;border:2px solid var(--line);background:var(--mist);min-height:340px}
+.map iframe{position:relative;z-index:1;display:block;width:100%;height:100%;min-height:340px;border:0}
+.mapfb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--deep);text-align:center;background:radial-gradient(circle at 30% 30%,#e8f4dc,transparent 60%),repeating-linear-gradient(0deg,transparent 0 38px,rgba(63,143,58,.08) 38px 40px),repeating-linear-gradient(90deg,transparent 0 38px,rgba(63,143,58,.08) 38px 40px),var(--mist)}
+.mapfb svg{width:54px;height:54px;color:var(--leaf);filter:drop-shadow(0 4px 0 rgba(30,77,43,.15))}
+.mapfb b{font-size:18px}
+.mapfb small{font-size:13px;color:var(--sub)}
+.ainfo{background:#fff;border:2px solid var(--line);border-radius:26px;padding:22px 24px;margin:0;display:grid;gap:12px;align-content:start}
+.ainfo div{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+.ainfo i{width:40px;height:40px;border-radius:50%;background:var(--mist);color:var(--leaf);display:flex;align-items:center;justify-content:center}
+.ainfo i svg{width:21px;height:21px}
+.ainfo .k{display:block;font-size:12.5px;font-weight:900;color:var(--leaf);line-height:1.4}
+.ainfo .v{display:block;margin:0;font-size:15px;line-height:1.6}
+.ainfo .tel{font-size:24px;font-weight:900;color:var(--deep);text-decoration:none;letter-spacing:.02em}
+.ainfo .stu{font-size:13px;color:var(--sub);border-top:1px dashed var(--line);padding-top:10px;display:block}
+.ainfo .stu a{color:var(--leaf);font-weight:700}
+
+/* footer */
+footer{position:relative;margin-top:40px;background:var(--deep);color:#e0eedb;padding:56px 0 40px}
+footer .grass{position:absolute;left:0;right:0;top:-38px;width:100%;height:40px;color:var(--deep)}
+.fgrid{display:grid;grid-template-columns:1.1fr 1.6fr;gap:30px 40px}
+.fbrand{display:flex;gap:14px;align-items:center}
+.fbrand img{width:64px;height:64px;border-radius:50%;background:#fff;padding:2px;flex:none}
+.fbrand small{display:block;font-size:12px;color:#b9d6ad}
+.fbrand b{display:block;font-size:22px;color:#fff;letter-spacing:.04em;line-height:1.35}
+.faddr{font-size:13px;line-height:1.8;margin:14px 0 0;color:#cfe4c6}
+.flinks{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 16px;list-style:none;margin:0;padding:0;font-size:14px}
+.flinks a{display:flex;align-items:center;gap:6px;text-decoration:none;color:#e0eedb;padding:4px 0}
+.flinks a::before{content:"";width:7px;height:7px;border-radius:50% 0;background:#9fe68a;transform:rotate(-45deg);flex:none}
+.flinks a:hover{color:#fff;text-decoration:underline}
+.fnote{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border-top:1px solid rgba(201,242,168,.25);padding-top:18px;font-size:12.5px;color:#b9d6ad}
+.totop{display:inline-flex;align-items:center;gap:6px;color:#3a2e00;background:var(--sprout);text-decoration:none;font-weight:900;border-radius:999px;padding:4px 14px;font-size:12.5px}
+
+@media(max-width:900px){
+ .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+ .tile.faq{grid-column:span 2}
+ .visit{grid-template-columns:1fr;padding:32px 26px}
+ .acc{grid-template-columns:1fr}
+ .fgrid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+ .bar{height:60px}
+ .logo small{display:none}
+ .logo b{font-size:17px}
+ .logo img{width:38px;height:38px}
+ header nav a:not(.navjob):not(.navstu){display:none}
+ nav a.navjob{font-size:11px;padding:5px 8px;margin-left:4px}
+ nav a.navstu{font-size:11px;padding:3px 7px;margin-left:0}
+ .bar{gap:6px}
+ .logo{gap:6px}
+ .logo img{width:32px!important;height:32px!important}
+ .logo b{font-size:14px!important;letter-spacing:0}
+ .hero{min-height:500px;padding-bottom:110px}
+ .hero .wave{height:44px}
+ #news{margin-top:-40px}
+ .news{grid-template-columns:1fr}
+ .news-h{flex-direction:row;align-items:center;padding:18px 22px}
+ .news-h p,.news-h .deco{display:none}
+ .news-all{margin-left:auto;align-self:center;font-size:12.5px;padding:5px 12px}
+ .news-h h2{font-size:28px}
+ .news ul{padding:6px 14px;max-height:360px}
+ .news li a{grid-template-columns:1fr 26px;gap:4px 10px}
+ .news time{grid-column:1;justify-self:start}
+ .news .tx{grid-column:1}
+ .news .go{grid-column:2;grid-row:1/3}
+ section{padding:44px 0}
+ .tile.big b{font-size:26px}
+ .tile.faq .q{width:58px;height:58px;font-size:34px}
+ .tile.faq b{font-size:18px}
+ .ft,.ft:nth-child(even){grid-template-columns:1fr;gap:16px}
+ .ft:nth-child(even) .ph{order:0}
+ .ft .no{font-size:44px}
+ .flinks{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile:hover,.tile:focus-visible{transform:none}}
+/* ===== smartphone: bottom tabs + drawer menu ===== */
+.menu-btn{display:none}
+.tabbar{display:none}
+.drawer[hidden]{display:none}
+@media(max-width:700px){
+ header nav{display:none}
+ .logo{gap:8px}
+ .logo img{width:38px!important;height:38px!important}
+ .logo b{font-size:17px!important;letter-spacing:.04em}
+ .menu-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:56px;height:48px;border:2px solid var(--line);border-radius:14px;background:#fff;color:var(--deep);font-family:inherit;font-weight:700;font-size:10px;line-height:1;cursor:pointer;padding:0}
+ .menu-btn svg{width:24px;height:24px;flex:none}
+ .menu-btn span{flex:none;letter-spacing:.02em;white-space:nowrap}
+ body{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
+ .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:45;background:color-mix(in srgb,#fff 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 18px rgba(30,77,43,.08)}
+ .tabbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;color:var(--sub);font-size:10.5px;font-weight:700;white-space:nowrap;letter-spacing:-.02em;padding:4px 0;border-radius:14px;transition:background .2s,color .2s}
+ .tabbar a svg{width:24px;height:24px}
+ .tabbar a.on{color:var(--deep);background:var(--mist)}
+.tabbar a .lf1{fill:#3f8f3a}.tabbar a .lf2{fill:#8cc63f}.tabbar a .stem{stroke:#2f6e2c}
+ .tabbar a.call{color:#fff;background:var(--leaf);margin:0 4px;box-shadow:0 3px 0 var(--deep)}
+ .drawer{position:fixed;inset:0;z-index:60}
+ .scrim{position:absolute;inset:0;background:rgba(10,25,15,.45);opacity:0;transition:opacity .25s}
+ .panel{position:absolute;top:0;right:0;bottom:0;width:min(86vw,340px);background:var(--bg);box-shadow:-10px 0 30px rgba(0,0,0,.2);transform:translateX(100%);transition:transform .28s cubic-bezier(.3,.7,.2,1);overflow-y:auto;padding:calc(14px + env(safe-area-inset-top,0px)) 18px calc(24px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:16px}
+ .drawer.open .scrim{opacity:1}
+ .drawer.open .panel{transform:none}
+ .p-head{display:flex;align-items:center;justify-content:space-between}
+ .p-head b{font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400;font-size:26px;color:var(--deep)}
+ .p-close{width:44px;height:44px;border-radius:50%;border:2px solid var(--line);background:#fff;color:var(--deep);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+ .p-close svg{width:20px;height:20px}
+ .p-sec small{display:block;font-size:12px;font-weight:900;color:var(--leaf);letter-spacing:.08em;margin:0 0 6px 4px}
+ .p-chips{display:flex;flex-wrap:wrap;gap:6px}
+ .p-chips a{text-decoration:none;background:#fff;border:2px solid var(--line);color:var(--deep);font-weight:700;font-size:13.5px;border-radius:999px;padding:5px 14px}
+ .p-list{list-style:none;margin:0;padding:0;background:#fff;border:2px solid var(--line);border-radius:18px;overflow:hidden}
+ .p-list li+li{border-top:1px dashed var(--line)}
+ .p-list a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 14px;text-decoration:none;color:var(--ink);font-weight:700;font-size:15px}
+ .p-list a svg{width:16px;height:16px;color:var(--leaf);flex:none}
+ .p-list a:active{background:#f4faee}
+ .p-btns{display:grid;gap:8px}
+ .p-btns a{display:block;text-align:center;text-decoration:none;font-weight:900;font-size:14.5px;border-radius:999px;padding:10px}
+ .p-btns .stu{background:#fff;border:2px solid var(--leaf);color:var(--deep)}
+ .p-btns .job{background:var(--leaf);color:#fff;box-shadow:0 3px 0 var(--deep)}
+ .p-btns .tel{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--deep);color:#fff;box-shadow:0 3px 0 var(--sprout);font-size:18px}
+ .p-btns .tel svg{width:18px;height:18px}
+ .p-note{font-size:12px;color:var(--sub);text-align:center;margin:-4px 0 0}
+}
+@media(max-width:700px) and (prefers-reduced-motion:reduce){.panel,.scrim,.tabbar a{transition:none}}
+
+.slides{position:absolute;inset:0;z-index:0}
+.slide{position:absolute;inset:0;background-size:cover;background-repeat:no-repeat;opacity:0;animation:wkslide 30s linear infinite}
+.slide:first-child{opacity:1}
+@keyframes wkslide{0%{opacity:0;transform:scale(1.04)}4.0%{opacity:1}20.0%{opacity:1}24.0%{opacity:0;transform:scale(1)}100%{opacity:0}}
+.shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,24,14,.72),rgba(8,24,14,.3))}
+.hero-in{position:relative;z-index:2;width:100%}
+.hero p{margin-bottom:0}
+@media(prefers-reduced-motion:reduce){.slide{animation:none}.slide:not(:first-child){display:none}}
+.hero h1.catch{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;font-weight:900;letter-spacing:.03em;margin:0 0 26px;line-height:1.25;color:#c9f2a8;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+.catch .row1{display:flex;align-items:flex-end;gap:10px;margin-bottom:.12em}
+.catch .l1{display:inline-block;position:relative;font-size:clamp(30px,4.8vw,48px);transform:rotate(-3deg);transform-origin:left;color:#c9f2a8}
+.catch .l2{display:inline-block;font-size:clamp(44px,8vw,86px);color:#c9f2a8;transform:rotate(-1.5deg);margin-left:.6em;position:relative;word-break:keep-all}
+.catch .l1::after,.catch .l2::after{content:"";position:absolute;left:0;right:0;bottom:-.06em;height:.16em;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 Q50 2 100 7 T198 5' stroke='%23f3c94a' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.catch .lf{display:inline-block;width:clamp(40px,5vw,60px);color:#9fe68a;margin-left:8px;vertical-align:middle;transform:rotate(12deg)}
+.catch,.hero-in>p{animation:wkrise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-in>p{animation-delay:.3s}
+@keyframes wkrise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.catch .l1::after,.catch .l2::after{clip-path:inset(0 100% 0 0);animation:wkdraw .6s cubic-bezier(.45,.05,.3,1) .7s forwards}
+.catch .l2::after{animation-duration:.9s;animation-delay:1.55s}
+@keyframes wkdraw{to{clip-path:inset(0 0 0 0)}}
+.catch .lf{transform-origin:50% 100%;opacity:0;animation:wkpop .6s cubic-bezier(.3,1.6,.5,1) 2.45s forwards}
+.catch .lfl{margin:0;transform:rotate(-14deg);animation-name:wkpopL;animation-delay:1.25s;width:clamp(34px,4.2vw,50px)}
+@keyframes wkpopL{0%{opacity:0;transform:translateY(10px) rotate(-14deg) scale(.2)}60%{opacity:1;transform:translateY(-6px) rotate(-4deg) scale(1.15)}100%{opacity:1;transform:translateY(0) rotate(-14deg) scale(1)}}
+@keyframes wkpop{0%{opacity:0;transform:translateY(10px) rotate(12deg) scale(.2)}60%{opacity:1;transform:translateY(-6px) rotate(4deg) scale(1.15)}100%{opacity:1;transform:translateY(0) rotate(12deg) scale(1)}}
+@media(max-width:600px){.hero h1.catch{position:relative}.catch .l2{margin-left:.3em}.catch .lfr{position:absolute;right:4px;top:0;width:44px}.catch .lfl{width:34px}}
+@media(prefers-reduced-motion:reduce){.catch,.hero-in>p{animation:none}.catch .l2::after{animation:none;clip-path:none}.catch .lf{animation:none;opacity:1}}
+#sky{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
+.bird{position:absolute;left:0;top:0;width:var(--w,36px);will-change:transform}
+.bird svg{display:block;width:100%;height:auto;overflow:visible}
+.bird .wing{transform-origin:46% 52%;animation:flap var(--f,.32s) ease-in-out infinite alternate}
+@keyframes flap{from{transform:rotate(-28deg) scaleY(1)}to{transform:rotate(22deg) scaleY(.55)}}
+.bird.sw .wing{animation-name:flapS}
+@keyframes flapS{from{transform:rotate(-18deg) scaleY(1)}to{transform:rotate(26deg) scaleY(.45)}}
+.bird.sp .wing{animation-name:flapP}
+@keyframes flapP{from{transform:rotate(-34deg)}to{transform:rotate(18deg) scaleY(.6)}}
+@media(prefers-reduced-motion:reduce){#sky{display:none}}
+.ig{position:relative;overflow:hidden;background:linear-gradient(135deg,#ffffff 0%,#f4fbec 60%,#e6f4d6 100%);border:2px solid var(--line);border-radius:30px;padding:34px 36px;display:grid;grid-template-columns:1.15fr 1fr auto;gap:30px;align-items:center}
+.ig-handle{display:inline-flex;align-items:center;gap:8px;margin:0 0 10px;padding:4px 14px 4px 8px;border-radius:999px;background:#fff;border:1.5px solid var(--line);color:var(--deep);font-weight:700;font-size:14px}
+.ig-handle svg{width:20px;color:var(--leaf)}
+.ig h2{word-break:keep-all;font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400;color:var(--deep);font-size:clamp(24px,3vw,32px);line-height:1.45;margin:0 0 12px}
+.ig-lead{margin:0 0 20px;color:var(--sub);font-size:15px;max-width:24em}
+.ig-btn{display:inline-flex;align-items:center;gap:10px;background:var(--deep);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:12px 24px;box-shadow:0 4px 0 #f3c94a}
+.ig-btn svg{width:20px;color:#c9f2a8}
+.ig-btn:hover{transform:translateY(1px);box-shadow:0 3px 0 #f3c94a}
+.ig-feed{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;transform:rotate(-2deg);background:#fff;padding:8px;border-radius:18px;box-shadow:0 12px 28px rgba(30,77,43,.14)}
+.ig-feed img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:8px}
+.ig-qr{position:relative;margin:0;background:#fff;border-radius:20px;padding:14px 14px 10px;text-align:center;box-shadow:0 10px 24px rgba(30,77,43,.14);transform:rotate(3deg);width:190px}
+.ig-qr img{width:160px;height:auto;display:block;margin:0 auto}
+.ig-qr figcaption{font-size:12px;color:var(--sub);line-height:1.5;margin-top:4px}
+.ig-leaf{position:absolute;top:-16px;right:-10px;width:44px;color:var(--leaf);transform:rotate(18deg)}
+@media(max-width:980px){.ig{grid-template-columns:1fr 1fr}.ig-text{grid-column:1/-1}.ig-qr{justify-self:center}}
+@media(max-width:600px){.ig{grid-template-columns:1fr;padding:24px 20px}.ig-qr{display:none}.ig-feed{transform:none}.ig-btn{width:100%;justify-content:center}}
+
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#top"><img src="images/0f056ef1c070.png" alt="" width="44" height="44"><span><small>学校法人わかば学園</small><b>わかば幼稚園</b></span></a>
+<nav aria-label="メインメニュー"><a href="#news">お知らせ</a><a href="#guide">ご案内</a><a href="#about">わかばの保育</a><a href="#access">アクセス</a><a href="gakusei.html" class="navstu">学生の方へ</a><a href="recruit.html" class="navjob">就職を希望する方へ</a></nav>
+<button class="menu-btn" type="button" aria-controls="drawer" aria-expanded="false" aria-label="メニューを開く"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>メニュー</span></button>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="slides" aria-hidden="true"><div class="slide" style="background-image:url(images/6f920512cd45.jpg);background-position:center 30%;animation-delay:0s"></div><div class="slide" style="background-image:url(images/ea5d7bb4a2fd.jpg);background-position:center;animation-delay:6s"></div><div class="slide" style="background-image:url(images/9ffad82c65b6.jpg);background-position:center 35%;animation-delay:12s"></div><div class="slide" style="background-image:url(images/ce2b03d5544d.jpg);background-position:center 40%;animation-delay:18s"></div><div class="slide" style="background-image:url(images/4f11dabab18e.jpg);background-position:center 40%;animation-delay:24s"></div></div><div class="shade"></div><svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 38C180 8 360 6 540 26s360 40 540 22 270-36 360-30V70H0z"/></svg><div class="wrap hero-in">
+<h1 class="catch"><span class="row1"><span class="lf lfl"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span><span class="l1">出会いを</span></span><span class="l2">大切にする<wbr>保育</span><span class="lf lfr"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span></h1>
+<p>社会に出てからも伸びていく「生きる力」を持った子どもを育てる、千種区の幼稚園です。昭和28年の創立から、子どものことを一番に考える保育を続けています。</p>
+</div>
+</div>
+
+
+<section id="news"><div class="wrap"><div class="news">
+<div class="news-h"><h2 class="hand">お知らせ<small>NEWS</small></h2><p>説明会・体験会や、各ページの更新をお知らせします。</p><a class="news-all" href="news.html">お知らせ一覧<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a><span class="deco"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span></div>
+<ul>
+<li><a href="news.html"><time>2026.10</time><span class="tx"><span class="new">New</span>運動会を10月28日（水）に行います。未就園児プログラムは10時頃の予定で、0歳からどなたでも親子で参加できます（雨天時は29日・30日に順延）</span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+<li><a href="green.html"><time>2026.10</time><span class="tx"><span class="new">New</span>プレスクールグリーンの後期募集受付中です</span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+<li><a href="nyuen.html"><time>2026.9</time><span class="tx">9月15日（火）9:30から入園説明会、9月18日（金）に幼稚園体験会を行います</span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+<li><a href="green.html"><time>2026.6</time><span class="tx">7月よりプレスクールグリーンの週3回コースが始まります</span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+<li><a href="oyako.html"><time>2026.5</time><span class="tx">5月11日（月）の親子ひろばでは園説明会も行う予定です</span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+<li><a href="azukari.html"><time>2026.4</time><span class="tx">預かり保育の時間が17時までとなりました。園庭開放を始めます</span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+</ul>
+</div></div></section>
+
+<section id="guide"><div class="wrap">
+<div class="sh"><h2 class="hand"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>知りたいことから探す</h2></div>
+<div class="bento">
+<a class="tile big" style="--pic:url(images/cbb1bb24d10e.jpg)" href="nyuen.html"><span class="ar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span><span class="pill">見学は随時受付中</span><b>入園案内</b><small>来年度の新入園について</small></a>
+<a class="tile" style="--pic:url(images/6ea03a206710.jpg)" href="ichinichi.html"><span class="ar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span><b>わかばの一日の流れ</b><small>登園から降園まで</small></a>
+<a class="tile" style="--pic:url(images/117b8575b991.jpg);background-position:center,center 65%" href="gyoji.html"><span class="ar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span><b>1年間の行事</b><small>季節ごとの行事</small></a>
+<a class="tile" style="--pic:url(images/e3f0633a9933.jpg);background-position:center,center 48%" href="oyako.html"><span class="ar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span><b>親子ひろば・園庭開放</b><small>0歳から就園前まで</small></a>
+<a class="tile" style="--pic:url(images/d467ff864878.jpg)" href="green.html"><span class="ar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span><b>Green（プレスクール）</b><small>2歳児のための場</small></a>
+<a class="tile" style="--pic:url(images/95d795f183f9.jpg)" href="man3sai.html"><span class="ar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span><b>満3歳児保育</b><small>3歳になった時から</small></a>
+<a class="tile" style="--pic:url(images/5ce1b956ef52.jpg)" href="azukari.html"><span class="ar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span><b>預かり保育</b><small>17時まで・在園児対象</small></a>
+<a class="tile faq" href="faq.html"><span class="ar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span><span class="q">?</span><div><b>よくある質問</b><small>通園方法もこちら</small></div></a>
+</div></div></section>
+
+<section id="about"><div class="wrap">
+<div class="sh"><h2 class="hand"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>わかばの保育</h2></div>
+<div class="feat">
+<article class="ft"><div class="ph"><img src="images/e8c1e035d772.jpg" alt="桜の咲くわかば幼稚園の門" loading="lazy"><span class="dot"></span></div>
+<div><span class="no hand">01</span><h3 class="hand">わかば幼稚園について</h3><p>わかばの教育は、一人一人に合った「出会い」の場を設定することで「三つ子の魂」を育てます。教育方針や目標、沿革をご紹介します。</p><a class="more" href="about.html">詳しく見る<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div></article>
+<article class="ft"><div class="ph"><img src="images/d705e5208fa9.jpg" alt="工作に取り組む子どもたち" loading="lazy"><span class="dot"></span></div>
+<div><span class="no hand">02</span><h3 class="hand">自由作業</h3><p>保育室で工作などの手先を使った遊びをします。「今日は何で遊ぼうかな？」と自分で選ぶことで自立心が育ち、器用さ、発想力、集中力も伸びていきます。</p><a class="more" href="jiyusagyo.html">詳しく見る<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div></article>
+<article class="ft"><div class="ph"><img src="images/46876449da5a.jpg" alt="給食を食べる子どもたち" loading="lazy"><span class="dot"></span></div>
+<div><span class="no hand">03</span><h3 class="hand">園内調理の給食</h3><p>火曜日から金曜日は、園の給食室で作った温かい給食です。「全部食べられたよ！」という達成感が、自己肯定感につながります。</p><a class="more" href="kyushoku.html">詳しく見る<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div></article>
+<article class="ft"><div class="ph"><img src="images/f0ff102499fb.jpg" alt="わかば幼稚園の園庭の木" loading="lazy"><span class="dot"></span></div>
+<div><span class="no hand">04</span><h3 class="hand">実績と歴史</h3><p>昭和28年の創立以来、子どものことを一番に考える保育を続けてきました。親子二代で卒園された方も多くいらっしゃいます。</p><a class="more" href="jisseki.html">詳しく見る<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div></article>
+</div></div></section>
+
+<section style="padding-top:12px"><div class="wrap"><div class="visit">
+<span class="deco"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span>
+<div><h2 class="hand">まずは、<wbr>園を見に<wbr>きてください</h2><p>転入園をご希望の方は、受け入れ状況をお電話でお問い合わせください。見学は随時受け付けています。</p></div>
+<div class="call"><span>お電話でのお問い合わせ</span><a href="tel:0527823651"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>052-782-3651</a><small>受付時間　平日 9:00〜15:00</small></div>
+</div></div></section>
+
+<section id="sns" style="padding-top:0"><div class="wrap"><div class="ig">
+<div class="ig-text">
+<p class="ig-handle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.6-2.4h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>wakaba.kindergarten</span></p>
+<h2>わかばの毎日を<br>Instagramで<wbr>お届けしています</h2>
+<p class="ig-lead">あそびや行事、季節の園庭のようすなど、子どもたちの「いま」を写真で発信しています。</p>
+<a class="ig-btn" href="https://www.instagram.com/wakaba.kindergarten/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.6-2.4h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="2"/></svg>Instagramを見る</a>
+</div>
+<div class="ig-feed" aria-hidden="true"><img src="images/57c4dd172e7c.jpg" alt="" loading="lazy"><img src="images/26d465a06952.jpg" alt="" loading="lazy"><img src="images/605550c08618.jpg" alt="" loading="lazy"><img src="images/4fbd17df49ff.jpg" alt="" loading="lazy"><img src="images/902055e53460.jpg" alt="" loading="lazy"><img src="images/92db9c961a3f.jpg" alt="" loading="lazy"><img src="images/cdb1f389589f.jpg" alt="" loading="lazy"><img src="images/4d6873efbfe6.jpg" alt="" loading="lazy"><img src="images/786b96b0fe93.jpg" alt="" loading="lazy"></div>
+<figure class="ig-qr"><span class="ig-leaf"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span><img src="images/632757ceb8dd.png" alt="わかば幼稚園公式InstagramのQRコード（wakaba.kindergarten）"><figcaption>スマホのカメラで<br>読み取ってください</figcaption></figure>
+</div></div></section>
+
+
+<section id="access"><div class="wrap">
+<div class="sh"><h2 class="hand"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>アクセス</h2><span>Access</span></div>
+<div class="acc">
+<div class="map"><div class="mapfb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s7.5-6.6 7.5-12.3A7.5 7.5 0 0 0 4.5 9.7C4.5 15.4 12 22 12 22z"/><circle cx="12" cy="9.7" r="2.8" fill="#fff"/></svg><b>わかば幼稚園</b><small>名古屋市千種区猫洞通2丁目13番地</small></div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4085.370232977428!2d136.96900427651855!3d35.169053872757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037006310c5b37%3A0x5868af2e52bc5e92!2z44KP44GL44Gw5bm856ia5ZyS!5e1!3m2!1sja!2sjp!4v1790581392240!5m2!1sja!2sjp" title="わかば幼稚園の地図" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+<div class="ainfo">
+<div><i><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i><span><b class="k">住所</b><span class="v">〒464-0032<br>名古屋市千種区猫洞通2丁目13番地</span></span></div>
+<div><i><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><g transform="rotate(-12 7.5 15)"><ellipse cx="7.5" cy="12.6" rx="3" ry="4.3"/><ellipse cx="7.5" cy="19.7" rx="2.3" ry="1.9"/></g><g transform="rotate(12 16.5 9)"><ellipse cx="16.5" cy="6.4" rx="3" ry="4.3"/><ellipse cx="16.5" cy="13.5" rx="2.3" ry="1.9"/></g></svg></i><span><b class="k">徒歩</b><span class="v">地下鉄東山線 本山駅から徒歩13分</span></span></div>
+<div><i><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="14" rx="2.5"/><path d="M4 10h16M7 17.5V20M17 17.5V20M8 14h.01M16 14h.01"/></svg></i><span><b class="k">バス</b><span class="v">最寄りのバス停：猫洞通2丁目</span></span></div>
+<div><i><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16.5v-3c0-.9.6-1.6 1.4-1.8L7 11l2.1-3.2c.4-.6 1-.9 1.7-.9h3.4c.7 0 1.3.3 1.7.9L18 11l1.6.4c.8.2 1.4.9 1.4 1.8v3.3h-2"/><path d="M9 16.5h6M5 16.5H3"/><path d="M9.3 11h6.3M12.5 7v4"/><circle cx="7" cy="16.8" r="2"/><circle cx="17" cy="16.8" r="2"/></svg></i><span><b class="k">駐車場</b><span class="v">園の北側敷地内／南側の道路向かい、美濃忠さん隣</span></span></div>
+<div><i><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></i><span><b class="k">電話（平日 9:00〜15:00）</b><span class="v"><a class="tel" href="tel:0527823651">052-782-3651</a></span></span></div>
+
+</div>
+</div></div></section>
+</main>
+
+<footer>
+<svg class="grass" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 40V26c40-10 60-18 80-4 20-16 46-14 70 2 26-18 52-16 76 0 22-14 48-18 74-2 28-16 52-12 78 2 24-16 50-18 76 0 24-14 50-14 74 0 26-16 52-16 78 0 22-12 48-16 72 0 26-16 52-14 76 2 24-18 50-16 76-2 24-12 50-14 74 2 26-16 50-16 76 0 24-14 50-16 74 0 26-16 54-14 80 2 22-14 40-10 64-2V40z"/></svg>
+<div class="wrap fgrid">
+<div><div class="fbrand"><img src="images/0f056ef1c070.png" alt=""><div><small>学校法人わかば学園</small><b>わかば幼稚園</b></div></div>
+<p class="faddr">〒464-0032 名古屋市千種区猫洞通2丁目13番地<br>TEL 052-782-3651（平日 9:00〜15:00）</p></div>
+<ul class="flinks">
+<li><a href="about.html">わかば幼稚園について</a></li>
+<li><a href="nyuen.html">入園案内</a></li>
+<li><a href="ichinichi.html">一日の流れ</a></li>
+<li><a href="gyoji.html">1年間の行事</a></li>
+<li><a href="jiyusagyo.html">自由作業</a></li>
+<li><a href="kyushoku.html">弁当・給食</a></li>
+<li><a href="jisseki.html">実績と歴史</a></li>
+<li><a href="green.html">Green</a></li>
+<li><a href="man3sai.html">満3歳児保育</a></li>
+<li><a href="azukari.html">預かり保育</a></li>
+<li><a href="oyako.html">親子ひろば・園庭開放</a></li>
+<li><a href="faq.html">よくある質問</a></li>
+<li><a href="gakusei.html">学生の方へ</a></li>
+<li><a href="recruit.html">就職を希望する方へ</a></li>
+<li><a href="https://www.instagram.com/wakaba.kindergarten/" target="_blank" rel="noopener">Instagram</a></li>
+</ul>
+<div class="fnote"><span>※掲載情報は、時期によって確定していない場合があります。</span><a class="totop" href="#top">↑ ページの先頭へ</a></div>
+</div>
+</footer>
+<div class="drawer" id="drawer" hidden>
+<div class="scrim" data-close></div>
+<aside class="panel" role="dialog" aria-modal="true" aria-label="メニュー">
+<div class="p-head"><b>メニュー</b><button class="p-close" type="button" data-close aria-label="メニューを閉じる"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+<div class="p-sec"><small>このページ</small><div class="p-chips"><a href="#news" data-close>お知らせ</a><a href="#guide" data-close>ご案内</a><a href="#about" data-close>わかばの保育</a><a href="#sns" data-close>Instagram</a><a href="#access" data-close>アクセス</a></div></div>
+<div class="p-sec"><small>ページ一覧</small><ul class="p-list"><li><a href="news.html">お知らせ一覧<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="nyuen.html">入園案内<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="ichinichi.html">わかばの一日の流れ<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="gyoji.html">1年間の行事<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="oyako.html">親子ひろば・園庭開放<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="green.html">Green（プレスクール）<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="man3sai.html">満3歳児保育<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="azukari.html">預かり保育<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="faq.html">よくある質問<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="about.html">わかば幼稚園について<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="jiyusagyo.html">自由作業<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="kyushoku.html">弁当・給食<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="jisseki.html">実績と歴史<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></li></ul></div>
+<div class="p-btns"><a class="stu" href="gakusei.html">学生の方へ</a><a class="job" href="recruit.html">就職を希望する方へ</a><a class="tel" href="tel:0527823651"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>052-782-3651</a></div>
+<p class="p-note">受付時間　平日 9:00〜15:00</p>
+</aside>
+</div>
+<nav class="tabbar" aria-label="スマホ用メニュー">
+<a href="#top" data-tab="top" class="on"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5h4v5"/></svg>トップ</a>
+<a href="#news" data-tab="news"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>お知らせ</a>
+<a href="#guide" data-tab="guide"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg>ご案内</a>
+<a href="#about" data-tab="about"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path class="stem" d="M12 21v-8.5" stroke-width="2"/><path class="lf1" d="M12 13.2C11.6 8.4 8 5.2 2.8 5.6 3.1 10.6 6.8 13.6 12 13.2z"/><path class="lf2" d="M12 11.6C12.6 6.6 16.2 3.4 21.4 3.8 21.1 9 17.2 12 12 11.6z"/><path d="M5.6 8.2 11 12.6M18.6 6.4 13 10.8" stroke="#fff" stroke-width="1" opacity=".7"/></svg>わかばについて</a>
+<a href="tel:0527823651" class="call"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>電話</a>
+</nav>
+
+<div id="sky" aria-hidden="true"></div>
+<script>
+(function(){
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var sky=document.getElementById('sky');
+  // ツバメ：紺の背中・白いお腹・赤い顔・長い燕尾
+  function swallow(){
+    return '<svg viewBox="0 0 80 44">'+
+      '<path d="M30 21 L2 10 L15 23 L4 36 L30 28 Z" fill="#1f2d55"/>'+
+      '<ellipse cx="42" cy="25" rx="17" ry="8.5" fill="#24345e"/>'+
+      '<ellipse cx="44" cy="29" rx="13" ry="5" fill="#fdfaf3"/>'+
+      '<circle cx="57" cy="21" r="8" fill="#24345e"/>'+
+      '<ellipse cx="60.5" cy="25" rx="4.6" ry="3.8" fill="#d9482f"/>'+
+      '<path d="M63.5 20.5 L69 22 L63.5 23.8 Z" fill="#2a2a2a"/>'+
+      '<circle cx="59.5" cy="19" r="2.1" fill="#fff"/><circle cx="60" cy="19" r="1.3" fill="#141a2e"/>'+
+      '<g class="wing" style="transform-origin:46px 22px"><path d="M47 22 C42 7 28 0 14 1 C25 7 33 15 40 25 Z" fill="#1b2849"/>'+
+      '<path d="M44 19 C38 10 30 6 22 4" stroke="#3a4c80" stroke-width="1.2" fill="none" stroke-linecap="round"/></g></svg>';
+  }
+  // スズメ：茶色の頭・白いほお・黒いほおの点とのど
+  function sparrow(){
+    return '<svg viewBox="0 0 60 44">'+
+      '<path d="M16 26 L2 23 L4 28 L2 32 L16 30 Z" fill="#6e4628"/>'+
+      '<ellipse cx="28" cy="27" rx="16" ry="12" fill="#a8794e"/>'+
+      '<ellipse cx="31" cy="32" rx="12" ry="6.5" fill="#efe3cc"/>'+
+      '<circle cx="41" cy="19" r="9.5" fill="#8a4b26"/>'+
+      '<path d="M33 22.5 C35 28 46 29 49.5 23.5 C45 21.5 37 21 33 22.5 Z" fill="#fbf6ec"/>'+
+      '<ellipse cx="41" cy="24.6" rx="2" ry="1.5" fill="#2b2018"/>'+
+      '<path d="M47.5 22.5 C49.5 23 50.5 24.5 49.6 26.6 C48 26.4 46.8 25 47.5 22.5 Z" fill="#2b2018"/>'+
+      '<path d="M49.5 17.3 L55.5 19.6 L49.8 21.8 Z" fill="#3a2a1e"/>'+
+      '<circle cx="45.5" cy="17.2" r="1.8" fill="#1d1410"/><circle cx="46.1" cy="16.6" r=".6" fill="#fff"/>'+
+      '<ellipse cx="44.5" cy="21.5" rx="1.6" ry="1" fill="#f4a6a0" opacity=".7"/>'+
+      '<g class="wing" style="transform-origin:31px 23px"><path d="M12 25 C16 15 31 13 35 23 C29 28 19 29 12 25 Z" fill="#7d5130"/>'+
+      '<path d="M17 21.5 L21 24 M21 19.5 L25 22.5 M26 18.5 L29 21.5" stroke="#4f3219" stroke-width="1.5" stroke-linecap="round"/>'+
+      '<path d="M16 25.5 C22 26.8 28 26.2 32 24" stroke="#f3e6cf" stroke-width="1.4" fill="none" stroke-linecap="round"/></g></svg>';
+  }
+  function fly(){
+    var W=innerWidth,H=innerHeight,ltr=Math.random()<.5;
+    var isSw=Math.random()<.5;
+    var size=isSw?(44+Math.random()*16):(26+Math.random()*10);
+    var y0=H*(.08+Math.random()*.6);
+    var amp=isSw?(26+Math.random()*34):(8+Math.random()*10);
+    var waves=isSw?1.2+Math.random()*.8:4+Math.random()*2;
+    var n=Math.random()<.35?(isSw?2:(Math.random()<.5?2:3)):1;
+    var dur=isSw?(W/150+3.5)*1000*(0.85+Math.random()*.3):(W/80+7)*1000*(0.85+Math.random()*.3);
+    for(var i=0;i<n;i++){
+      (function(i){
+        var el=document.createElement('div');el.className='bird '+(isSw?'sw':'sp');
+        el.style.setProperty('--w',(size*(i?0.88:1))+'px');
+        el.style.setProperty('--f',isSw?((.34+Math.random()*.12)+'s'):((.14+Math.random()*.06)+'s'));
+        el.innerHTML=isSw?swallow():sparrow();
+        sky.appendChild(el);
+        var oy=i*(size*.7)*(i%2?1:-1), ox=i*size*1.3;
+        var x0=ltr?-100-ox:W+100+ox, x1=ltr?W+100:-100;
+        var flip=ltr?1:-1, k=[];
+        for(var t=0;t<=20;t++){
+          var p=t/20, x=x0+(x1-x0)*p, ph=p*Math.PI*waves+i, y, r;
+          if(isSw){ y=y0+oy+Math.sin(ph)*amp; r=Math.cos(ph)*-14; }
+          else { y=y0+oy-Math.abs(Math.sin(ph))*amp*2+amp; r=Math.cos(ph)*(Math.sin(ph)>0?-8:8); }
+          k.push({transform:'translate('+x+'px,'+y+'px) scaleX('+flip+') rotate('+r+'deg)'});
+        }
+        var a=el.animate(k,{duration:dur,easing:'linear',delay:i*(isSw?140:220)});
+        a.onfinish=function(){el.remove()};
+      })(i);
+    }
+  }
+  function loop(){ if(!document.hidden) fly(); setTimeout(loop,9000+Math.random()*12000); }
+  setTimeout(function(){fly();loop();},3500);
+})();
+</script>
+
+<script>
+(function(){
+var btn=document.querySelector('.menu-btn'),dr=document.getElementById('drawer');if(!btn||!dr)return;
+var panel=dr.querySelector('.panel'),closeBtn=dr.querySelector('.p-close'),last=null;
+function open(){last=document.activeElement;dr.hidden=false;requestAnimationFrame(function(){dr.classList.add('open')});btn.setAttribute('aria-expanded','true');document.documentElement.style.overflow='hidden';setTimeout(function(){closeBtn.focus()},50)}
+function close(){dr.classList.remove('open');btn.setAttribute('aria-expanded','false');document.documentElement.style.overflow='';setTimeout(function(){dr.hidden=true},280);if(last)last.focus()}
+btn.addEventListener('click',open);
+[].forEach.call(dr.querySelectorAll('[data-close]'),function(el){el.addEventListener('click',close)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!dr.hidden)close()});
+var tabs=[].slice.call(document.querySelectorAll('.tabbar a[data-tab]'));
+function setOn(id){tabs.forEach(function(t){t.classList.toggle('on',t.dataset.tab===id)})}
+function onScroll(){var y=window.innerHeight*0.35,cur='top';['news','guide'].forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<y)cur=id});['about'].forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<y)cur=id});var g=document.getElementById('about'),nx=g&&g.nextElementSibling;while(nx&&nx.tagName!=='SECTION')nx=nx.nextElementSibling;if(nx&&nx.getBoundingClientRect().top<y)cur='';setOn(cur)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
+</script>
+</body>
+</html>

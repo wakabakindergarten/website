@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>入園案内 | わかば幼稚園</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Yomogi&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#edf6e3;--ink:#1d2b21;--sub:#5a6b5f;--line:#c6dbb0;--leaf:#3f8f3a;--deep:#1e4d2b;--mist:#dbecc8;--sprout:#f3c94a;--petal:#f5bccb;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{height:100%;scroll-behavior:smooth}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;line-height:1.9}
+.wrap{max-width:840px;margin:0 auto;padding:36px 20px 56px}
+a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:999px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:13px}
+.hand{font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400}
+
+/* header */
+.top{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:center;background:#fff;border:2px solid var(--line);border-radius:30px;padding:78px 34px 34px 38px;margin-bottom:24px;overflow:hidden}
+.top>.garland{position:absolute;left:0;right:0;top:-2px;width:100%;height:auto;pointer-events:none}
+.sprouts{display:block;width:100%;max-width:300px;height:auto;margin-top:6px}
+.top::before{content:"";position:absolute;left:-60px;bottom:-80px;width:260px;height:260px;border-radius:50%;background:#f4faee}
+.top>*{position:relative}
+.yr{display:inline-block;background:var(--sprout);color:#3a2e00;font-weight:900;font-size:14px;border-radius:999px;padding:1px 16px;letter-spacing:.08em}
+.top h1{margin:8px 0 2px;font-size:clamp(48px,7.4vw,70px);color:var(--deep);line-height:1.1;letter-spacing:.02em}
+.top .lead{margin:0 0 8px;color:var(--sub);font-size:16px;font-weight:700}
+.photo{margin:0;isolation:isolate;position:relative;max-width:340px;justify-self:center;width:100%}
+.photo img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:47% 53% 50% 50%/53% 46% 54% 47%;box-shadow:0 12px 26px rgba(30,77,43,.18);border:6px solid #fff}
+.photo::after{content:"";position:absolute;right:-8px;bottom:4%;width:24%;aspect-ratio:1;border-radius:50%;background:var(--sprout);z-index:-1}
+.photo::before{content:"";position:absolute;left:-10px;top:6%;width:16%;aspect-ratio:1;border-radius:50%;background:var(--mist);z-index:-1}
+.pt{position:absolute;width:14px;height:11px;background:var(--petal);border-radius:85% 0 85% 0;opacity:.9;pointer-events:none}
+.pt.a{left:46%;top:16%;transform:rotate(20deg)}
+.pt.b{left:54%;top:64%;width:11px;height:9px;transform:rotate(-30deg)}
+.pt.c{right:6%;top:8%;width:12px;height:10px;transform:rotate(60deg)}
+.pt.d{left:8%;top:9%;width:10px;height:8px;transform:rotate(-10deg);background:#f8cfda}
+@media (prefers-reduced-motion:no-preference){
+.pt{animation:sway 6s ease-in-out infinite}
+.pt.b{animation-delay:-2s}.pt.c{animation-delay:-4s}.pt.d{animation-delay:-1s}
+@keyframes sway{0%,100%{translate:0 0;rotate:0deg}50%{translate:6px 8px;rotate:40deg}}}
+
+/* sections */
+.sh{display:flex;align-items:center;gap:8px;margin:0 0 16px;color:var(--deep);font-size:clamp(25px,3.4vw,31px);line-height:1.35}
+.sh .no{font-size:15px;font-weight:900;color:#3a2e00;background:var(--sprout);border-radius:999px;padding:0 12px;font-family:"Zen Maru Gothic",sans-serif;line-height:1.8}
+.sec{background:#fff;border:2px solid var(--line);border-radius:26px;padding:28px;margin-bottom:24px;scroll-margin-top:16px}
+.sec p{margin:0 0 8px;font-size:15.5px}
+
+/* 募集人員 */
+.who{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.wc{position:relative;border-radius:22px;padding:22px 18px 20px;text-align:center;background:#f4faee;border:2px solid var(--line)}
+.wc.m{background:#fffaea;border-color:#f0dc9c}
+.wc .ic{display:flex;width:70px;height:70px;margin:0 auto 4px;border-radius:50%;background:#fff;align-items:center;justify-content:center;box-shadow:0 3px 0 rgba(30,77,43,.1)}
+.wc .ic svg{width:46px;height:46px}
+.wc h3{margin:0 0 12px;font-size:27px;color:var(--deep);line-height:1.3}
+.range{display:flex;align-items:center;justify-content:center;gap:6px 8px;flex-wrap:wrap;font-weight:900;color:var(--deep);font-size:16px;line-height:1.5}
+.range span{background:#fff;border-radius:12px;padding:4px 12px;border:1.5px dashed #b9d39f}
+.wc.m .range span{border-color:#ead08a}
+.range i{font-style:normal;color:var(--leaf)}
+.wc small{display:block;margin-top:8px;font-size:14px;color:var(--sub);font-weight:700}
+
+/* 見学・願書 */
+.flow{display:grid;grid-template-columns:1fr 1fr;gap:34px;list-style:none;margin:0;padding:0}
+.step{position:relative;background:#fff;border:2px solid var(--line);border-radius:22px;padding:18px 20px 20px}
+.step:first-child::after{content:"";position:absolute;right:-29px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--leaf) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E") center/14px no-repeat}
+.st{display:inline-block;font-size:11.5px;font-weight:900;letter-spacing:.14em;color:#fff;background:var(--leaf);border-radius:999px;padding:0 12px;line-height:1.9}
+.step h3{margin:6px 0 12px;font-size:24px;color:var(--deep);line-height:1.35}
+.sbody{display:flex;gap:16px;align-items:center}
+.sbody p{margin:0;font-size:15px}
+.any{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;width:88px;height:88px;border-radius:50%;background:var(--mist);color:var(--deep);line-height:1.1}
+.any svg{width:26px;height:26px;color:var(--leaf);margin-bottom:2px}
+.any b{font-size:24px;font-weight:400}
+.cal{flex:none;width:88px;border-radius:14px;background:#fff;border:2px solid var(--leaf);text-align:center;overflow:hidden;position:relative;box-shadow:0 4px 0 var(--mist)}
+.cal i{display:block;font-style:normal;background:var(--leaf);color:#fff;font-size:13px;font-weight:700;padding:5px 0 3px}
+.cal b{display:block;font-size:40px;color:var(--deep);line-height:1.15;font-weight:900}
+.cal small{display:block;font-size:12px;color:var(--sub);padding-bottom:5px;font-weight:700}
+
+/* 満3歳 */
+.m3{background:#fffaea;border-color:#f0dc9c;position:relative;overflow:hidden}
+.m3 .deco{position:absolute;right:-26px;top:-30px;width:150px;color:#f7e6ad;transform:rotate(-14deg)}
+.m3 .deco svg{width:100%}
+.m3 .sh,.m3 .grid{position:relative}
+.m3 .grid{display:grid;grid-template-columns:1.15fr 1fr;grid-template-areas:"t d" "b d";gap:6px 24px;align-items:center}
+.m3 .tx{grid-area:t}.m3 .bday{grid-area:d}.m3 .bt{grid-area:b;align-self:start}
+.note{font-size:13px!important;color:var(--sub)}
+.bday{display:flex;align-items:center;justify-content:center;gap:12px;list-style:none;margin:0;padding:18px 14px;background:#fff;border-radius:20px;border:2px dashed #ead08a}
+.bday li{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;font-weight:900;color:var(--deep);font-size:15px;line-height:1.45}
+.bday .ic{display:flex;width:80px;height:80px;border-radius:50%;align-items:center;justify-content:center;background:#fff1f4}
+.bday li:last-child .ic{background:var(--mist)}
+.bday .ic svg{width:52px;height:52px}
+.bday .to{flex:none;color:var(--leaf);margin-bottom:26px}
+.bday .to svg{width:46px;height:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;margin-top:10px;background:var(--deep);color:#fff;border-radius:999px;padding:10px 22px;font-weight:700;font-size:14.5px;text-decoration:none;box-shadow:0 4px 0 var(--sprout);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--sprout)}
+.btn svg{width:18px;height:18px}
+
+@media(max-width:680px){
+.wrap{padding:24px 16px 48px}
+.top{grid-template-columns:1fr;padding:50px 20px 24px;gap:18px;text-align:left}
+.photo{order:-1;max-width:250px}
+.sec{padding:22px 18px}
+.who,.flow,.m3 .grid{grid-template-columns:1fr}
+.m3 .grid{grid-template-areas:"t" "d" "b";gap:14px}
+.range{flex-direction:column;gap:2px}
+.range i{line-height:1;transform:rotate(90deg)}
+.flow{gap:30px}
+.step:first-child::after{right:auto;left:50%;top:auto;bottom:-27px;margin:0 0 0 -11px;transform:rotate(90deg)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ct{position:relative;overflow:hidden;background:#1e4d2b;color:#fff;border-radius:26px;padding:26px 28px 24px;margin:24px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px 30px;align-items:center}
+.ct>*{position:relative}
+.ct .ct-deco{position:absolute;right:-30px;bottom:-34px;width:210px;color:#3f8f3a;opacity:.35;transform:rotate(-12deg)}
+.ct h2{grid-column:1/-1;margin:0;font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400;font-size:clamp(22px,3vw,28px);color:#c9f2a8;line-height:1.4;display:flex;align-items:center;gap:8px}
+.ct h2 svg{width:34px;flex:none;color:#9fe68a}
+.ct-who{display:flex;gap:14px;align-items:center}
+.ct-who img{width:64px;height:64px;flex:none;border-radius:50%;background:#fff;padding:2px}
+.ct-who small{display:block;font-size:12px;color:#cfe4c6}
+.ct-who b{display:block;font-size:20px;font-weight:900;letter-spacing:.04em;line-height:1.4}
+.ct-addr{font-size:13px;color:#e6f2dd;margin:10px 0 0;line-height:1.7}
+.ct-call{background:rgba(255,255,255,.08);border:1px solid rgba(201,242,168,.35);border-radius:20px;padding:16px 18px;text-align:center}
+.ct-call span{display:block;font-size:13px;color:#c9f2a8;font-weight:700}
+.ct-tel{display:flex;align-items:center;justify-content:center;gap:10px;margin:8px 0;background:#fff;color:#1e4d2b;text-decoration:none;border-radius:999px;padding:10px 14px;font-size:clamp(21px,2.6vw,25px);font-weight:900;letter-spacing:.03em;white-space:nowrap;box-shadow:0 4px 0 #f3c94a}
+.ct-tel svg{width:22px;flex:none;color:#3f8f3a}
+.ct-tel:hover{transform:translateY(1px);box-shadow:0 3px 0 #f3c94a}
+.ct-call small{display:block;font-size:12.5px;color:#e6f2dd}
+/* 見出しを見やすく太く */
+h1,h2,h3,h4{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif!important;letter-spacing:.02em}
+h1,h2{font-weight:900!important}
+h3.hand,h4.hand{font-weight:700!important}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">← 前へ</a>
+
+<header class="top">
+<svg class="garland" viewBox="0 0 800 70" preserveAspectRatio="xMidYMin meet" aria-hidden="true"><path d="M-10 6Q200 62 410 6" stroke="#b79a6e" stroke-width="2" fill="none"/><path d="M390 6Q600 62 810 6" stroke="#b79a6e" stroke-width="2" fill="none"/><path d="M-13 0H13L0 26z" fill="#f3c94a" transform="translate(40.4 17.8) rotate(11.5)"/><path d="M-13 0H13L0 26z" fill="#f5bccb" transform="translate(103.4 28.1) rotate(7.0)"/><path d="M-13 0H13L0 26z" fill="#8cc63f" transform="translate(166.4 33.3) rotate(2.4)"/><path d="M-13 0H13L0 26z" fill="#a9d3ef" transform="translate(233.6 33.3) rotate(-2.4)"/><path d="M-13 0H13L0 26z" fill="#f8cf9a" transform="translate(296.6 28.1) rotate(-7.0)"/><path d="M-13 0H13L0 26z" fill="#3f8f3a" transform="translate(359.6 17.8) rotate(-11.5)"/><path d="M-13 0H13L0 26z" fill="#f5bccb" transform="translate(440.4 17.8) rotate(11.5)"/><path d="M-13 0H13L0 26z" fill="#f3c94a" transform="translate(503.4 28.1) rotate(7.0)"/><path d="M-13 0H13L0 26z" fill="#a9d3ef" transform="translate(566.4 33.3) rotate(2.4)"/><path d="M-13 0H13L0 26z" fill="#8cc63f" transform="translate(633.6 33.3) rotate(-2.4)"/><path d="M-13 0H13L0 26z" fill="#f3c94a" transform="translate(696.6 28.1) rotate(-7.0)"/><path d="M-13 0H13L0 26z" fill="#f5bccb" transform="translate(759.6 17.8) rotate(-11.5)"/></svg>
+<span class="pt a"></span><span class="pt b"></span><span class="pt c"></span><span class="pt d"></span>
+<div>
+<span class="yr">令和9年度</span>
+<h1 class="hand">入園案内</h1>
+<p class="lead">来年度の新入園について</p>
+<svg class="sprouts" viewBox="0 0 300 74" aria-hidden="true"><path d="M4 64c30-6 60 4 96 0s70-5 104-1 64 3 92 0" stroke="#c7a575" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(26 64)"><path d="M0 0V-10" stroke="#2f6e2c" stroke-width="2.6" stroke-linecap="round"/><path d="M0 -8c-1-3.6-3.6-5.9-7.7-5.4 0.5 4.0 3.6 5.9 7.7 5.4z" fill="#3f8f3a"/><path d="M0 -10c1.2-3.6 3.6-5.9 7.7-5.4-0.5 4.0-3.6 5.9-7.7 5.4z" fill="#8cc63f"/></g><g transform="translate(86 64)"><path d="M0 0V-18" stroke="#2f6e2c" stroke-width="2.6" stroke-linecap="round"/><path d="M0 -16c-1-4.8-4.8-7.8-10.2-7.2 0.6 5.4 4.8 7.8 10.2 7.2z" fill="#3f8f3a"/><path d="M0 -18c1.2-4.8 4.8-7.8 10.2-7.2-0.6 5.4-4.8 7.8-10.2 7.2z" fill="#8cc63f"/></g><g transform="translate(146 64)"><path d="M0 0V-26" stroke="#2f6e2c" stroke-width="2.6" stroke-linecap="round"/><path d="M0 -24c-1-6.0-6.0-9.8-12.8-9.0 0.8 6.8 6.0 9.8 12.8 9.0z" fill="#3f8f3a"/><path d="M0 -26c1.2-6.0 6.0-9.8 12.8-9.0-0.8 6.8-6.0 9.8-12.8 9.0z" fill="#8cc63f"/></g><g transform="translate(206 64)"><path d="M0 0V-34" stroke="#2f6e2c" stroke-width="2.6" stroke-linecap="round"/><path d="M0 -32c-1-7.2-7.2-11.7-15.3-10.8 0.9 8.1 7.2 11.7 15.3 10.8z" fill="#3f8f3a"/><path d="M0 -34c1.2-7.2 7.2-11.7 15.3-10.8-0.9 8.1-7.2 11.7-15.3 10.8z" fill="#8cc63f"/></g><g transform="translate(266 64)"><path d="M0 0V-42" stroke="#2f6e2c" stroke-width="2.6" stroke-linecap="round"/><path d="M0 -40c-1-8.4-8.4-13.7-17.9-12.6 1.1 9.5 8.4 13.7 17.9 12.6z" fill="#3f8f3a"/><path d="M0 -42c1.2-8.4 8.4-13.7 17.9-12.6-1.1 9.5-8.4 13.7-17.9 12.6z" fill="#8cc63f"/></g><circle cx="56" cy="58" r="3" fill="#f5bccb"/><circle cx="176" cy="58" r="3" fill="#f3c94a"/><circle cx="236" cy="59" r="2.6" fill="#f5bccb"/></svg>
+</div>
+<figure class="photo"><img src="images/9251ef9e56dc.jpg" alt="桜の咲く日の園の門と「入園式」の看板"></figure>
+</header>
+
+<section class="sec" id="boshu" aria-labelledby="h1s">
+<h2 class="sh hand" id="h1s"><span class="no">1</span>募集人員</h2>
+<div class="who">
+<div class="wc"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 44V22" stroke="#2f6e2c" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M24 26C23 14 14 7 3 8.5 4.5 20 13 27.5 24 26z" fill="#3f8f3a"/><path d="M24 22C25.5 11 34 4 45 5.5 43.5 17 35 23.5 24 22z" fill="#8cc63f"/><path d="M8 13l14 11M40 10L26 20" stroke="#fff" stroke-width="1.2" opacity=".6" fill="none" stroke-linecap="round"/><path d="M12 44h24" stroke="#c7a575" stroke-width="3" stroke-linecap="round"/></svg></span><h3 class="hand">3年保育児</h3>
+<div class="range"><span>令和5年4月2日</span><i>〜</i><span>令和6年4月1日</span></div><small>生まれ</small></div>
+<div class="wc m"><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42V30" stroke="#2f6e2c" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M24 32c-.6-6.5-5.6-10.4-12-9.6.8 6.4 5.6 10.4 12 9.6z" fill="#5aa845"/><path d="M24 30c.8-6.2 5.6-10 12-9.2-.8 6.4-5.6 9.9-12 9.2z" fill="#b5d96a"/><path d="M14 42h20" stroke="#c7a575" stroke-width="3" stroke-linecap="round"/></svg></span><h3 class="hand">満3歳保育児</h3>
+<div class="range"><span>令和6年4月2日</span><i>〜</i><span>令和7年4月1日</span></div><small>生まれ</small></div>
+</div>
+</section>
+
+<section class="sec" id="gansho" aria-labelledby="h2s">
+<h2 class="sh hand" id="h2s"><span class="no">2</span>見学と願書配布</h2>
+<ol class="flow">
+<li class="step"><span class="st">STEP 1</span><h3 class="hand">見学について</h3>
+<div class="sbody"><div class="any"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg><b class="hand">随時</b></div><p>見学は随時対応しています。お気軽にお問い合わせください。</p></div></li>
+<li class="step"><span class="st">STEP 2</span><h3 class="hand">願書配布</h3>
+<div class="sbody"><div class="cal" aria-hidden="true"><i>9月</i><b>1</b><small>（火）</small></div><p>9月1日（火）より開始となります。<br>受付までお越しください。</p></div></li>
+</ol>
+</section>
+
+<section class="sec m3" id="man3" aria-labelledby="h3s">
+<span class="deco" aria-hidden="true"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span>
+<h2 class="sh hand" id="h3s"><span class="no">3</span>満3歳児クラスについて</h2>
+<div class="grid">
+<div class="tx">
+<p>令和8年度6月から、満3歳児クラスを始めました。誕生月の翌月から入園できます。</p>
+<p class="note">※現在も引き続き、今年度入園希望者の願書を受付中です。</p>
+</div>
+<div class="bt"><a class="btn" href="man3sai.html">満3歳児保育について<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+<ol class="bday" aria-label="誕生月の翌月から入園できます">
+<li><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 6.5c2 2.4 2 4.4 0 5.6-2-1.2-2-3.2 0-5.6z" fill="#f3a53c"/><rect x="14.7" y="12" width="2.6" height="9" rx="1.1" fill="#7fb6e0"/><path d="M24 6.5c2 2.4 2 4.4 0 5.6-2-1.2-2-3.2 0-5.6z" fill="#f3a53c"/><rect x="22.7" y="12" width="2.6" height="9" rx="1.1" fill="#f08aa5"/><path d="M32 6.5c2 2.4 2 4.4 0 5.6-2-1.2-2-3.2 0-5.6z" fill="#f3a53c"/><rect x="30.7" y="12" width="2.6" height="9" rx="1.1" fill="#8cc63f"/><rect x="9" y="21" width="30" height="9" rx="3" fill="#f7c5d2"/><path d="M9 26c3 2.5 6 2.5 7.5 0s4.5-2.5 7.5 0 6 2.5 7.5 0 4.5-2.5 7.5 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="6" y="30" width="36" height="11" rx="3" fill="#f2e2c4"/><circle cx="15" cy="35.5" r="1.6" fill="#e0607a"/><circle cx="24" cy="35.5" r="1.6" fill="#3f8f3a"/><circle cx="33" cy="35.5" r="1.6" fill="#e0607a"/></svg></span>3歳の<br>誕生月</li>
+<li class="to" aria-hidden="true"><svg viewBox="0 0 46 18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h30" stroke-dasharray="1 6"/><path d="M34 3l7 6-7 6"/></svg></li>
+<li><span class="ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42V30" stroke="#2f6e2c" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M24 32c-.6-6.5-5.6-10.4-12-9.6.8 6.4 5.6 10.4 12 9.6z" fill="#5aa845"/><path d="M24 30c.8-6.2 5.6-10 12-9.2-.8 6.4-5.6 9.9-12 9.2z" fill="#b5d96a"/><path d="M14 42h20" stroke="#c7a575" stroke-width="3" stroke-linecap="round"/></svg></span>翌月から<br>入園</li>
+</ol>
+</div>
+</section>
+
+<section class="ct" aria-label="お問い合わせ先"><span class="ct-deco"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span>
+<h2><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>詳しくはお問い合わせください</h2>
+<div><div class="ct-who"><img src="images/0f056ef1c070.png" alt=""><div><small>学校法人わかば学園</small><b>わかば幼稚園</b></div></div>
+<p class="ct-addr">〒464-0032 名古屋市千種区猫洞通2丁目13番地<br>見学は随時受け付けています。</p></div>
+<div class="ct-call"><span>お電話でのお問い合わせ</span><a class="ct-tel" href="tel:0527823651"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>052-782-3651</a><small>受付時間　平日 9:00〜15:00</small></div>
+</section>
+</div></body></html>

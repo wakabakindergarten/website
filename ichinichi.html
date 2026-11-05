@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>わかばの一日の流れ | わかば幼稚園</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Yomogi&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#edf6e3;--ink:#1d2b21;--sub:#5a6b5f;--line:#c6dbb0;--leaf:#3f8f3a;--deep:#1e4d2b;--mist:#dbecc8;--sprout:#f3c94a;
+--c1:#f3c94a;--c2:#a6d77a;--c3:#5bb26a;--c4:#2f7f4a;--c5:#f2a865;--c6:#a6d77a;--c7:#c6dbb0;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{height:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;line-height:1.85}
+.wrap{max-width:840px;margin:0 auto;padding:36px 20px 56px}
+a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:999px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:13px}
+.hand{font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400}
+
+/* header */
+.top{position:relative;border-radius:26px;overflow:hidden;min-height:380px;display:flex;align-items:flex-end;padding:30px;margin-bottom:22px;background:#1e4d2b url(images/7f176867a2c3.jpg) center 35%/cover}
+.top::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,14,0) 25%,rgba(8,24,14,.78))}
+.top>div{position:relative}
+.top h1{margin:0;word-break:keep-all;color:#c9f2a8;font-size:clamp(34px,6vw,56px);line-height:1.2;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+.top p{margin:8px 0 0;color:#f0f7ea;font-size:15px}
+.top .hsun{position:absolute;top:22px;right:24px;width:74px;color:var(--sprout);filter:drop-shadow(0 2px 6px rgba(0,0,0,.25))}
+
+/* section heading */
+.sh{display:flex;align-items:center;gap:8px;margin:0 0 14px;color:var(--deep);font-size:clamp(22px,3vw,27px);line-height:1.4}
+.sh svg{width:32px;flex:none;color:var(--leaf)}
+
+/* day ruler */
+.card{background:#fff;border:2px solid var(--line);border-radius:24px;padding:24px 26px;margin-bottom:22px}
+.ruler{display:flex;height:46px;border-radius:14px;overflow:hidden;border:2px solid #fff;box-shadow:0 0 0 2px var(--line)}
+.ruler a{display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:12.5px;font-weight:700;color:var(--deep);white-space:nowrap;overflow:hidden;min-width:0;transition:filter .2s}
+.ruler a+a{border-left:2px solid #fff}
+.ruler a:hover{filter:brightness(1.06)}
+.ruler a.dk{color:#fff}
+.ticks{position:relative;height:22px;margin-top:6px;font-size:12px;color:var(--sub);font-weight:700}
+.ticks span{position:absolute;top:0;transform:translateX(-50%)}
+.ticks span:last-child{transform:translateX(-85%)}
+.rnote{margin:10px 0 0;font-size:13px;color:var(--sub)}
+.rnote b{color:var(--deep)}
+.legend{display:none;flex-wrap:wrap;gap:6px 14px;list-style:none;margin:10px 0 0;padding:0;font-size:12.5px}
+.legend li{display:flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:4px;flex:none}
+
+/* timeline */
+.tl{position:relative;margin:8px 0 26px}
+.rail{position:absolute;left:130px;width:6px;margin-left:-3px;border-radius:3px;background:repeating-linear-gradient(180deg,var(--line) 0 8px,transparent 8px 14px)}
+.rail .fill{position:absolute;left:0;top:0;width:100%;height:0;border-radius:3px;background:linear-gradient(180deg,var(--sprout),var(--leaf))}
+.sun{position:absolute;left:50%;top:0;width:46px;height:46px;margin:-23px 0 0 -23px;z-index:3;will-change:transform;pointer-events:none}
+.sun svg{width:100%;height:100%;overflow:visible}
+.sun .rays{transform-origin:24px 24px;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.st{position:relative;display:grid;grid-template-columns:92px 52px 1fr;grid-template-areas:"tm nd bx";column-gap:12px;margin-bottom:18px;align-items:start}
+.tm{grid-area:tm;text-align:right;padding-top:6px;color:var(--deep);font-size:30px;line-height:1.1}
+.tm small{display:block;font-family:"Zen Maru Gothic",sans-serif;font-size:12px;color:var(--sub);font-weight:700;margin-top:4px}
+.nd{grid-area:nd;position:relative;z-index:2;width:52px;height:52px;border-radius:50%;background:#fff;border:3px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--leaf);transition:background .35s,border-color .35s,color .35s,transform .35s}
+.nd svg{width:24px;height:24px}
+.st.on .nd{background:var(--leaf);border-color:#fff;color:#fff;transform:scale(1.06);box-shadow:0 0 0 3px var(--leaf)}
+.bx{grid-area:bx;background:#fff;border:2px solid var(--line);border-radius:22px;padding:18px 22px;min-width:0}
+.bx h3{margin:0;font-size:20px;font-weight:900;color:var(--deep);display:flex;align-items:center;gap:8px}
+.bx h3 i{width:12px;height:12px;border-radius:4px;flex:none}
+.bx p{margin:4px 0 0;font-size:14.5px;color:var(--sub)}
+.bx .go{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--leaf);text-decoration:none;border-bottom:2px solid var(--mist)}
+.bx .go:hover{border-color:var(--leaf)}
+.bx.wp{display:grid;grid-template-columns:1fr 210px;gap:18px;align-items:center}
+.bx.wp img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+.bx.sm{padding:13px 22px}
+.st.sm .nd{width:44px;height:44px;margin:4px}
+.st.sm .tm{padding-top:8px;font-size:26px}
+
+.pr{position:relative;display:grid;grid-template-columns:92px 52px 1fr;column-gap:12px;margin:4px 0 14px}
+.pr span{grid-column:2/4;justify-self:start;position:relative;z-index:2;background:var(--bg);color:var(--leaf);font-size:20px;padding:0 14px 0 4px;line-height:1.4}
+.pr span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--sprout);margin:0 12px 0 17px;vertical-align:2px;box-shadow:0 0 0 4px var(--bg)}
+
+/* taiso feature */
+.taiso{grid-area:bx;background:var(--deep);color:#fff;border-radius:22px;overflow:hidden}
+.taiso img{display:block;width:100%;aspect-ratio:16/7;object-fit:cover}
+.taiso .tx{padding:16px 22px 20px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.taiso h4{margin:0;color:#c9f2a8;font-size:24px;line-height:1.3}
+.taiso p{margin:4px 0 0;font-size:14px;color:#e6f2dd;max-width:30em}
+.wk{display:flex;gap:6px}
+.wk b{width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:15px;background:rgba(255,255,255,.1);color:#cfe4c6;border:1px solid rgba(201,242,168,.3)}
+.wk b.y{background:var(--sprout);color:#3a2e00;border-color:var(--sprout);box-shadow:0 3px 0 #c9a12a}
+.st.ft .nd{visibility:hidden}
+
+/* after */
+.after{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+.az{display:flex;gap:16px;align-items:center;background:#fffaf0;border:2px dashed #e4c56a;border-radius:22px;padding:18px 22px;text-decoration:none;color:inherit;transition:transform .2s}
+.az:hover{transform:translateY(-2px)}
+.az .ic{flex:none;width:54px;height:54px;border-radius:50%;background:#fff4cf;color:#8a6a00;display:flex;align-items:center;justify-content:center}
+.az .ic svg{width:28px;height:28px}
+.az small{display:block;font-size:12.5px;color:#8a6a00;font-weight:700}
+.az b{display:block;font-size:18px;color:var(--deep);font-weight:900;line-height:1.5}
+.az span{font-size:13px;color:var(--leaf);font-weight:700}
+.memo{background:var(--mist);border-radius:22px;padding:18px 22px}
+.memo h3{margin:0 0 6px;color:var(--deep);font-size:21px;line-height:1.4}
+.memo ul{list-style:none;margin:0;padding:0}
+.memo li{position:relative;padding-left:1.4em;font-size:14px;margin-bottom:4px}
+.memo li::before{content:"";position:absolute;left:.2em;top:.62em;width:.6em;height:.6em;border-radius:50% 0;background:var(--leaf);transform:rotate(-45deg)}
+
+/* contact */
+.ct{position:relative;overflow:hidden;background:#1e4d2b;color:#fff;border-radius:26px;padding:26px 28px 24px;margin:24px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px 30px;align-items:center}
+.ct>*{position:relative}
+.ct .ct-deco{position:absolute;right:-30px;bottom:-34px;width:210px;color:#3f8f3a;opacity:.35;transform:rotate(-12deg)}
+.ct h2{grid-column:1/-1;margin:0;font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400;font-size:clamp(22px,3vw,28px);color:#c9f2a8;line-height:1.4;display:flex;align-items:center;gap:8px}
+.ct h2 svg{width:34px;flex:none;color:#9fe68a}
+.ct-who{display:flex;gap:14px;align-items:center}
+.ct-who img{width:64px;height:64px;flex:none;border-radius:50%;background:#fff;padding:2px}
+.ct-who small{display:block;font-size:12px;color:#cfe4c6}
+.ct-who b{display:block;font-size:20px;font-weight:900;letter-spacing:.04em;line-height:1.4}
+.ct-addr{font-size:13px;color:#e6f2dd;margin:10px 0 0;line-height:1.7}
+.ct-call{background:rgba(255,255,255,.08);border:1px solid rgba(201,242,168,.35);border-radius:20px;padding:16px 18px;text-align:center}
+.ct-call span{display:block;font-size:13px;color:#c9f2a8;font-weight:700}
+.ct-tel{display:flex;align-items:center;justify-content:center;gap:10px;margin:8px 0;background:#fff;color:#1e4d2b;text-decoration:none;border-radius:999px;padding:10px 14px;font-size:clamp(21px,2.6vw,25px);font-weight:900;letter-spacing:.03em;white-space:nowrap;box-shadow:0 4px 0 #f3c94a}
+.ct-tel svg{width:22px;flex:none;color:#3f8f3a}
+.ct-tel:hover{transform:translateY(1px);box-shadow:0 3px 0 #f3c94a}
+.ct-call small{display:block;font-size:12.5px;color:#e6f2dd}
+
+@media(max-width:680px){
+ .top{min-height:300px;padding:22px}
+ .top .hsun{width:50px;top:16px;right:16px}
+ .top h1{font-size:32px}
+ .bx.wp img{aspect-ratio:16/10}
+ .card{padding:20px 18px}
+ .ruler a span{display:none}
+ .legend{display:flex}
+ .rail{left:22px}
+ .st,.pr{grid-template-columns:44px 1fr;grid-template-areas:"nd tm" "nd bx";column-gap:12px}
+ .st .tm{text-align:left;padding:0 0 4px;font-size:24px;display:flex;align-items:baseline;gap:8px}
+ .st .tm small{display:inline;margin:0}
+ .nd,.st.sm .nd{width:44px;height:44px;margin:0}
+ .st.sm .tm{padding:4px 0 4px;font-size:22px}
+ .pr span{grid-column:1/3}
+ .pr span::before{margin-left:13px}
+ .bx.wp{grid-template-columns:1fr}
+ .bx{padding:16px 18px}
+ .after{grid-template-columns:1fr}
+ .taiso .tx{padding:14px 18px 18px}
+}
+@media(prefers-reduced-motion:reduce){.sun .rays{animation:none}.nd,.az,.ruler a{transition:none}}
+/* 見出しを見やすく太く */
+h1,h2,h3,h4{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif!important;letter-spacing:.02em}
+h1,h2{font-weight:900!important}
+h3.hand,h4.hand{font-weight:700!important}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">← 前へ</a>
+
+<header class="top">
+<svg class="hsun" viewBox="0 0 48 48" aria-hidden="true"><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M24 2v6M24 40v6M2 24h6M40 24h6M8.4 8.4l4.3 4.3M35.3 35.3l4.3 4.3M8.4 39.6l4.3-4.3M35.3 12.7l4.3-4.3"/></g><circle cx="24" cy="24" r="11" fill="currentColor"/></svg>
+<div><h1 class="hand">わかばの<wbr>一日の流れ</h1><p>登園から降園まで、こんな一日を過ごしています</p></div>
+</header>
+
+<section class="card" aria-labelledby="h-ruler">
+<h2 class="sh hand" id="h-ruler"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>一日のものさし</h2>
+<div class="ruler" role="list">
+<a role="listitem" href="#s1" style="flex:15;background:var(--c1)" title="登園 8:45〜9:00"><span>登園</span></a>
+<a role="listitem" href="#s2" style="flex:50;background:var(--c2)" title="自由作業 9:00〜"><span>自由作業</span></a>
+<a role="listitem" href="#s3" style="flex:40;background:var(--c3)" class="dk" title="外遊び 9:50〜"><span>外遊び</span></a>
+<a role="listitem" href="#s4" style="flex:60;background:var(--c4)" class="dk" title="クラスでの活動 10:30〜"><span>クラスでの活動</span></a>
+<a role="listitem" href="#s5" style="flex:80;background:var(--c5)" title="お弁当・給食 11:30〜"><span>お弁当・給食</span></a>
+<a role="listitem" href="#s6" style="flex:30;background:var(--c6)" title="自由作業・自由遊び 12:50〜"><span style="font-size:11px;line-height:1.25;text-align:center">自由作業・<br>自由遊び</span></a>
+<a role="listitem" href="#s7" style="flex:40;background:var(--c7)" title="降園準備 13:20〜"><span>降園準備</span></a>
+</div>
+<div class="ticks" aria-hidden="true"><span style="left:4.76%">9:00</span><span style="left:23.81%">10:00</span><span style="left:42.86%">11:00</span><span style="left:61.9%">12:00</span><span style="left:80.95%">13:00</span><span style="left:100%">14:00</span></div>
+<ul class="legend" aria-hidden="true">
+<li><i style="background:var(--c1)"></i>登園</li><li><i style="background:var(--c2)"></i>自由作業</li><li><i style="background:var(--c3)"></i>外遊び</li><li><i style="background:var(--c4)"></i>クラスでの活動</li><li><i style="background:var(--c5)"></i>お弁当・給食</li><li><i style="background:var(--c7)"></i>降園準備</li>
+</ul>
+<p class="rnote">8:45〜9:00に登園して、<b>14:00に降園</b>します。そのあとは、希望する方のみ預かり保育があります。</p>
+</section>
+
+<section class="tl" id="tl" aria-label="一日のタイムライン">
+<div class="rail" id="rail" aria-hidden="true"><span class="fill" id="fill"></span><span class="sun" id="sun"><svg viewBox="0 0 48 48"><g class="rays" stroke="#f3c94a" stroke-width="3.2" stroke-linecap="round"><path d="M24 1v6M24 41v6M1 24h6M41 24h6M7.7 7.7l4.2 4.2M36.1 36.1l4.2 4.2M7.7 40.3l4.2-4.2M36.1 11.9l4.2-4.2"/></g><circle cx="24" cy="24" r="13" fill="#f3c94a" stroke="#fff" stroke-width="3"/><circle cx="19.5" cy="23" r="1.6" fill="#6a4e00"/><circle cx="28.5" cy="23" r="1.6" fill="#6a4e00"/><path d="M20.5 27.5q3.5 3 7 0" stroke="#6a4e00" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="16.5" cy="27" r="1.8" fill="#f2a865" opacity=".7"/><circle cx="31.5" cy="27" r="1.8" fill="#f2a865" opacity=".7"/></svg></span></div>
+
+<div class="pr"><span class="hand">あさ</span></div>
+
+<article class="st" id="s1"><div class="tm hand">8:45<small>〜9:00</small></div><div class="nd"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10a6 6 0 0 1 12 0v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M9 14h6v4H9z"/><path d="M10 4.5a2 2 0 0 1 4 0"/></svg></div>
+<div class="bx"><div><h3><i style="background:var(--c1)"></i>登園</h3><p>身支度</p></div></div></article>
+
+<article class="st" id="s2"><div class="tm hand">9:00<small>〜</small></div><div class="nd"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.5" r="2.8"/><circle cx="6" cy="17.5" r="2.8"/><path d="M8.3 8.2 20 18M8.3 15.8 20 6"/></svg></div>
+<div class="bx wp"><div><h3><i style="background:var(--c2)"></i>自由作業</h3><p>うた／話し合いなど</p><a class="go" href="jiyusagyo.html">自由作業について見る →</a></div><img src="images/5f2dc95078b6.jpg" alt="机に向かって裁縫や工作に取り組む子どもたち" loading="lazy"></div></article>
+
+<article class="st" id="s3"><div class="tm hand">9:50<small>〜</small></div><div class="nd"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9.5c5 2 12 2 17 0M3.5 14.5c5-2 12-2 17 0"/><path d="M12 3c-2.5 3-2.5 15 0 18"/></svg></div>
+<div class="bx wp"><div><h3><i style="background:var(--c3)"></i>外遊び</h3><p>週に二回程度体操</p></div><img src="images/68543223d605.jpg" alt="園庭の砂場で遊ぶ子どもたち" loading="lazy"></div></article>
+
+<article class="st ft" aria-label="体操のようす"><div class="tm"></div><div class="nd"></div>
+<div class="taiso"><img src="images/6f82e39345f8.jpg" alt="園庭に並んで体操をする子どもたち" loading="lazy">
+<div class="tx"><div><h4 class="hand">体操のようす</h4><p>広い園庭に集まって、全員で同じ体操をします。現在は火曜日と木曜日に行っています。</p></div>
+<div class="wk" aria-label="体操の曜日：火曜日と木曜日"><b>月</b><b class="y">火</b><b>水</b><b class="y">木</b><b>金</b></div></div></div></article>
+
+<article class="st" id="s4"><div class="tm hand">10:30<small>〜</small></div><div class="nd"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></div>
+<div class="bx wp"><div><h3><i style="background:var(--c4)"></i>クラスでの活動</h3><p>室内ゲーム／リズム遊び／制作活動／絵画活動など</p></div><img src="images/456232dd4aef.jpg" alt="保育室でボールを使ったゲームをする子どもたち" loading="lazy"></div></article>
+
+<div class="pr"><span class="hand">おひる</span></div>
+
+<article class="st" id="s5"><div class="tm hand">11:30<small>〜</small></div><div class="nd"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18a9 8 0 0 1-18 0z"/><path d="M8 21h8"/><path d="M9 8c0-1.5 1.5-1.5 1.5-3M14 8c0-1.5 1.5-1.5 1.5-3"/></svg></div>
+<div class="bx wp"><div><h3><i style="background:var(--c5)"></i>お弁当・給食</h3><p>休息</p><a class="go" href="kyushoku.html">弁当・給食について見る →</a></div><img src="images/17ae76f9b988.jpg" alt="給食を食べる子どもたち" loading="lazy"></div></article>
+
+<div class="pr"><span class="hand">ごご</span></div>
+
+<article class="st" id="s6"><div class="tm hand">12:50<small>〜</small></div><div class="nd"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/><path d="M12 3l4.5 7.5h-9z"/></svg></div>
+<div class="bx wp"><div><h3><i style="background:var(--c6)"></i>自由作業・自由遊び</h3></div><img src="images/f3f926c09827.jpg" alt="大きなブロックで遊ぶ子どもたち" loading="lazy"></div></article>
+
+<article class="st sm" id="s7"><div class="tm hand">13:20<small>〜</small></div><div class="nd"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c0-5 3-9 7-9s7 4 7 9"/><path d="M2.5 15.5h19"/><path d="M8 15.5c0 2.5 1.8 4.5 4 4.5s4-2 4-4.5"/></svg></div>
+<div class="bx sm"><h3><i style="background:var(--c7)"></i>降園準備</h3></div></article>
+
+<article class="st sm" id="s8"><div class="tm hand">14:00<small>〜</small></div><div class="nd"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5h4v5"/></svg></div>
+<div class="bx sm"><h3><i style="background:var(--sprout)"></i>降園</h3></div></article>
+</section>
+
+<div class="after">
+<a class="az" href="azukari.html"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span><div><small>希望者のみ</small><b>14:00〜16:00　預かり保育</b><span>預かり保育について見る →</span></div></a>
+<div class="memo"><h3 class="hand">一日の流れについて</h3><ul>
+<li>年令や季節により、融通的な面が多分にあります。</li>
+<li>3才、4才、5才全員が同時に園庭に出ることは、体操の時以外ありません。</li>
+</ul></div>
+</div>
+
+<section class="ct" aria-label="お問い合わせ先"><span class="ct-deco"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span>
+<h2><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>お気軽にお問い合わせください</h2>
+<div><div class="ct-who"><img src="images/0f056ef1c070.png" alt=""><div><small>学校法人わかば学園</small><b>わかば幼稚園</b></div></div>
+<p class="ct-addr">〒464-0032 名古屋市千種区猫洞通2丁目13番地<br>見学は随時受け付けています。</p></div>
+<div class="ct-call"><span>お電話でのお問い合わせ</span><a class="ct-tel" href="tel:0527823651"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>052-782-3651</a><small>受付時間　平日 9:00〜15:00</small></div>
+</section>
+</div>
+
+<script>
+(function(){
+var tl=document.getElementById('tl'),rail=document.getElementById('rail'),fill=document.getElementById('fill'),sun=document.getElementById('sun');
+var steps=[].slice.call(tl.querySelectorAll('.st:not(.ft)'));
+var nodes=steps.map(function(s){return s.querySelector('.nd')});
+var centers=[],top0=0,len=0,ticking=false;
+function measure(){
+  var r=tl.getBoundingClientRect();
+  centers=nodes.map(function(n){var b=n.getBoundingClientRect();return b.top+b.height/2-r.top});
+  top0=centers[0];len=centers[centers.length-1]-top0;
+  rail.style.top=top0+'px';rail.style.height=len+'px';
+  update();
+}
+function update(){
+  ticking=false;
+  var r=tl.getBoundingClientRect();
+  var y=window.innerHeight*0.5-r.top-top0;
+  var p=Math.max(0,Math.min(len,y));
+  sun.style.transform='translateY('+p+'px)';
+  fill.style.height=p+'px';
+  for(var i=0;i<steps.length;i++){steps[i].classList.toggle('on',centers[i]-top0<=p+2)}
+}
+function req(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+window.addEventListener('scroll',req,{passive:true});
+window.addEventListener('resize',measure);
+window.addEventListener('load',measure);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(measure);
+[].forEach.call(document.images,function(im){if(!im.complete)im.addEventListener('load',measure)});
+measure();
+})();
+</script>
+</body></html>

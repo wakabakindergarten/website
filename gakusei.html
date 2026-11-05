@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>学生の方へ | わかば幼稚園</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Yomogi&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#edf6e3;--ink:#1d2b21;--sub:#5a6b5f;--line:#c6dbb0;--leaf:#3f8f3a;--deep:#1e4d2b;--mist:#dbecc8;--sprout:#f3c94a;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{height:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;line-height:1.85}
+.wrap{max-width:840px;margin:0 auto;padding:36px 20px 56px}
+a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:999px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:13px}
+.hand{font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400}
+
+.top{position:relative;border-radius:26px;overflow:hidden;min-height:320px;display:flex;align-items:flex-end;padding:30px;margin-bottom:24px;background:#1e4d2b url(images/dc050b4040a8.jpg) center/cover}
+.top::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,14,.05) 20%,rgba(8,24,14,.82))}
+.top>div{position:relative}
+.top .eyebrow{display:inline-block;background:var(--sprout);color:#3a2e00;font-weight:900;font-size:13px;border-radius:999px;padding:1px 14px;margin-bottom:8px}
+.top h1{margin:0;color:#c9f2a8;font-size:clamp(34px,6vw,54px);line-height:1.25;text-shadow:0 2px 10px rgba(0,0,0,.45);word-break:keep-all}
+.top h1 svg{display:inline-block;width:.9em;vertical-align:-.05em;color:#9fe68a;margin-left:.15em;transform:rotate(10deg)}
+
+.sh{display:flex;align-items:center;gap:8px;margin:0 0 14px;color:var(--deep);font-size:clamp(23px,3vw,28px);line-height:1.4}
+.sh svg{width:32px;flex:none;color:var(--leaf)}
+.sec{background:#fff;border:2px solid var(--line);border-radius:26px;padding:26px;margin-bottom:22px}
+
+/* intro */
+.intro{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+.intro .ic{width:84px;height:84px;border-radius:50%;background:var(--mist);color:var(--leaf);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 5px #f4faee}
+.intro .ic svg{width:46px;height:46px}
+.intro p{margin:0;font-size:clamp(17px,2.2vw,20px);font-weight:900;color:var(--deep);line-height:1.7}
+.kinds{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.kinds span{display:inline-flex;align-items:center;gap:6px;background:var(--deep);color:#fff;border-radius:999px;padding:3px 16px;font-size:14px;font-weight:900}
+.kinds span.y{background:var(--sprout);color:#3a2e00}
+.kinds svg{width:17px;height:17px}
+
+/* voices */
+.voices{display:grid;gap:14px;margin-top:4px}
+.voice{display:flex;gap:14px;align-items:flex-end}
+.voice:nth-child(even){flex-direction:row-reverse}
+.av{flex:none;width:68px;height:68px;border-radius:50%;overflow:hidden;display:block;box-shadow:0 0 0 3px #fff,0 0 0 5px var(--line)}
+.av svg{width:100%;height:100%;display:block}
+.voice:nth-child(1) .av{background:#dff1d3}
+.voice:nth-child(2) .av{background:#fde6cc}
+.voice:nth-child(3) .av{background:#dcebf6}
+.bub{position:relative;background:#f7fbf2;border:2px solid var(--line);border-radius:22px;padding:12px 20px;font-size:clamp(19px,2.4vw,23px);color:var(--deep);line-height:1.5}
+.voice:nth-child(1) .bub{border-bottom-left-radius:6px}
+.voice:nth-child(2) .bub{background:#fff8e9;border-color:#f0dcae;border-bottom-right-radius:6px}
+.voice:nth-child(3) .bub{background:#eef6fb;border-color:#c7e0ee;border-bottom-left-radius:6px}
+
+/* target */
+.target{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.tg{background:#f7fbf2;border-radius:20px;padding:18px;text-align:center}
+.tg i{display:flex;width:54px;height:54px;margin:0 auto 8px;border-radius:50%;background:var(--mist);color:var(--leaf);align-items:center;justify-content:center}
+.tg i svg{width:28px;height:28px}
+.tg b{display:block;font-size:17px;color:var(--deep);line-height:1.5}
+.tg small{font-size:13px;color:var(--sub)}
+.tg.y{background:#fff8e1}.tg.y i{background:#fff0bf;color:#9a7300}
+.sec p.full{margin:0;font-size:15px;color:var(--sub);text-align:center}
+
+/* message */
+.msg{position:relative;display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:center;background:var(--deep);color:#fff;border-radius:28px;padding:30px;margin-bottom:22px;overflow:hidden}
+.msg .deco{position:absolute;right:-30px;top:-30px;width:180px;color:#2f6e3c;opacity:.7;transform:rotate(-20deg)}
+.msg>*{position:relative}
+.msg h2{margin:0 0 10px;font-size:clamp(28px,3.6vw,36px);color:#c9f2a8;line-height:1.35}
+.msg p{margin:0;color:#e6f2dd;font-size:16px}
+.pics{position:relative;height:250px}
+.pics img{position:absolute;width:58%;aspect-ratio:4/3;object-fit:cover;border:6px solid #fff;border-radius:14px;box-shadow:0 8px 18px rgba(0,0,0,.25)}
+.pics img:nth-child(1){left:0;top:0;transform:rotate(-5deg)}
+.pics img:nth-child(2){right:0;top:20px;transform:rotate(4deg)}
+.pics img:nth-child(3){left:20%;bottom:0;transform:rotate(-1deg);z-index:2}
+
+/* anytime */
+.any{display:flex;gap:18px;align-items:center;background:#fff8e1;border:2px dashed #ecd48a;border-radius:24px;padding:20px 24px;margin-bottom:22px}
+.any .ic{flex:none;width:64px;height:64px;border-radius:50%;background:var(--sprout);color:#3a2e00;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 0 #d9ac2a}
+.any .ic svg{width:34px;height:34px}
+.any b{display:block;font-size:clamp(19px,2.4vw,23px);color:#6a4e00;line-height:1.5}
+.any span{font-size:14px;color:var(--sub)}
+
+.more{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 0 6px}
+.more a{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:14px;border-radius:999px;padding:7px 18px;box-shadow:0 3px 0 var(--line)}
+.more a:hover{transform:translateY(1px);box-shadow:0 2px 0 var(--line)}
+.more-cap{text-align:center;font-size:13px;color:var(--sub);margin:0 0 10px}
+
+/* contact */
+.ct{position:relative;overflow:hidden;background:#1e4d2b;color:#fff;border-radius:26px;padding:26px 28px 24px;margin:24px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px 30px;align-items:center}
+.ct>*{position:relative}
+.ct .ct-deco{position:absolute;right:-30px;bottom:-34px;width:210px;color:#3f8f3a;opacity:.35;transform:rotate(-12deg)}
+.ct h2{grid-column:1/-1;margin:0;font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400;font-size:clamp(22px,3vw,28px);color:#c9f2a8;line-height:1.4;display:flex;align-items:center;gap:8px}
+.ct h2 svg{width:34px;flex:none;color:#9fe68a}
+.ct-who{display:flex;gap:14px;align-items:center}
+.ct-who img{width:64px;height:64px;flex:none;border-radius:50%;background:#fff;padding:2px}
+.ct-who small{display:block;font-size:12px;color:#cfe4c6}
+.ct-who b{display:block;font-size:20px;font-weight:900;letter-spacing:.04em;line-height:1.4}
+.ct-addr{font-size:13px;color:#e6f2dd;margin:10px 0 0;line-height:1.7}
+.ct-call{background:rgba(255,255,255,.08);border:1px solid rgba(201,242,168,.35);border-radius:20px;padding:16px 18px;text-align:center}
+.ct-call span{display:block;font-size:13px;color:#c9f2a8;font-weight:700}
+.ct-tel{display:flex;align-items:center;justify-content:center;gap:10px;margin:8px 0;background:#fff;color:#1e4d2b;text-decoration:none;border-radius:999px;padding:10px 14px;font-size:clamp(21px,2.6vw,25px);font-weight:900;letter-spacing:.03em;white-space:nowrap;box-shadow:0 4px 0 #f3c94a}
+.ct-tel svg{width:22px;flex:none;color:#3f8f3a}
+.ct-tel:hover{transform:translateY(1px);box-shadow:0 3px 0 #f3c94a}
+.ct-call small{display:block;font-size:12.5px;color:#e6f2dd}
+
+@media(max-width:680px){
+ .top{min-height:260px;padding:22px}
+ .sec{padding:20px 16px}
+ .intro{grid-template-columns:1fr;text-align:center;justify-items:center}
+ .kinds{justify-content:center}
+ .target{grid-template-columns:1fr}
+ .msg{grid-template-columns:1fr;padding:24px 20px}
+ .pics{height:220px}
+ .av{width:54px;height:54px}
+ .any{flex-direction:column;text-align:center;padding:18px}
+}
+/* 見出しを見やすく太く */
+h1,h2,h3,h4{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif!important;letter-spacing:.02em}
+h1,h2{font-weight:900!important}
+h3.hand,h4.hand{font-weight:700!important}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">← 前へ</a>
+
+<header class="top"><div>
+<span class="eyebrow">学生の方へ</span>
+<h1 class="hand">わかば幼稚園に<wbr>来てみません<span style="white-space:nowrap">か？<svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span></h1>
+</div></header>
+
+<section class="sec" aria-label="募集について">
+<div class="intro"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="6" r="2.5"/><circle cx="16" cy="6" r="2.5"/><path d="M3.5 20v-4.5a4.5 4.5 0 0 1 9 0V20"/><path d="M11.5 20v-4.5a4.5 4.5 0 0 1 9 0V20"/></svg></span>
+<div><p>わかば幼稚園ではボランティア、職場体験をしてみたい学生さんを募集します！</p>
+<div class="kinds"><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-9.5A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.5C19 15.6 12 20 12 20z"/></svg>ボランティア</span><span class="y"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="14" rx="2.5"/><path d="M9 6V4.5h6V6"/><path d="M4 12h16"/></svg>職場体験</span></div></div></div>
+</section>
+
+<section class="sec" aria-labelledby="h-voice">
+<h2 class="sh hand" id="h-voice"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>こんな方をお待ちしています</h2>
+<div class="voices">
+<div class="voice"><span class="av"><svg viewBox="6 8 52 54" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linejoin="round"><path d="M14 44c-3-16 3-28 18-28s21 12 18 28c-2 3-6 3-7 0V34H21v10c-1 3-5 3-7 0z" fill="#6b4a33"/><path d="M26 50v8h12v-8" fill="#ffe9d6"/><path d="M14 64c2-8 9-11 18-11s16 3 18 11z" fill="#fff" /><circle cx="32" cy="33" r="16" fill="#ffe9d6"/><path d="M16 32c1-10 7-16 16-16s15 6 16 16c-5-4-10-6-16-6-3 2-8 4-16 6z" fill="#6b4a33"/><path d="M24 35q2.5-2.5 5 0M35 35q2.5-2.5 5 0" fill="none" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round"/><path d="M28.5 41q3.5 3 7 0" fill="none" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round"/><circle cx="22.5" cy="40" r="2.6" fill="#f7b3a8" stroke="none"/><circle cx="41.5" cy="40" r="2.6" fill="#f7b3a8" stroke="none"/></svg></span><p class="bub hand" style="margin:0">「どんな園なのか実際に見てみたい！」</p></div>
+<div class="voice"><span class="av"><svg viewBox="6 8 52 54" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linejoin="round"><path d="M26 50v8h12v-8" fill="#ffe9d6"/><path d="M14 64c2-8 9-11 18-11s16 3 18 11z" fill="#fff" /><circle cx="32" cy="33" r="16" fill="#ffe9d6"/><path d="M16 31c-1-11 6-18 16-18 9 0 16 6 16 16-2-3-5-5-8-5 1-2 1-4 0-5-3 3-8 5-14 5-4 0-7 3-10 7z" fill="#2f2622"/><path d="M24 35q2.5-2.5 5 0M35 35q2.5-2.5 5 0" fill="none" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round"/><path d="M28.5 41q3.5 3 7 0" fill="none" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round"/><circle cx="22.5" cy="40" r="2.6" fill="#f7b3a8" stroke="none"/><circle cx="41.5" cy="40" r="2.6" fill="#f7b3a8" stroke="none"/></svg></span><p class="bub hand" style="margin:0">「実習園だけではなく、他の園も知りたい！」</p></div>
+<div class="voice"><span class="av"><svg viewBox="6 8 52 54" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linejoin="round"><path d="M13 56c-3-24 3-40 19-40s22 16 19 40c-3 2-7 2-9 0V34H22v22c-2 2-6 2-9 0z" fill="#3d2f2a"/><path d="M26 50v8h12v-8" fill="#ffe9d6"/><path d="M14 64c2-8 9-11 18-11s16 3 18 11z" fill="#fff" /><circle cx="32" cy="33" r="16" fill="#ffe9d6"/><path d="M16 33c1-11 7-17 16-17s15 6 16 17c-4-6-9-9-15-9l-2 3c-5 1-11 3-15 6z" fill="#3d2f2a"/><path d="M24 35q2.5-2.5 5 0M35 35q2.5-2.5 5 0" fill="none" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round"/><path d="M28.5 41q3.5 3 7 0" fill="none" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round"/><circle cx="22.5" cy="40" r="2.6" fill="#f7b3a8" stroke="none"/><circle cx="41.5" cy="40" r="2.6" fill="#f7b3a8" stroke="none"/><circle cx="46" cy="22" r="3" fill="#f3c94a"/></svg></span><p class="bub hand" style="margin:0">「子どもたちと関わりたい！」</p></div>
+</div>
+</section>
+
+<section class="sec" aria-labelledby="h-tg">
+<h2 class="sh hand" id="h-tg"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>対象</h2>
+<div class="target">
+<div class="tg"><i><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 11.5v4c2 2 10 2 12 0v-4"/><path d="M22 9.5v5"/></svg></i><b>就職年度の学生さん</b></div>
+<div class="tg y"><i><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4.5L16 4.5a2.1 2.1 0 0 1 3 3L8 18.5z"/><path d="M14 6.5l3 3"/></svg></i><b>将来の進路を真剣に考えている<br>中学、高校生の皆さん</b></div>
+</div>
+<p class="full">就職年度の学生さんに限らず将来の進路を真剣に考えている中学、高校生の皆さんも対象にしています。</p>
+</section>
+
+<section class="msg" aria-labelledby="h-msg">
+<span class="deco"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span>
+<div><h2 class="hand" id="h-msg">是非1度足を<wbr>運んでみてください！</h2>
+<p>そしてわかば幼稚園の雰囲気を感じていただけたらと思います。</p></div>
+<div class="pics"><img src="images/9170a543525c.jpg" alt="工作をする子どもたち" loading="lazy"><img src="images/d83e032fa77a.jpg" alt="保育室で遊ぶ子どもたち" loading="lazy"><img src="images/3c9d0b3682b1.jpg" alt="先生の読み聞かせを聞く子どもたち" loading="lazy"></div>
+</section>
+
+<div class="any">
+<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg></span>
+<div><b>「長期休暇中に体験したい」など、随時受け付けています！</b></div>
+</div>
+
+<p class="more-cap">わかば幼稚園のことを、もう少し知りたい方へ</p>
+<div class="more">
+<a href="ichinichi.html">わかばの一日の流れ →</a>
+<a href="jiyusagyo.html">自由作業 →</a>
+<a href="gyoji.html">1年間の行事 →</a>
+</div>
+
+<section class="ct" aria-label="お問い合わせ先"><span class="ct-deco"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span>
+<h2><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>ご興味ある方はお電話でお問い合わせください。</h2>
+<div><div class="ct-who"><img src="images/0f056ef1c070.png" alt=""><div><small>学校法人わかば学園</small><b>わかば幼稚園</b></div></div>
+<p class="ct-addr">〒464-0032 名古屋市千種区猫洞通2丁目13番地</p></div>
+<div class="ct-call"><span>お電話でのお問い合わせ</span><a class="ct-tel" href="tel:0527823651"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>052-782-3651</a><small>受付時間　平日 9:00〜15:00</small></div>
+</section>
+</div>
+</body></html>

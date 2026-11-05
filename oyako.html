@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>親子ひろば・園庭開放 | わかば幼稚園</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Yomogi&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#edf6e3;--ink:#1d2b21;--sub:#5a6b5f;--line:#c6dbb0;--leaf:#3f8f3a;--deep:#1e4d2b;--mist:#dbecc8;--sprout:#f3c94a;
+--hi:#3f8f3a;--hi-bg:#e3f2d6;--te:#e0a21b;--te-bg:#fff4cf;--te-ink:#7a5600;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{height:100%;scroll-behavior:smooth}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;line-height:1.85}
+.wrap{max-width:840px;margin:0 auto;padding:36px 20px 56px}
+a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:999px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:13px}
+.hand{font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400}
+
+.top{position:relative;border-radius:26px;overflow:hidden;display:grid;grid-template-columns:1fr 1.25fr;margin-bottom:24px;background:var(--deep)}
+.top>div{position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:30px 28px;overflow:hidden}
+.top>div::before{content:"";position:absolute;left:-40px;top:-50px;width:190px;height:190px;border-radius:50%;background:#2a6038;opacity:.7}
+.top>div>*{position:relative}
+.top .ph{margin:0;min-height:100%}
+.top .ph img{display:block;width:100%;height:100%;aspect-ratio:1280/1166;object-fit:cover}
+.top h1{margin:0;color:#c9f2a8;font-size:clamp(32px,6vw,54px);line-height:1.2;word-break:keep-all;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+.top p{margin:8px 0 0;color:#f0f7ea;font-size:15px}
+
+.sh{display:flex;align-items:center;gap:8px;margin:0 0 14px;color:var(--deep);font-size:clamp(23px,3vw,28px);line-height:1.4}
+.sh svg{width:32px;flex:none;color:var(--leaf)}
+
+/* two tiles */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
+.tile{--c:var(--hi);--cb:var(--hi-bg);--ci:var(--deep);position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;border:2px solid var(--line);border-radius:26px;padding:22px 20px 18px;text-decoration:none;color:inherit;transition:transform .2s,border-color .2s}
+.tile.te{--c:var(--te);--cb:var(--te-bg);--ci:var(--te-ink)}
+.tile:hover{transform:translateY(-3px);border-color:var(--c)}
+.tile img{width:118px;height:118px;border-radius:50%;object-fit:cover;border:5px solid var(--cb);box-shadow:0 0 0 2px var(--c)}
+.tile .where{margin-top:12px;font-size:12.5px;font-weight:700;color:var(--ci);background:var(--cb);border-radius:999px;padding:1px 12px}
+.tile h2{margin:6px 0 2px;font-size:30px;line-height:1.3;color:var(--deep)}
+.tile p{margin:0 0 12px;font-size:14px;color:var(--sub)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:6px;width:100%;margin:0;padding:0;list-style:none}
+.facts li{background:#f7fbf2;border-radius:12px;padding:6px 8px;font-size:12.5px;line-height:1.5;color:var(--sub)}
+.facts b{display:block;font-size:14.5px;color:var(--deep)}
+.facts li.key{background:var(--cb)}
+.facts li.key b{color:var(--ci)}
+.tile .more{margin-top:12px;font-size:13px;font-weight:700;color:var(--ci)}
+
+/* calendar */
+.cal{background:#fff;border:2px solid var(--line);border-radius:26px;padding:24px 24px 20px;margin-bottom:28px}
+.cal-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;margin-bottom:12px}
+.cal-head .sh{margin:0}
+.lg{display:flex;gap:14px;font-size:13px;font-weight:700;color:var(--sub)}
+.lg span{display:flex;align-items:center;gap:6px}
+.lg i{width:16px;height:16px;border-radius:50%}
+.next{display:none;align-items:center;gap:12px;background:var(--deep);color:#fff;border-radius:18px;padding:12px 18px;margin-bottom:16px}
+.next.show{display:flex}
+.next .lb{flex:none;background:var(--sprout);color:#3a2e00;font-weight:900;font-size:12.5px;border-radius:999px;padding:2px 12px}
+.next b{font-size:17px}
+.next small{color:#cfe4c6;font-size:13px;margin-left:4px;white-space:nowrap}
+.months{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.mo h3{margin:0 0 6px;font-size:22px;color:var(--deep);line-height:1.2}
+.mo table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:12px;text-align:center}
+.mo th{font-weight:700;color:#97a98a;padding:2px 0;font-size:11px}
+.mo th:first-child{color:#d0808f}
+.mo td{padding:2px 0;height:26px;color:#7a8a6f}
+.mo td span{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%}
+.mo td.hi span{background:var(--hi);color:#fff;font-weight:900}
+.mo td.te span{background:var(--sprout);color:#3a2e00;font-weight:900}
+.mo td.today span{box-shadow:0 0 0 2px #fff,0 0 0 4px #e0607a}
+.mo td.past span{opacity:.45}
+.mo ul{list-style:none;margin:8px 0 0;padding:0;font-size:12.5px}
+.mo li{display:flex;align-items:center;gap:6px;line-height:1.7}
+.mo li i{width:9px;height:9px;border-radius:50%;flex:none}
+.cal .time{margin:16px 0 0;text-align:center;font-size:14px;color:var(--sub)}
+.cal .time b{font-size:18px;color:var(--deep);margin:0 4px}
+
+/* detail */
+.dt{--c:var(--hi);--cb:var(--hi-bg);--ci:var(--deep);background:#fff;border:2px solid var(--line);border-radius:26px;overflow:hidden;margin-bottom:20px;scroll-margin-top:16px}
+.dt.te{--c:var(--te);--cb:var(--te-bg);--ci:var(--te-ink)}
+.dt-h{display:flex;align-items:center;gap:12px;background:var(--cb);padding:16px 24px;border-bottom:2px solid var(--line)}
+.dt-h .ic{flex:none;width:46px;height:46px;border-radius:50%;background:#fff;color:var(--c);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px var(--c)}
+.dt-h .ic svg{width:26px;height:26px}
+.dt-h h2{margin:0;font-size:clamp(26px,3.4vw,32px);color:var(--deep);line-height:1.2}
+.dt-h small{display:block;font-family:"Zen Maru Gothic",sans-serif;font-size:13px;color:var(--ci);font-weight:700}
+.dt-b{padding:20px 24px 22px}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.badges span{background:var(--cb);color:var(--ci);border-radius:999px;padding:2px 12px;font-size:13px;font-weight:700}
+.badges span.k{background:var(--c);color:#fff}
+.dt.te .badges span.k{color:#3a2e00;background:var(--sprout)}
+.dt p{margin:0 0 8px;font-size:15px}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 6px}
+.gal img,.wide img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
+.wide{margin:16px 0 6px}
+.wide img{aspect-ratio:12/5}
+.cap{font-size:13px;color:var(--sub);text-align:center;margin:0 0 14px}
+.info{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;background:#f7fbf2;border-radius:18px;padding:14px 18px;margin-top:14px;font-size:14px;align-items:baseline}
+.info dt{font-weight:900;color:var(--ci);font-size:13px}
+.info dd{margin:0}
+.info .dl{display:flex;flex-wrap:wrap;gap:4px 8px}
+.info .dl span{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:0 8px;font-size:13.5px;white-space:nowrap}
+.tip{display:flex;gap:10px;align-items:flex-start;margin-top:12px;font-size:13.5px;color:var(--sub)}
+.tip svg{flex:none;width:20px;height:20px;color:var(--c);margin-top:3px}
+.welcome{margin-top:14px;text-align:center;font-size:22px;color:var(--leaf)}
+
+/* contact */
+.ct{position:relative;overflow:hidden;background:#1e4d2b;color:#fff;border-radius:26px;padding:26px 28px 24px;margin:24px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px 30px;align-items:center}
+.ct>*{position:relative}
+.ct .ct-deco{position:absolute;right:-30px;bottom:-34px;width:210px;color:#3f8f3a;opacity:.35;transform:rotate(-12deg)}
+.ct h2{grid-column:1/-1;margin:0;font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400;font-size:clamp(22px,3vw,28px);color:#c9f2a8;line-height:1.4;display:flex;align-items:center;gap:8px}
+.ct h2 svg{width:34px;flex:none;color:#9fe68a}
+.ct-who{display:flex;gap:14px;align-items:center}
+.ct-who img{width:64px;height:64px;flex:none;border-radius:50%;background:#fff;padding:2px}
+.ct-who small{display:block;font-size:12px;color:#cfe4c6}
+.ct-who b{display:block;font-size:20px;font-weight:900;letter-spacing:.04em;line-height:1.4}
+.ct-addr{font-size:13px;color:#e6f2dd;margin:10px 0 0;line-height:1.7}
+.ct-call{background:rgba(255,255,255,.08);border:1px solid rgba(201,242,168,.35);border-radius:20px;padding:16px 18px;text-align:center}
+.ct-call span{display:block;font-size:13px;color:#c9f2a8;font-weight:700}
+.ct-tel{display:flex;align-items:center;justify-content:center;gap:10px;margin:8px 0;background:#fff;color:#1e4d2b;text-decoration:none;border-radius:999px;padding:10px 14px;font-size:clamp(21px,2.6vw,25px);font-weight:900;letter-spacing:.03em;white-space:nowrap;box-shadow:0 4px 0 #f3c94a}
+.ct-tel svg{width:22px;flex:none;color:#3f8f3a}
+.ct-tel:hover{transform:translateY(1px);box-shadow:0 3px 0 #f3c94a}
+.ct-call small{display:block;font-size:12.5px;color:#e6f2dd}
+
+@media(max-width:720px){.months{grid-template-columns:1fr 1fr;gap:18px 16px}}
+@media(max-width:600px){
+ .top{grid-template-columns:1fr}
+ .top .ph{order:-1}
+ .top>div{padding:20px 22px 24px}
+ .top h1{font-size:30px}
+ .pair{grid-template-columns:1fr}
+ .cal{padding:20px 16px}
+ .dt-h{padding:14px 18px}
+ .dt-b{padding:18px}
+ .gal{grid-template-columns:1fr}
+ .wide img{aspect-ratio:16/9}
+ .next{flex-wrap:wrap;gap:4px 10px}
+}
+@media(max-width:380px){.months{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile{transition:none}}
+/* 見出しを見やすく太く */
+h1,h2,h3,h4{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif!important;letter-spacing:.02em}
+h1,h2{font-weight:900!important}
+h3.hand,h4.hand{font-weight:700!important}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">← 前へ</a>
+
+<header class="top"><div><h1 class="hand">親子ひろば・<wbr>園庭開放</h1><p>0歳〜就園前のお子さまと保護者の方のための遊びの場です</p></div><figure class="ph"><img src="images/6d2e5a0e34a8.jpg" alt="保育室で親子が布やおもちゃで遊ぶ親子ひろばのようす"></figure></header>
+
+<div class="pair">
+<a class="tile" href="#hiroba"><img src="images/a7b654ccfa43.jpg" alt=""><span class="where">お部屋で・親子で</span><h2 class="hand">親子ひろば</h2><p>室内遊びや親子でできる簡単な遊び</p>
+<ul class="facts"><li>対象<b>0歳〜就園前</b></li><li class="key">予約<b>要予約</b></li><li>参加費<b>無料</b></li><li>開催<b>月2回・金曜</b></li></ul><span class="more">くわしく見る ↓</span></a>
+<a class="tile te" href="#teien"><img src="images/4b52d08fd75c.jpg" alt=""><span class="where">お外で・自由に</span><h2 class="hand">園庭開放</h2><p>園庭で、ご自由に遊んでいただけます</p>
+<ul class="facts"><li>対象<b>未就園児の親子</b></li><li class="key">予約<b>予約不要</b></li><li>参加費<b>無料</b></li><li>開催<b>月1回・金曜</b></li></ul><span class="more">くわしく見る ↓</span></a>
+</div>
+
+<section class="cal" aria-labelledby="h-cal">
+<div class="cal-head"><h2 class="sh hand" id="h-cal"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>開催日予定表</h2>
+<div class="lg"><span><i style="background:var(--hi)"></i>親子ひろば</span><span><i style="background:var(--sprout)"></i>園庭開放</span></div></div>
+<div class="next" id="next" aria-live="polite"><span class="lb" id="next-lb">つぎの開催</span><div><b id="next-d"></b><small id="next-t"></small></div></div>
+<div class="months">
+<div class="mo"><h3 class="hand">11月</h3><table><caption class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">2026年11月</caption><thead><tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr></thead><tbody><tr><td data-d="2026-11-1"><span>1</span></td><td data-d="2026-11-2"><span>2</span></td><td data-d="2026-11-3"><span>3</span></td><td data-d="2026-11-4"><span>4</span></td><td data-d="2026-11-5"><span>5</span></td><td class="hi" data-d="2026-11-6"><span>6</span></td><td data-d="2026-11-7"><span>7</span></td></tr><tr><td data-d="2026-11-8"><span>8</span></td><td data-d="2026-11-9"><span>9</span></td><td data-d="2026-11-10"><span>10</span></td><td data-d="2026-11-11"><span>11</span></td><td data-d="2026-11-12"><span>12</span></td><td class="te" data-d="2026-11-13"><span>13</span></td><td data-d="2026-11-14"><span>14</span></td></tr><tr><td data-d="2026-11-15"><span>15</span></td><td data-d="2026-11-16"><span>16</span></td><td data-d="2026-11-17"><span>17</span></td><td data-d="2026-11-18"><span>18</span></td><td data-d="2026-11-19"><span>19</span></td><td class="hi" data-d="2026-11-20"><span>20</span></td><td data-d="2026-11-21"><span>21</span></td></tr><tr><td data-d="2026-11-22"><span>22</span></td><td data-d="2026-11-23"><span>23</span></td><td data-d="2026-11-24"><span>24</span></td><td data-d="2026-11-25"><span>25</span></td><td data-d="2026-11-26"><span>26</span></td><td data-d="2026-11-27"><span>27</span></td><td data-d="2026-11-28"><span>28</span></td></tr><tr><td data-d="2026-11-29"><span>29</span></td><td data-d="2026-11-30"><span>30</span></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table><ul><li><i style="background:var(--hi)"></i>6日（金）親子ひろば</li><li><i style="background:var(--sprout)"></i>13日（金）園庭開放</li><li><i style="background:var(--hi)"></i>20日（金）親子ひろば</li></ul></div>
+<div class="mo"><h3 class="hand">12月</h3><table><caption class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">2026年12月</caption><thead><tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr></thead><tbody><tr><td></td><td></td><td data-d="2026-12-1"><span>1</span></td><td data-d="2026-12-2"><span>2</span></td><td data-d="2026-12-3"><span>3</span></td><td class="hi" data-d="2026-12-4"><span>4</span></td><td data-d="2026-12-5"><span>5</span></td></tr><tr><td data-d="2026-12-6"><span>6</span></td><td data-d="2026-12-7"><span>7</span></td><td data-d="2026-12-8"><span>8</span></td><td data-d="2026-12-9"><span>9</span></td><td data-d="2026-12-10"><span>10</span></td><td class="te" data-d="2026-12-11"><span>11</span></td><td data-d="2026-12-12"><span>12</span></td></tr><tr><td data-d="2026-12-13"><span>13</span></td><td data-d="2026-12-14"><span>14</span></td><td data-d="2026-12-15"><span>15</span></td><td data-d="2026-12-16"><span>16</span></td><td data-d="2026-12-17"><span>17</span></td><td class="hi" data-d="2026-12-18"><span>18</span></td><td data-d="2026-12-19"><span>19</span></td></tr><tr><td data-d="2026-12-20"><span>20</span></td><td data-d="2026-12-21"><span>21</span></td><td data-d="2026-12-22"><span>22</span></td><td data-d="2026-12-23"><span>23</span></td><td data-d="2026-12-24"><span>24</span></td><td data-d="2026-12-25"><span>25</span></td><td data-d="2026-12-26"><span>26</span></td></tr><tr><td data-d="2026-12-27"><span>27</span></td><td data-d="2026-12-28"><span>28</span></td><td data-d="2026-12-29"><span>29</span></td><td data-d="2026-12-30"><span>30</span></td><td data-d="2026-12-31"><span>31</span></td><td></td><td></td></tr></tbody></table><ul><li><i style="background:var(--hi)"></i>4日（金）親子ひろば</li><li><i style="background:var(--sprout)"></i>11日（金）園庭開放</li><li><i style="background:var(--hi)"></i>18日（金）親子ひろば</li></ul></div>
+<div class="mo"><h3 class="hand">1月</h3><table><caption class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">2027年1月</caption><thead><tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td data-d="2027-1-1"><span>1</span></td><td data-d="2027-1-2"><span>2</span></td></tr><tr><td data-d="2027-1-3"><span>3</span></td><td data-d="2027-1-4"><span>4</span></td><td data-d="2027-1-5"><span>5</span></td><td data-d="2027-1-6"><span>6</span></td><td data-d="2027-1-7"><span>7</span></td><td data-d="2027-1-8"><span>8</span></td><td data-d="2027-1-9"><span>9</span></td></tr><tr><td data-d="2027-1-10"><span>10</span></td><td data-d="2027-1-11"><span>11</span></td><td data-d="2027-1-12"><span>12</span></td><td data-d="2027-1-13"><span>13</span></td><td data-d="2027-1-14"><span>14</span></td><td class="hi" data-d="2027-1-15"><span>15</span></td><td data-d="2027-1-16"><span>16</span></td></tr><tr><td data-d="2027-1-17"><span>17</span></td><td data-d="2027-1-18"><span>18</span></td><td data-d="2027-1-19"><span>19</span></td><td data-d="2027-1-20"><span>20</span></td><td data-d="2027-1-21"><span>21</span></td><td data-d="2027-1-22"><span>22</span></td><td data-d="2027-1-23"><span>23</span></td></tr><tr><td data-d="2027-1-24"><span>24</span></td><td data-d="2027-1-25"><span>25</span></td><td data-d="2027-1-26"><span>26</span></td><td data-d="2027-1-27"><span>27</span></td><td data-d="2027-1-28"><span>28</span></td><td class="hi" data-d="2027-1-29"><span>29</span></td><td data-d="2027-1-30"><span>30</span></td></tr><tr><td data-d="2027-1-31"><span>31</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table><ul><li><i style="background:var(--hi)"></i>15日（金）親子ひろば</li><li><i style="background:var(--hi)"></i>29日（金）親子ひろば</li></ul></div>
+<div class="mo"><h3 class="hand">2月</h3><table><caption class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">2027年2月</caption><thead><tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr></thead><tbody><tr><td></td><td data-d="2027-2-1"><span>1</span></td><td data-d="2027-2-2"><span>2</span></td><td data-d="2027-2-3"><span>3</span></td><td data-d="2027-2-4"><span>4</span></td><td data-d="2027-2-5"><span>5</span></td><td data-d="2027-2-6"><span>6</span></td></tr><tr><td data-d="2027-2-7"><span>7</span></td><td data-d="2027-2-8"><span>8</span></td><td data-d="2027-2-9"><span>9</span></td><td data-d="2027-2-10"><span>10</span></td><td data-d="2027-2-11"><span>11</span></td><td data-d="2027-2-12"><span>12</span></td><td data-d="2027-2-13"><span>13</span></td></tr><tr><td data-d="2027-2-14"><span>14</span></td><td data-d="2027-2-15"><span>15</span></td><td data-d="2027-2-16"><span>16</span></td><td data-d="2027-2-17"><span>17</span></td><td data-d="2027-2-18"><span>18</span></td><td class="hi" data-d="2027-2-19"><span>19</span></td><td data-d="2027-2-20"><span>20</span></td></tr><tr><td data-d="2027-2-21"><span>21</span></td><td data-d="2027-2-22"><span>22</span></td><td data-d="2027-2-23"><span>23</span></td><td data-d="2027-2-24"><span>24</span></td><td data-d="2027-2-25"><span>25</span></td><td class="hi" data-d="2027-2-26"><span>26</span></td><td data-d="2027-2-27"><span>27</span></td></tr><tr><td data-d="2027-2-28"><span>28</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table><ul><li><i style="background:var(--hi)"></i>19日（金）親子ひろば</li><li><i style="background:var(--hi)"></i>26日（金）親子ひろば</li></ul></div>
+</div>
+<p class="time">全日程<b>10:00〜11:00</b>です</p>
+</section>
+
+<section class="dt" id="hiroba" aria-labelledby="h-hi">
+<div class="dt-h"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><circle cx="12" cy="14.5" r="2.5"/></svg></span><h2 class="hand" id="h-hi">親子ひろば<small>お部屋で・親子で</small></h2></div>
+<div class="dt-b">
+<div class="badges"><span>対象：0歳〜就園前</span><span>参加費無料</span><span class="k">要予約</span></div>
+<p>０歳〜就園前までのお子様のための親子で楽しむ遊びの場です。<br>室内遊びや園庭開放・親子でできる簡単な遊びをします。<br>同じ年頃のお子様との交流の場としてもご活用ください！</p>
+<div class="gal"><img src="images/a4cbfc25c209.jpg" alt="親子ひろばでうたを楽しむ様子" loading="lazy"><img src="images/8343f99e2c8e.jpg" alt="親子ひろばで遊ぶ様子" loading="lazy"></div>
+<p class="cap">うたや手遊びを楽しんだり、ゆったり遊んだり</p>
+<dl class="info"><dt>日程</dt><dd class="dl"><span>11月 6日・20日</span><span>12月 4日・18日</span><span>1月 15日・29日</span><span>2月 19日・26日</span></dd><dt>時間</dt><dd>全日程 10時〜11時（いずれも金曜日）</dd></dl>
+<div class="tip"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg><span>暑い時期には水に触れる機会も設けます。必要な方は着替えをお持ちください。</span></div>
+<p class="welcome hand">お気軽に遊びに来てください！</p>
+</div></section>
+
+<section class="dt te" id="teien" aria-labelledby="h-te">
+<div class="dt-h"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></span><h2 class="hand" id="h-te">園庭開放<small>お外で・自由に</small></h2></div>
+<div class="dt-b">
+<div class="badges"><span>対象：未就園児の親子</span><span>参加費無料</span><span class="k">予約不要</span></div>
+<p>未就園のお子さんを持つ親子を対象に、園庭を開放し、ご自由に遊んでいただく場を提供します。<br>来園されましたら受付をお願いします。</p>
+<div class="wide"><img src="images/047c472c7741.jpg" alt="砂場や遊具のある園庭" loading="lazy"></div>
+<p class="cap">砂場や遊具のある園庭で、日よけの下でゆったり遊べます</p>
+<dl class="info"><dt>日程</dt><dd class="dl"><span>11月 13日</span><span>12月 11日</span></dd><dt>時間</dt><dd>全日程 10時〜11時（いずれも金曜日）</dd></dl>
+<div class="tip"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c0-5 3-9 7-9s7 4 7 9"/><path d="M2.5 15.5h19"/></svg><span>暑い時期は帽子や水筒をお持ちいただくことをおすすめします。</span></div>
+<p class="welcome hand">お気軽に遊びに来てください！</p>
+</div></section>
+
+<section class="ct" aria-label="お問い合わせ先"><span class="ct-deco"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span>
+<h2><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>お気軽にお問い合わせください</h2>
+<div><div class="ct-who"><img src="images/0f056ef1c070.png" alt=""><div><small>学校法人わかば学園</small><b>わかば幼稚園</b></div></div>
+<p class="ct-addr">〒464-0032 名古屋市千種区猫洞通2丁目13番地<br>見学は随時受け付けています。</p></div>
+<div class="ct-call"><span>お電話でのお問い合わせ</span><a class="ct-tel" href="tel:0527823651"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>052-782-3651</a><small>受付時間　平日 9:00〜15:00</small></div>
+</section>
+</div>
+
+<script>
+(function(){
+var EV=[["2026-11-06", "親子ひろば"], ["2026-11-13", "園庭開放"], ["2026-11-20", "親子ひろば"], ["2026-12-04", "親子ひろば"], ["2026-12-11", "園庭開放"], ["2026-12-18", "親子ひろば"], ["2027-01-15", "親子ひろば"], ["2027-01-29", "親子ひろば"], ["2027-02-19", "親子ひろば"], ["2027-02-26", "親子ひろば"]];
+var now=new Date();var t0=new Date(now.getFullYear(),now.getMonth(),now.getDate()).getTime();
+var cells=document.querySelectorAll('td[data-d]');
+[].forEach.call(cells,function(td){var p=td.dataset.d.split('-');var t=new Date(+p[0],+p[1]-1,+p[2]).getTime();
+ if(t===t0)td.classList.add('today');else if(t<t0&&td.classList.length)td.classList.add('past');});
+var nx=null;for(var i=0;i<EV.length;i++){var p=EV[i][0].split('-');var t=new Date(+p[0],+p[1]-1,+p[2]).getTime();if(t>=t0){nx=EV[i];nx.t=t;break}}
+if(nx){var p=nx[0].split('-');
+ document.getElementById('next-lb').textContent=nx.t===t0?'きょう開催':'つぎの開催';
+ document.getElementById('next-d').textContent=(+p[1])+'月'+(+p[2])+'日（金）　'+nx[1];
+ document.getElementById('next-t').textContent='10:00〜11:00';
+ document.getElementById('next').classList.add('show');}
+})();
+</script>
+</body></html>

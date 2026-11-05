@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>実績と歴史 | わかば幼稚園</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Yomogi&family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#edf6e3;--ink:#1d2b21;--sub:#5a6b5f;--line:#c6dbb0;--leaf:#3f8f3a;--deep:#1e4d2b;--mist:#dbecc8;--sprout:#f3c94a;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{height:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;line-height:1.9}
+.wrap{max-width:840px;margin:0 auto;padding:36px 20px 56px}
+a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:999px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:13px}
+.hand{font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400}
+
+.top{position:relative;border-radius:26px;overflow:hidden;min-height:330px;display:flex;align-items:flex-end;padding:30px;margin-bottom:24px;background:#1e4d2b url(images/66e521993e1e.jpg) center 40%/cover}
+.top::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,14,0) 25%,rgba(8,24,14,.82))}
+.top>div:not(.since){position:relative}
+.top h1{margin:0;color:#c9f2a8;font-size:clamp(34px,6vw,54px);line-height:1.25;text-shadow:0 2px 10px rgba(0,0,0,.45);word-break:keep-all}
+.top p{margin:8px 0 0;color:#f0f7ea;font-size:15.5px}
+.since{position:absolute;top:22px;right:24px;width:104px;height:104px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 0 var(--sprout);transform:rotate(6deg);color:var(--deep);text-align:center;line-height:1.2}
+.since small{font-size:11px;font-weight:900;color:var(--leaf);letter-spacing:.1em}
+.since b{font-family:"Shippori Mincho B1","Hiragino Mincho ProN",serif;font-weight:800;font-size:17px;white-space:nowrap}
+.since span{font-size:11px;font-weight:700;color:var(--sub)}
+
+.sh{display:flex;align-items:center;gap:8px;margin:0 0 16px;color:var(--deep);font-size:clamp(25px,3.4vw,31px);line-height:1.35}
+.sh svg{width:34px;flex:none;color:var(--leaf)}
+.sec{background:#fff;border:2px solid var(--line);border-radius:26px;padding:28px;margin-bottom:24px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:18px}
+.st{position:relative;border-radius:22px;padding:18px 10px 16px;text-align:center;background:#f7fbf2;overflow:hidden}
+.st small{display:block;font-size:13px;font-weight:700;color:var(--sub)}
+.st b{display:block;font-family:"Shippori Mincho B1","Hiragino Mincho ProN",serif;font-weight:800;font-size:clamp(38px,6vw,52px);line-height:1.15;color:var(--deep);letter-spacing:.02em}
+.st b span{font-family:"Zen Maru Gothic",sans-serif;font-size:16px;font-weight:900;margin-left:2px}
+.st b em{font-style:normal;font-family:"Zen Maru Gothic",sans-serif;font-size:15px;font-weight:900;margin-right:2px}
+.st.y{background:#fff8e1}
+.st.y b{color:#8a5a00}
+.st.p{background:#eef6fb}
+.st.p b{color:#2f5f88}
+.lead{font-size:16px;margin:0 0 14px}
+.bld{position:relative;margin:0 0 14px;border-radius:20px;overflow:hidden}
+.bld img{display:block;width:100%;height:auto}
+.bld figcaption{position:absolute;right:12px;bottom:10px;background:rgba(255,255,255,.92);color:var(--deep);font-weight:900;font-size:13px;border-radius:999px;padding:2px 14px}
+.aside{display:flex;gap:12px;align-items:flex-start;background:#f7fbf2;border-radius:16px;padding:12px 16px;font-size:13.5px;color:var(--sub);margin:0}
+.aside svg{flex:none;width:20px;height:20px;color:var(--leaf);margin-top:4px}
+.more{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-weight:700;font-size:14px;color:var(--deep);text-decoration:none;background:#fff;border:2px solid var(--leaf);border-radius:999px;padding:6px 18px;box-shadow:0 3px 0 var(--line)}
+.more:hover{transform:translateY(1px);box-shadow:0 2px 0 var(--line)}
+
+/* garden (unchanged) */
+.card{background:#fff;border:2px solid var(--line);border-radius:22px;padding:22px 24px;margin-bottom:24px}
+.card h2{margin:0 0 10px;font-size:16px;color:var(--leaf);font-weight:900;display:flex;align-items:center;gap:8px}
+.card p{margin:0 0 8px;font-size:14.5px}
+.nature-card{padding:18px}
+.nature-card h2{padding:0 6px}
+.wreath{position:relative;height:520px;margin-top:4px;border-radius:20px;background:radial-gradient(ellipse at center,#fff 45%,#f4fbec 100%)}
+.bloom{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);margin:0;transform:translate(-50%,-50%);border-radius:50%;overflow:hidden;border:5px solid #fff;box-shadow:0 0 0 3px var(--r),0 6px 14px rgba(30,77,43,.15)}
+.bloom img{width:100%;height:100%;object-fit:cover;display:block}
+.wtext{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52%;text-align:center}
+.wtext p{font-size:14.5px;margin:0 0 10px;line-height:1.9}
+@media(max-width:720px){.wreath{height:auto;padding:12px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;background:none}
+.bloom{position:static;transform:none;width:58px!important;height:58px!important;border-width:3px}
+.wtext{position:static;transform:none;width:100%;order:0;padding:6px 4px;text-align:left}
+.bloom:nth-of-type(n+5){order:1}}
+
+/* spirit */
+.spirit{position:relative;overflow:hidden;background:#fff;border:2px solid var(--line);color:var(--ink);border-radius:28px;padding:34px 34px 30px;margin-bottom:24px;text-align:center}
+.spirit>*{position:relative}
+.spirit .deco{position:absolute;width:150px;color:#cfe8b8;opacity:.8}
+.spirit .deco.l{left:-30px;bottom:-36px;transform:rotate(20deg)}
+.spirit .deco.r{right:-30px;top:-36px;transform:rotate(200deg)}
+.spirit .eyebrow{display:inline-block;background:var(--sprout);color:#3a2e00;font-size:13px;font-weight:900;border-radius:999px;padding:1px 14px;margin-bottom:12px}
+.spirit h2{margin:0 0 14px;font-size:clamp(28px,4vw,38px);color:#c9f2a8;line-height:1.3}
+.spirit p{margin:0 auto;max-width:36em;font-size:16.5px;line-height:2;color:var(--ink)}
+.spirit .q{display:block;font-family:"Shippori Mincho B1",serif;font-size:60px;line-height:.6;color:var(--sprout);opacity:.9;margin-bottom:6px}
+
+/* contact */
+.ct{position:relative;overflow:hidden;background:#1e4d2b;color:#fff;border-radius:26px;padding:26px 28px 24px;margin:24px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px 30px;align-items:center}
+.ct>*{position:relative}
+.ct .ct-deco{position:absolute;right:-30px;bottom:-34px;width:210px;color:#3f8f3a;opacity:.35;transform:rotate(-12deg)}
+.ct h2{grid-column:1/-1;margin:0;font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400;font-size:clamp(22px,3vw,28px);color:#c9f2a8;line-height:1.4;display:flex;align-items:center;gap:8px}
+.ct h2 svg{width:34px;flex:none;color:#9fe68a}
+.ct-who{display:flex;gap:14px;align-items:center}
+.ct-who img{width:64px;height:64px;flex:none;border-radius:50%;background:#fff;padding:2px}
+.ct-who small{display:block;font-size:12px;color:#cfe4c6}
+.ct-who b{display:block;font-size:20px;font-weight:900;letter-spacing:.04em;line-height:1.4}
+.ct-addr{font-size:13px;color:#e6f2dd;margin:10px 0 0;line-height:1.7}
+.ct-call{background:rgba(255,255,255,.08);border:1px solid rgba(201,242,168,.35);border-radius:20px;padding:16px 18px;text-align:center}
+.ct-call span{display:block;font-size:13px;color:#c9f2a8;font-weight:700}
+.ct-tel{display:flex;align-items:center;justify-content:center;gap:10px;margin:8px 0;background:#fff;color:#1e4d2b;text-decoration:none;border-radius:999px;padding:10px 14px;font-size:clamp(21px,2.6vw,25px);font-weight:900;letter-spacing:.03em;white-space:nowrap;box-shadow:0 4px 0 #f3c94a}
+.ct-tel svg{width:22px;flex:none;color:#3f8f3a}
+.ct-tel:hover{transform:translateY(1px);box-shadow:0 3px 0 #f3c94a}
+.ct-call small{display:block;font-size:12.5px;color:#e6f2dd}
+
+@media(max-width:640px){
+ .top{min-height:260px;padding:22px}
+ .since{width:80px;height:80px;top:14px;right:14px}
+ .since b{font-size:13px}.since small,.since span{font-size:9.5px}
+ .sec{padding:20px 16px}
+ .stats{grid-template-columns:1fr;gap:10px}
+ .st{display:flex;align-items:baseline;justify-content:space-between;padding:12px 18px;text-align:left}
+ .st b{font-size:36px}
+ 
+ .spirit{padding:28px 20px 24px}
+ .spirit p{font-size:15.5px;text-align:left}
+}
+/* 見出しを見やすく太く */
+h1,h2,h3,h4{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif!important;letter-spacing:.02em}
+h1,h2{font-weight:900!important}
+h3.hand,h4.hand{font-weight:700!important}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">← 前へ</a>
+
+<header class="top">
+<div><h1 class="hand">信頼される<wbr>実績と歴史</h1><p>昭和28年の創立から、子どものことを一番に考える保育を続けています</p></div>
+</header>
+
+<section class="sec" aria-labelledby="h-hist">
+<h2 class="sh hand" id="h-hist"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>長い歴史</h2>
+<div class="stats">
+<div class="st"><small>創立からの歩み</small><b><em>約</em>70<span>年</span></b></div>
+<div class="st y"><small>修了児数</small><b>5,000<span>名超</span></b></div>
+</div>
+<p class="lead">初代が幼稚園を開園してまもなく70年！修了児数は5000名をすでに越しました。親子2代が卒業生ということも、めずらしいことではなくなりました。</p>
+<figure class="bld"><img src="images/038bfc473a53.jpg" alt="桜が咲く園庭で子どもたちが遊ぶ、わかば幼稚園の園舎を上から描いたイラスト" loading="lazy"></figure>
+<p class="aside"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg><span>実はあまり報じてきませんでしたが、上皇様のご長女の夫君である黒田慶樹さんも、わかばの園庭で遊ばれたお一人です。</span></p>
+<a class="more" href="about.html">沿革を見る（わかば幼稚園について）→</a>
+</section>
+
+<div class="card nature-card"><h2>🌳 自然豊かな園庭</h2>
+<div class="wreath">
+<figure class="bloom" style="--x:13%;--y:19%;--s:150px;--r:#f6c9d8"><img src="images/ed4cb608559c.jpg" alt="桜"></figure>
+<figure class="bloom" style="--x:50%;--y:10%;--s:108px;--r:#c9c3ee"><img src="images/a1133e624bbe.jpg" alt="紫陽花"></figure>
+<figure class="bloom" style="--x:87%;--y:19%;--s:150px;--r:#f6c9d8"><img src="images/4009eb432c30.jpg" alt="蓮"></figure>
+<figure class="bloom" style="--x:94%;--y:50%;--s:104px;--r:#f8cfa8"><img src="images/c7feee58e577.jpg" alt="ざくろの花"></figure>
+<figure class="bloom" style="--x:87%;--y:81%;--s:150px;--r:#f8d79a"><img src="images/4c77b000b090.jpg" alt="紅葉"></figure>
+<figure class="bloom" style="--x:50%;--y:90%;--s:108px;--r:#f8cfa8"><img src="images/a30eed67e378.jpg" alt="柿の実"></figure>
+<figure class="bloom" style="--x:13%;--y:81%;--s:150px;--r:#f6c9d8"><img src="images/e095d751c2a5.jpg" alt="椿"></figure>
+<figure class="bloom" style="--x:6%;--y:50%;--s:104px;--r:#cfe8b8"><img src="images/a9edc7807545.jpg" alt="枝豆の苗"></figure>
+<div class="wtext">
+<p>園庭には、花の咲く木、実のなる木々がたくさんあります。園のシンボルでもあるみかんの木には夏ミカンが実り、子どもたちといただきます。収穫した梅の実は、年長児と一緒に梅ジュースづくりをします。自分たちで作ったジュースは、おいしさも格別です。</p>
+<p>いちょうやもみじの紅葉の変化の様子も美しく、季節の移り変わりを自然に感じられる園庭になっています。</p>
+</div>
+</div>
+</div>
+
+
+<section class="spirit" aria-label="受け継がれてきた想い">
+<span class="deco l"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span><span class="deco r"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span>
+<p>永年の実績と信頼の上に築かれた志を尊重しながら、深刻な社会情勢の変化にも立ち向かえるような、具体的な願いと決意をもって現在に至っています。</p>
+</section>
+
+<section class="ct" aria-label="お問い合わせ先"><span class="ct-deco"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span>
+<h2><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>お気軽にお問い合わせください</h2>
+<div><div class="ct-who"><img src="images/0f056ef1c070.png" alt=""><div><small>学校法人わかば学園</small><b>わかば幼稚園</b></div></div>
+<p class="ct-addr">〒464-0032 名古屋市千種区猫洞通2丁目13番地<br>見学は随時受け付けています。</p></div>
+<div class="ct-call"><span>お電話でのお問い合わせ</span><a class="ct-tel" href="tel:0527823651"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>052-782-3651</a><small>受付時間　平日 9:00〜15:00</small></div>
+</section>
+</div>
+</body></html>
