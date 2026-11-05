@@ -261,6 +261,9 @@ footer .grass{position:absolute;left:0;right:0;top:-38px;width:100%;height:40px;
 .slide:first-child{opacity:1}
 @keyframes wkslide{0%{opacity:0;transform:scale(1.04)}4.0%{opacity:1}20.0%{opacity:1}24.0%{opacity:0;transform:scale(1)}100%{opacity:0}}
 .shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,24,14,.72),rgba(8,24,14,.3))}
+/* 三輪車の4人が中心に来るよう調整 */
+.slide-trike{background-position:48% 62%}
+@media(max-width:600px){.slide-trike{background-size:auto 150%;background-position:46% 72%}}
 .hero-in{position:relative;z-index:2;width:100%}
 .hero p{margin-bottom:0}
 @media(prefers-reduced-motion:reduce){.slide{animation:none}.slide:not(:first-child){display:none}}
@@ -319,7 +322,7 @@ footer .grass{position:absolute;left:0;right:0;top:-38px;width:100%;height:40px;
 </div></header>
 
 <main id="top">
-<div class="hero"><div class="slides" aria-hidden="true"><div class="slide" style="background-image:url(images/6f920512cd45.jpg);background-position:center 30%;animation-delay:0s"></div><div class="slide" style="background-image:url(images/ea5d7bb4a2fd.jpg);background-position:center;animation-delay:6s"></div><div class="slide" style="background-image:url(images/9ffad82c65b6.jpg);background-position:center 35%;animation-delay:12s"></div><div class="slide" style="background-image:url(images/ce2b03d5544d.jpg);background-position:center 40%;animation-delay:18s"></div><div class="slide" style="background-image:url(images/4f11dabab18e.jpg);background-position:center 40%;animation-delay:24s"></div></div><div class="shade"></div><svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 38C180 8 360 6 540 26s360 40 540 22 270-36 360-30V70H0z"/></svg><div class="wrap hero-in">
+<div class="hero"><div class="slides" aria-hidden="true"><div class="slide" style="background-image:url(images/6f920512cd45.jpg);background-position:center 30%;animation-delay:0s"></div><div class="slide" style="background-image:url(images/ea5d7bb4a2fd.jpg);background-position:center;animation-delay:6s"></div><div class="slide slide-trike" style="background-image:url(images/afb99399111b.jpg);animation-delay:12s"></div><div class="slide" style="background-image:url(images/ce2b03d5544d.jpg);background-position:center 40%;animation-delay:18s"></div><div class="slide" style="background-image:url(images/4f11dabab18e.jpg);background-position:center 40%;animation-delay:24s"></div></div><div class="shade"></div><svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 38C180 8 360 6 540 26s360 40 540 22 270-36 360-30V70H0z"/></svg><div class="wrap hero-in">
 <h1 class="catch"><span class="row1"><span class="lf lfl"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span><span class="l1">出会いを</span></span><span class="l2">大切にする<wbr>保育</span><span class="lf lfr"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span></h1>
 <p>社会に出てからも伸びていく「生きる力」を持った子どもを育てる、千種区の幼稚園です。昭和28年の創立から、子どものことを一番に考える保育を続けています。</p>
 </div>
