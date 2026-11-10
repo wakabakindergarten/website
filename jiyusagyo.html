@@ -27,13 +27,17 @@ body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:
 a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:999px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:13px}
 .hand{font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400}
 
-.top{position:relative;border-radius:26px;overflow:hidden;min-height:320px;display:flex;align-items:flex-end;padding:30px;margin-bottom:24px;background:#1e4d2b url(images/7882fbbcb2b7.jpg) center/cover}
-.top::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,14,0) 25%,rgba(8,24,14,.8))}
-.top>div{position:relative}
-.top .say{display:inline-block;position:relative;background:#fff;color:var(--deep);border-radius:20px;padding:6px 18px;font-size:clamp(17px,2.4vw,21px);margin-bottom:12px;box-shadow:0 4px 0 var(--sprout)}
+.top{position:relative;border-radius:26px;overflow:hidden;display:grid;grid-template-columns:1fr 1.12fr;align-items:stretch;margin-bottom:24px;background:var(--deep)}
+.top>div{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:34px 28px;overflow:hidden}
+.top>div::before{content:"";position:absolute;left:-56px;top:-64px;width:210px;height:210px;border-radius:50%;background:#2a6038;opacity:.7}
+.top>div::after{content:"";position:absolute;right:-70px;bottom:-84px;width:200px;height:200px;border-radius:50%;background:#2a6038;opacity:.5}
+.top>div>*{position:relative}
+.top .ph{position:relative;margin:0;min-height:450px}
+.top .ph img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.top .say{display:inline-block;position:relative;background:#fff;color:var(--deep);border-radius:20px;padding:6px 18px;font-size:clamp(17px,2.4vw,21px);margin-bottom:14px;box-shadow:0 4px 0 var(--sprout)}
 .top .say::after{content:"";position:absolute;left:26px;bottom:-9px;border:9px solid transparent;border-bottom:0;border-top-color:#fff}
-.top h1{margin:0;color:#c9f2a8;font-size:clamp(40px,7vw,64px);line-height:1.15;text-shadow:0 2px 10px rgba(0,0,0,.45)}
-.top p{margin:6px 0 0;color:#f0f7ea;font-size:15.5px}
+.top h1{margin:0;color:#c9f2a8;font-size:clamp(40px,6.4vw,60px);line-height:1.15;text-shadow:0 2px 10px rgba(0,0,0,.45);word-break:keep-all}
+.top p{margin:8px 0 0;color:#f0f7ea;font-size:15.5px;word-break:keep-all}
 
 .sh{display:flex;align-items:center;gap:8px;margin:0 0 14px;color:var(--deep);font-size:clamp(25px,3.4vw,31px);line-height:1.35}
 .sh svg{width:34px;flex:none;color:var(--leaf)}
@@ -41,11 +45,21 @@ a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:99
 .sec{background:#fff;border:2px solid var(--line);border-radius:26px;padding:28px;margin-bottom:24px}
 .sec p{margin:0 0 10px;font-size:15.5px}
 
+/* photos：テープでとめた写真 */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;margin:30px 16px 8px}
+.pol{position:relative;margin:0;padding:10px 10px 12px;background:#fffdf8;border:1px solid #ece4d3;border-radius:4px;box-shadow:0 10px 22px rgba(30,77,43,.16),0 1px 3px rgba(0,0,0,.08);transform:rotate(-1.6deg)}
+.pol::before{content:"";position:absolute;top:-13px;left:50%;width:84px;height:26px;margin-left:-42px;background:var(--tape,rgba(243,201,74,.8));transform:rotate(-4deg);border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.pol img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;background:var(--mist);border-radius:2px}
+.pol.sq img{aspect-ratio:14/15}
+.pol figcaption{padding:9px 2px 0;text-align:center;font-size:15px;line-height:1.6;color:#3d4a40;word-break:keep-all}
+.duo .pol:nth-child(2){transform:rotate(1.8deg);margin-top:36px}
+.duo .pol:nth-child(2)::before{transform:rotate(5deg)}
+.duo.low .pol:nth-child(2){margin-top:64px}
+.t-pk{--tape:rgba(240,150,172,.72)}
+.t-bl{--tape:rgba(118,178,214,.72)}
+.t-gr{--tape:rgba(140,200,120,.75)}
+
 /* room */
-.room{display:grid;grid-template-columns:1fr 1.05fr;gap:24px;align-items:center}
-.room img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px}
-.room figure{margin:0}
-.room figcaption{font-size:13px;color:var(--sub);margin-top:6px;text-align:center}
 .shelf{margin-top:16px;background:#fbf4e8;border-radius:18px;padding:14px 14px 0;box-shadow:inset 0 0 0 2px #ecdcc0}
 .shelf small{display:block;font-size:12.5px;font-weight:900;color:#8a6a3a;margin-bottom:6px}
 .shelf ul{list-style:none;margin:0;padding:0 2px 8px;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;border-bottom:8px solid var(--wood);border-radius:0 0 4px 4px}
@@ -65,9 +79,6 @@ a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:99
 .gs p{margin:0;font-size:14px;line-height:1.8;text-align:left}
 .gs:nth-child(3){background:#fff8e1;border-color:#f0dc9c}
 .gs:not(:last-child)::after{content:"";position:absolute;right:-13px;top:50%;width:12px;height:12px;border-top:3px solid var(--leaf);border-right:3px solid var(--leaf);transform:translateY(-50%) rotate(45deg);z-index:1}
-.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
-.pair img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
-.cap{font-size:13px;color:var(--sub);text-align:center;margin:8px 0 0}
 
 /* power */
 .power{background:#fff;border:2px solid var(--line);color:var(--ink);border-radius:26px;padding:28px;margin-bottom:24px;position:relative;overflow:hidden}
@@ -83,9 +94,6 @@ a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:99
 .badges span:nth-child(3){background:#cfe6f5}
 .badges span:nth-child(4){background:#ead9f6}
 .badges span:nth-child(5){background:var(--sprout);color:#3a2e00}
-.power figure{margin:0}
-.power img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:20px}
-.power figcaption{font-size:13px;color:var(--sub);text-align:center;margin-top:8px}
 
 .link{display:flex;justify-content:center;margin:0 0 6px}
 .link a{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:14px;border-radius:999px;padding:8px 20px;box-shadow:0 3px 0 var(--line)}
@@ -110,16 +118,22 @@ a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:99
 .ct-call small{display:block;font-size:12.5px;color:#e6f2dd}
 
 @media(max-width:700px){
- .room{grid-template-columns:1fr}
+ .top{grid-template-columns:1fr}
+ .top .ph{order:-1;min-height:0;aspect-ratio:5/4}
+ .top .ph img{object-position:50% 28%}
+ .top>div{padding:22px 22px 24px}
+ .top>div::before{display:none}
+ .duo{gap:24px;margin:28px 6px 6px}
  .grow{grid-template-columns:1fr;gap:20px}
  .gs:nth-child(1),.gs:nth-child(2){margin-top:0}
  .gs:not(:last-child)::after{right:50%;top:auto;bottom:-15px;transform:translateX(50%) rotate(135deg)}
  .badges span{width:92px;height:92px;font-size:15px}
 }
 @media(max-width:600px){
- .top{min-height:260px;padding:22px}
  .sec,.power{padding:20px 16px}
- .pair{grid-template-columns:1fr}
+ .duo{grid-template-columns:1fr;gap:30px;margin:28px 2px 6px}
+ .duo .pol{width:90%}
+ .duo .pol:nth-child(2),.duo.low .pol:nth-child(2){margin-top:0;justify-self:end}
 }
 /* 見出しを見やすく太く */
 h1,h2,h3,h4{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif!important;letter-spacing:.02em}
@@ -132,14 +146,13 @@ h3.hand,h4.hand{font-weight:700!important}
 <header class="top"><div>
 <span class="say hand">今日は何で遊ぼうかな？</span>
 <h1 class="hand">自由作業</h1>
-<p>自分で選んで、自分で決めて取り組む時間です</p>
-</div></header>
+<p>自分で選んで、<wbr>自分で決めて<wbr>取り組む時間です</p>
+</div>
+<figure class="ph"><img src="images/e346061ab32f.jpg" alt="カップに色画用紙のテープを貼って、工作をする子どもたち" width="840" height="1120"></figure>
+</header>
 
 <section class="sec" aria-labelledby="h1s">
 <h2 class="sh hand" id="h1s"><span class="no">1</span>自由に使える保育室</h2>
-<div class="room">
-<figure><img src="images/5a466a337d6b.jpg" alt="色がみをはさみで切る子どもたち" loading="lazy"><figcaption>好きな材料を選んで、はさみで切ったり、箱に貼ったり</figcaption></figure>
-<div>
 <p>保育室には、遊ぶのに都合のよいものが、とりやすく並んでいて自由に使えます。</p>
 <div class="shelf"><small>たとえば、こんなものが並んでいます</small>
 <ul>
@@ -149,7 +162,9 @@ h3.hand,h4.hand{font-weight:700!important}
 <li><i style="color:#8a6cc4"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5 12 13l8-3.5V18l-8 3.5L4 18z" fill="currentColor" fill-opacity=".18"/><path d="M4 9.5 12 6l8 3.5M12 13v8.5M4 9.5 1.8 6.6 9.6 3.2 12 6M20 9.5l2.2-2.9-7.8-3.4L12 6"/></svg></i>空き箱</li>
 <li><i style="color:#6aa7c9"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h4a2 2 0 1 1 4 0h4v4a2 2 0 1 1 0 4v4H4v-4a2 2 0 1 0 0-4z" fill="currentColor" fill-opacity=".18"/></svg></i>パズル</li>
 </ul></div>
-</div>
+<div class="duo">
+<figure class="pol"><img src="images/79932fc82e4b.jpg" alt="机ごとに分かれて、それぞれの工作に取り組む子どもたち" width="840" height="1120" loading="lazy"><figcaption class="hand">今日は<wbr>どの作業に<wbr>取り組もうかな</figcaption></figure>
+<figure class="pol t-bl"><img src="images/5c33ac3c0138.jpg" alt="空き箱を組み合わせて工作をする子どもたち。後ろには、材料を分けて入れた箱が並んでいる" width="840" height="1120" loading="lazy"><figcaption class="hand">箱を組み合わせて<wbr>こんなに大きな<wbr>作品も<wbr>作れるんだ</figcaption></figure>
 </div>
 </section>
 
@@ -161,8 +176,10 @@ h3.hand,h4.hand{font-weight:700!important}
 <div class="gs"><span class="pl"><svg viewBox="0 0 64 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M14 44h36" stroke="#c9a77a"/><path d="M32 44V22"/><path d="M32 30C30 20 22 15 12 17c2 9 9 14 20 13z" fill="currentColor"/><path d="M32 26c2-9 10-14 20-12-2 9-9 13-20 12z" fill="currentColor" opacity=".8"/></svg></span><h3 class="hand">少しずつ</h3><p>新しい教材・教具に手をのばすようになり、道具類も必要になってきます。</p></div>
 <div class="gs"><span class="pl"><svg viewBox="0 0 64 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M14 44h36" stroke="#c9a77a"/><path d="M32 44V12"/><path d="M32 34C29 25 21 21 11 23c2 9 10 13 21 11z" fill="currentColor"/><path d="M32 26c3-9 11-13 21-11-2 9-10 13-21 11z" fill="currentColor" opacity=".8"/><path d="M32 16C31 9 26 5 19 6c1 6 6 10 13 10z" fill="currentColor"/><circle cx="44" cy="10" r="4" fill="#f3c94a" stroke="none"/></svg></span><h3 class="hand">年長児になると</h3><p>年少のときに出会った教材・教具を利用して、目的をもった活動をするようになります。工夫を凝らし、何日もかかって作り上げることもできるようになります。</p></div>
 </div>
-<div class="pair"><img src="images/359ce90efa85.jpg" alt="空き箱で工作をする子どもたち" loading="lazy"><img src="images/c8b7ed309aa6.jpg" alt="段ボールで大きな作品を作る子どもたち" loading="lazy"></div>
-<p class="cap">空き箱や段ボールを使って、思い思いの作品づくり</p>
+<div class="duo">
+<figure class="pol t-pk"><img src="images/a656c0886724.jpg" alt="クラフトテープと空き箱を使って工作をする子どもたち" width="840" height="1120" loading="lazy"><figcaption class="hand">空き箱とテープで、<wbr>思い思いの作品づくり</figcaption></figure>
+<figure class="pol t-gr"><img src="images/030f79df30f8.jpg" alt="机いっぱいに並んだ空き箱から、材料を選んで工作をする子どもたち" width="840" height="1120" loading="lazy"><figcaption class="hand">好きな材料を選んで、<wbr>切ったり、貼ったり</figcaption></figure>
+</div>
 </section>
 
 <section class="power" aria-labelledby="h3s">
@@ -171,7 +188,10 @@ h3.hand,h4.hand{font-weight:700!important}
 <p>自分で課題を選択し、決断して実行する過程の中から、子どもは創造性、人間性、社会性や集中力を養います。</p>
 <p>壁にぶつかっても、やる気や簡単にはあきらめない精神力、助言してくれた友だちのありがたさなど、多くの出会いがあり、強い心が育まれます。</p>
 <div class="badges"><span>創造性</span><span>人間性</span><span>社会性</span><span>集中力</span><span>あきらめ<br>ない心</span></div>
-<figure><img src="images/56f376289879.jpg" alt="金づちで釘を打つ子どもたち" loading="lazy"><figcaption>金づちと釘にも挑戦。うまくいくまで、何度でも</figcaption></figure>
+<div class="duo low">
+<figure class="pol t-gr"><img src="images/e7a69a64632d.jpg" alt="絵が飾られた保育室で、友だちと机を囲んで工作をする子どもたち" width="840" height="1120" loading="lazy"><figcaption class="hand">友だちのとなりで、<wbr>それぞれの作品づくり</figcaption></figure>
+<figure class="pol sq"><img src="images/8ca8bf359122.jpg" alt="机に向かい、空き箱やのりを使って工作をする子どもたち" width="840" height="900" loading="lazy"><figcaption class="hand">じっくり、<wbr>集中して取り組みます</figcaption></figure>
+</div>
 </section>
 
 <div class="link"><a href="ichinichi.html">わかばの一日の流れを見る →</a></div>
