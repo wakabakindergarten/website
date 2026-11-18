@@ -2,14 +2,14 @@
 <html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>弁当・給食｜わかば学園｜わかば幼稚園｜千種区</title>
-<meta name="description" content="わかば幼稚園のお昼ごはんをご紹介します。月曜日はお弁当、火曜日から金曜日は園内の給食室で調理した給食です。食物アレルギーへの対応についてもご案内します。">
+<meta name="description" content="わかば幼稚園のお昼ごはんをご紹介します。月曜日はお弁当、火曜日から金曜日は園内の給食室で調理した給食です。園内で採れた野菜や果物をいただくこともあります。食物アレルギーへの対応についてもご案内します。">
 <link rel="canonical" href="https://www.wakabakindergarten.com/kyushoku.html">
 <link rel="icon" type="image/png" href="images/0f056ef1c070.png">
 <link rel="apple-touch-icon" href="images/0f056ef1c070.png">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="わかば学園｜わかば幼稚園｜千種区">
 <meta property="og:title" content="弁当・給食｜わかば学園｜わかば幼稚園｜千種区">
-<meta property="og:description" content="わかば幼稚園のお昼ごはんをご紹介します。月曜日はお弁当、火曜日から金曜日は園内の給食室で調理した給食です。食物アレルギーへの対応についてもご案内します。">
+<meta property="og:description" content="わかば幼稚園のお昼ごはんをご紹介します。月曜日はお弁当、火曜日から金曜日は園内の給食室で調理した給食です。園内で採れた野菜や果物をいただくこともあります。食物アレルギーへの対応についてもご案内します。">
 <meta property="og:url" content="https://www.wakabakindergarten.com/kyushoku.html">
 <meta property="og:image" content="https://www.wakabakindergarten.com/images/9251ef9e56dc.jpg">
 <meta property="og:image:alt" content="桜の咲く日の、わかば幼稚園の門">
@@ -25,34 +25,99 @@ html{height:100%}
 body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;line-height:1.9}
 .wrap{max-width:840px;margin:0 auto;padding:36px 20px 56px}
 a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:999px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:13px}
-.top{position:relative;border-radius:24px;overflow:hidden;min-height:280px;display:flex;align-items:flex-end;padding:28px;margin-bottom:22px;background:#1e4d2b url(images/387a323c9e6c.jpg) center 40%/cover}
-.top::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,14,0) 30%,rgba(8,24,14,.75))}
-.top h1{position:relative;margin:0;font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400;color:#c9f2a8;font-size:clamp(36px,6vw,58px);line-height:1.2;text-shadow:0 2px 10px rgba(0,0,0,.45)}
-.top p{position:relative;margin:6px 0 0;color:#f0f7ea;font-size:15px}
-.card{background:#fff;border:2px solid var(--line);border-radius:22px;padding:22px 26px;margin-bottom:16px}
-.card h2{margin:0 0 12px;font-size:17px;color:var(--leaf);font-weight:900}
-.card p{margin:0 0 8px;font-size:14.5px}
-.week{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:4px}
-.day{border-radius:16px;text-align:center;padding:10px 4px 12px;background:var(--mist);color:var(--deep)}
-.day b{display:block;font-size:22px;font-weight:900;line-height:1.3}
+.hand{font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400}
+
+.top{position:relative;border-radius:26px;overflow:hidden;display:grid;grid-template-columns:1fr 1.1fr;align-items:stretch;margin-bottom:24px;background:var(--deep)}
+.top>div{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:34px 28px;overflow:hidden}
+.top>div::before{content:"";position:absolute;left:-56px;top:-64px;width:210px;height:210px;border-radius:50%;background:#2a6038;opacity:.7}
+.top>div::after{content:"";position:absolute;right:-70px;bottom:-84px;width:200px;height:200px;border-radius:50%;background:#2a6038;opacity:.5}
+.top>div>*{position:relative}
+.top .ph{position:relative;margin:0;min-height:430px}
+.top .ph img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.top .say{display:inline-block;position:relative;background:#fff;color:var(--deep);border-radius:20px;padding:6px 18px;font-size:clamp(17px,2.4vw,21px);margin-bottom:14px;box-shadow:0 4px 0 var(--sprout)}
+.top .say::after{content:"";position:absolute;left:26px;bottom:-9px;border:9px solid transparent;border-bottom:0;border-top-color:#fff}
+.top h1{margin:0;color:#c9f2a8;font-size:clamp(40px,6.4vw,60px);line-height:1.15;text-shadow:0 2px 10px rgba(0,0,0,.45);word-break:keep-all}
+.top p{margin:10px 0 0;color:#f0f7ea;font-size:15.5px;word-break:keep-all}
+
+.sh{display:flex;align-items:center;gap:8px;margin:0 0 14px;color:var(--deep);font-size:clamp(24px,3.3vw,30px);line-height:1.35;word-break:keep-all}
+.sh svg{width:34px;flex:none;color:var(--leaf)}
+.sec{background:#fff;border:2px solid var(--line);border-radius:26px;padding:28px;margin-bottom:24px}
+.sec p{margin:0 0 10px;font-size:15.5px}
+
+/* week */
+.week{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:4px 0 14px}
+.day{border-radius:18px;text-align:center;padding:10px 4px 12px;background:#f2f8ea;color:var(--deep);border:2px solid #cfe6b9}
+.day b{display:block;font-size:24px;font-weight:900;line-height:1.3}
 .day span{font-size:13px;font-weight:700}
-.day.bento{background:#fff4cf;color:#6a4e00;border:2px solid var(--sprout)}
-.day.kyu{border:2px solid #b8d99d}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
-.two .card{margin-bottom:0;display:flex;flex-direction:column}
-.ph{margin:auto 0 0;padding-top:12px}
-.ph img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:2px solid var(--line)}
-.tag{display:inline-block;align-self:flex-start;border-radius:999px;font-size:12.5px;font-weight:700;padding:2px 12px;margin-bottom:8px}
-.tag.y{background:#fff4cf;color:#6a4e00}
+.day.bento{background:#fff4cf;color:#6a4e00;border-color:var(--sprout);box-shadow:0 4px 0 #ecd27a}
+
+/* bento & kyushoku */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px}
+.two .sec{margin-bottom:0;display:flex;flex-direction:column;padding:24px}
+.tag{display:inline-block;align-self:flex-start;border-radius:999px;font-size:13px;font-weight:900;padding:1px 14px;margin-bottom:6px}
+.tag.y{background:var(--sprout);color:#3a2e00}
 .tag.g{background:var(--mist);color:var(--deep)}
+.two h2{margin:0 0 8px;font-size:clamp(23px,3vw,27px);color:var(--deep);line-height:1.4}
+.two p{font-size:15px}
+.ph{margin:auto 0 0;padding-top:12px}
+.ph img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
 .points{list-style:none;margin:0;padding:0}
-.points li{position:relative;padding-left:1.4em;font-size:14.5px;margin-bottom:6px}
+.points li{position:relative;padding-left:1.4em;font-size:15px;margin-bottom:6px}
 .points li::before{content:"";position:absolute;left:.2em;top:.62em;width:.6em;height:.6em;border-radius:50% 0;background:var(--leaf);transform:rotate(-45deg)}
-.allergy{display:flex;gap:16px;align-items:center;background:var(--deep);border-color:var(--deep);color:#fff}
-.allergy h2{color:#c9f2a8;margin-bottom:4px}
-.allergy p{color:#e6f2dd;margin:0}
-.allergy .ic{flex:none;width:58px;height:58px;border-radius:50%;background:#c9f2a8;display:flex;align-items:center;justify-content:center;font-size:28px}
-@media(max-width:620px){.two{grid-template-columns:1fr}.day b{font-size:18px}.day span{font-size:11.5px}.card{padding:20px}}
+
+/* harvest */
+.harvest{position:relative;overflow:hidden}
+.harvest>*{position:relative}
+.harvest .deco{position:absolute;right:-40px;top:-40px;width:200px;color:var(--mist);opacity:.7;transform:rotate(-18deg)}
+.basket{margin:18px 0 6px;background:#fbf4e8;border-radius:20px;padding:14px 14px 16px;box-shadow:inset 0 0 0 2px #ecdcc0}
+.basket small{display:block;font-size:13px;font-weight:900;color:#8a6a3a;margin:0 0 10px 4px}
+.crops{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px 4px}
+.crops li{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;font-size:13px;line-height:1.4;font-weight:700;color:var(--deep);word-break:keep-all}
+.crops li i{display:flex;width:62px;height:62px;border-radius:50%;background:var(--c);align-items:center;justify-content:center;box-shadow:0 3px 0 rgba(30,77,43,.1)}
+.crops li svg{width:42px;height:42px}
+
+/* photos：テープでとめた写真 */
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:start;margin:30px 16px 8px}
+.pol{position:relative;margin:0;padding:10px 10px 12px;background:#fffdf8;border:1px solid #ece4d3;border-radius:4px;box-shadow:0 10px 22px rgba(30,77,43,.16),0 1px 3px rgba(0,0,0,.08);transform:rotate(-1.6deg)}
+.pol::before{content:"";position:absolute;top:-13px;left:50%;width:84px;height:26px;margin-left:-42px;background:var(--tape,rgba(243,201,74,.8));transform:rotate(-4deg);border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.pol img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;background:var(--mist);border-radius:2px}
+.pol figcaption{padding:9px 2px 0;text-align:center;font-size:15px;line-height:1.6;color:#3d4a40;word-break:keep-all;overflow-wrap:anywhere}
+.duo .pol:nth-child(2){transform:rotate(1.8deg);margin-top:36px}
+.duo .pol:nth-child(2)::before{transform:rotate(5deg)}
+.duo.low .pol:nth-child(2){margin-top:64px}
+.t-pk{--tape:rgba(240,150,172,.72)}
+.t-bl{--tape:rgba(118,178,214,.72)}
+.t-gr{--tape:rgba(140,200,120,.75)}
+
+/* allergy */
+.allergy{display:flex;gap:18px;align-items:center;background:var(--deep);border-radius:26px;padding:24px 28px;color:#fff}
+.allergy h2{margin:0 0 4px;color:#c9f2a8;font-size:clamp(20px,2.8vw,25px);line-height:1.4;word-break:keep-all}
+.allergy p{color:#e6f2dd;margin:0;font-size:15px;word-break:keep-all}
+.allergy .ic{flex:none;width:62px;height:62px;border-radius:50%;background:#c9f2a8;display:flex;align-items:center;justify-content:center;color:var(--deep)}
+.allergy .ic svg{width:34px;height:34px}
+
+@media(max-width:700px){
+ .top{grid-template-columns:1fr}
+ .top .ph{order:-1;min-height:0;aspect-ratio:5/4}
+ .top .ph img{object-position:50% 20%}
+ .top>div{padding:22px 22px 24px}
+ .top>div::before{display:none}
+ .two{grid-template-columns:1fr}
+ .duo{gap:18px;margin:28px 4px 6px}
+ .pol figcaption{font-size:14px}
+}
+@media(max-width:600px){
+ .sec{padding:22px 18px}
+ .two .sec{padding:22px 18px}
+ .day b{font-size:19px}.day span{font-size:11.5px}
+ .week{gap:6px}
+ .crops{gap:12px 2px}
+ .crops li{font-size:11px;letter-spacing:-.02em}
+ .crops li i{width:48px;height:48px}
+ .crops li svg{width:32px;height:32px}
+ .allergy{padding:20px 18px;gap:14px}
+ .allergy .ic{width:52px;height:52px}
+}
 /* 見出しを見やすく太く */
 h1,h2,h3,h4{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif!important;letter-spacing:.02em}
 h1,h2{font-weight:900!important}
@@ -60,30 +125,67 @@ h3.hand,h4.hand{font-weight:700!important}
 </style></head>
 <body><div class="wrap">
 <a class="back" href="index.html">← 前へ</a>
-<div class="top"><div><h1>弁当・給食</h1><p>月曜日はお弁当、火曜日から金曜日は園内調理の給食です</p></div></div>
 
-<div class="card"><h2>1週間のお昼ごはん</h2>
+<header class="top"><div>
+<span class="say hand">おいしいね！</span>
+<h1 class="hand">弁当・給食</h1>
+<p>月曜日はお弁当、<wbr>火曜日から金曜日は<wbr>園内調理の給食です</p>
+</div>
+<figure class="ph"><img src="images/2919069b4b98.jpg" alt="園で採れたさつまいもを、大きな口でほおばる子どもたち" width="900" height="1200"></figure>
+</header>
+
+<section class="sec" aria-labelledby="h-week">
+<h2 class="sh hand" id="h-week"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>1週間のお昼ごはん</h2>
 <div class="week">
 <div class="day bento"><b>月</b><span>お弁当</span></div>
-<div class="day kyu"><b>火</b><span>給食</span></div>
-<div class="day kyu"><b>水</b><span>給食</span></div>
-<div class="day kyu"><b>木</b><span>給食</span></div>
-<div class="day kyu"><b>金</b><span>給食</span></div>
+<div class="day"><b>火</b><span>給食</span></div>
+<div class="day"><b>水</b><span>給食</span></div>
+<div class="day"><b>木</b><span>給食</span></div>
+<div class="day"><b>金</b><span>給食</span></div>
 </div>
-<p style="margin-top:12px">週1回、月曜日はお弁当持参で、火曜日から金曜日の4日間は給食です。</p>
-</div>
+<p style="margin:0">週1回、月曜日はお弁当持参で、火曜日から金曜日の4日間は給食です。</p>
+</section>
 
 <div class="two">
-<div class="card"><span class="tag y">月曜日</span><h2>お弁当</h2>
+<section class="sec"><span class="tag y">月曜日</span><h2 class="hand">お弁当</h2>
 <p>お母さんの心のこもったお弁当は、子どもにとってたいへん楽しみなものです。</p>
-<figure class="ph"><img src="images/2c6f80b26c0b.jpg" alt="お弁当を食べる子どもたち"></figure></div>
-<div class="card"><span class="tag g">火曜日〜金曜日</span><h2>園内調理の給食</h2>
+<figure class="ph"><img src="images/2c6f80b26c0b.jpg" alt="お弁当を食べる子どもたち" loading="lazy"></figure></section>
+<section class="sec"><span class="tag g">火曜日〜金曜日</span><h2 class="hand">園内調理の給食</h2>
 <ul class="points">
 <li>給食は園内の給食室で作られており、毎回、出来立ての温かい昼食をいただきます。</li>
 <li>みんなと同じものを一緒に食べることも、うれしいことの一つです。</li>
 <li>献立の作成や調理は業者に委託していますが、代々受け継がれてきた、わかば幼稚園ならではのメニューも加えられています。</li>
-</ul></div>
+</ul>
+<figure class="ph"><img src="images/387a323c9e6c.jpg" alt="給食のカレーを食べる子どもたち" loading="lazy"></figure></section>
 </div>
 
-<div class="card allergy"><div class="ic" aria-hidden="true">🍽️</div><div><h2>食物アレルギーへの対応</h2><p>食物アレルギーのある子どもには、対応した特別食が作られます。</p></div></div>
+<section class="sec harvest" aria-labelledby="h-harvest">
+<span class="deco"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg></span>
+<h2 class="sh hand" id="h-harvest"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M32 38V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M32 22C30 10 20 4 6 6c2 12 12 18 26 16z" fill="currentColor"/><path d="M32 18C34 8 44 2 58 4c-2 11-12 17-26 14z" fill="currentColor" opacity=".8"/></svg>園で採れた野菜や果物も、<wbr>いただきます</h2>
+<p>園内では、季節ごとにいろいろな野菜や果物が採れます。採れたものは料理して、お弁当や給食の時間に、みんなでいただきます。</p>
+<p>自分たちの園で採れた野菜や果物の味は、また格別です。</p>
+<div class="basket"><small>たとえば、こんなものが採れます</small>
+<ul class="crops">
+<li><i style="--c:#f6ead6"><svg viewBox="0 0 48 48" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 27c-1-8 6-14 15-14s16 4 15 12-6 12-15 12S10 34 9 27z" fill="#d8b47a"/><circle cx="18" cy="23" r="1.2" fill="#8a6a3a" stroke="none"/><circle cx="29" cy="21" r="1.2" fill="#8a6a3a" stroke="none"/><circle cx="25" cy="31" r="1.2" fill="#8a6a3a" stroke="none"/><circle cx="33" cy="29" r="1.2" fill="#8a6a3a" stroke="none"/></svg></i>じゃがいも</li>
+<li><i style="--c:#f6e1ee"><svg viewBox="0 0 48 48" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 33c4-10 16-20 28-20 5 0 6 4 3 8-6 9-17 15-26 15-4 0-6-1-5-3z" fill="#a8457e"/><path d="M38 14l5-4M6 36l-3 2" fill="none"/><path d="M17 27q3-2 5 0M26 21q3-2 5 0" fill="none" stroke="#e0a6c6"/></svg></i>さつまいも</li>
+<li><i style="--c:#e2f2d6"><svg viewBox="0 0 48 48" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 43V26" fill="none" stroke="#3a4a3e"/><path d="M23 32C14 32 7 24 9 10c9 1 15 9 14 22z" fill="#5aa843"/><path d="M25 30c8 0 15-7 14-19-8 0-14 7-14 19z" fill="#6fbf52"/><path d="M24 27c-4-6-4-15 0-22 4 7 4 16 0 22z" fill="#4c9a38"/></svg></i>小松菜</li>
+<li><i style="--c:#fbe2dc"><svg viewBox="0 0 48 48" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="29" r="10" fill="#e8503a"/><circle cx="32" cy="25" r="9" fill="#ef6a4a"/><path d="M13 20q4 3 8 0M17 17v4M28 16q4 3 8 0M32 13v4" fill="none" stroke="#3f8f3a" stroke-width="2.2"/></svg></i>ミニトマト</li>
+<li><i style="--c:#fdf0d2"><svg viewBox="0 0 48 48" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18c-3 4-3 14 1 19 3 4 7 4 9 1 2 3 6 3 9-1 4-5 4-15 1-19-3-3-7-2-10 0-3-2-7-3-10 0z" fill="#f2a62e"/><path d="M24 18v-6c0-2 2-4 4-4" fill="none" stroke="#3f8f3a" stroke-width="3"/></svg></i>パプリカ</li>
+<li><i style="--c:#e6f4d4"><svg viewBox="0 0 48 48" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 33c2-6 8-8 12-10s7-8 13-10c5-1 9 2 8 6-1 5-6 7-10 10s-8 9-14 10c-5 1-10-1-9-6z" fill="#8cc45a"/><circle cx="16" cy="30" r="3.6" fill="#b4dc82"/><circle cx="24" cy="24" r="3.6" fill="#b4dc82"/><circle cx="32" cy="17" r="3.6" fill="#b4dc82"/></svg></i>枝豆</li>
+<li><i style="--c:#eef5d2"><svg viewBox="0 0 48 48" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="29" r="13" fill="#c5d94a"/><path d="M22 16q-4 6 0 26" fill="none" stroke="#9fb32c"/><path d="M23 16c2-5 7-8 13-7-1 6-6 9-13 7z" fill="#5aa843"/><circle cx="28" cy="25" r="2.5" fill="#f2a59a" stroke="none" opacity=".7"/></svg></i>梅</li>
+<li><i style="--c:#fff2cc"><svg viewBox="0 0 48 48" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="23" cy="29" r="14" fill="#f6c431"/><path d="M23 15v-3" fill="none"/><path d="M24 14c2-5 7-7 13-6-1 6-6 8-13 6z" fill="#4c9a38"/><circle cx="17" cy="26" r=".9" fill="#d99a12" stroke="none"/><circle cx="27" cy="23" r=".9" fill="#d99a12" stroke="none"/><circle cx="29" cy="33" r=".9" fill="#d99a12" stroke="none"/><circle cx="20" cy="35" r=".9" fill="#d99a12" stroke="none"/></svg></i>夏みかん</li>
+<li><i style="--c:#fde6cf"><svg viewBox="0 0 48 48" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="29" rx="15" ry="12" fill="#f08a24"/><path d="M15 18l9 4 9-4-3 6H18z" fill="#4c9a38"/><path d="M24 18v-4" fill="none"/></svg></i>柿</li>
+<li><i style="--c:#fbdcdc"><svg viewBox="0 0 48 48" aria-hidden="true" stroke="#3a4a3e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="29" r="14" fill="#c8303a"/><path d="M19 16l1-6 2 3 2-4 2 4 2-3 1 6z" fill="#c8303a"/><path d="M17 26q3-3 6 0" fill="none" stroke="#f08a8a"/></svg></i>ざくろ</li>
+</ul></div>
+<div class="duo">
+<figure class="pol"><img src="images/946b0cc98755.jpg" alt="自分で採ったじゃがいもをフォークに刺して、口に運ぶ男の子" width="720" height="960" loading="lazy"><figcaption class="hand">自分で採った<wbr>じゃがいも、<wbr>いただきます！</figcaption></figure>
+<figure class="pol t-pk"><img src="images/e4ff24526ca8.jpg" alt="園で採れた野菜をのせたピザトーストを食べる男の子" width="720" height="960" loading="lazy"><figcaption class="hand">園の野菜を<wbr>のせて、<wbr>ピザトーストに</figcaption></figure>
+</div>
+<div class="duo low">
+<figure class="pol t-gr"><img src="images/c25bcdee04ee.jpg" alt="園で採れた野菜の入ったみそしるを飲む男の子たち" width="720" height="960" loading="lazy"><figcaption class="hand">園の野菜が<wbr>入った、<wbr>あったかい<wbr>みそしる</figcaption></figure>
+<figure class="pol t-bl"><img src="images/6a53ddfe1b74.jpg" alt="ざくろの実をひと粒ずつ取り出す子どもたち" width="720" height="960" loading="lazy"><figcaption class="hand">ざくろの実を、<wbr>ひと粒ずつ<wbr>取り出して</figcaption></figure>
+</div>
+</section>
+
+<section class="allergy" aria-labelledby="h-allergy"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="7"/><circle cx="12" cy="13" r="3.5"/><path d="M2 4v6a2 2 0 0 0 2 2M4 4v16M6 4v6a2 2 0 0 1-2 2M21 4c-1.5 0-2.5 2-2.5 5s1 3 2.5 3v8"/></svg></div><div><h2 id="h-allergy">食物アレルギーへの<wbr>対応</h2><p>食物アレルギーのある子どもには、<wbr>対応した特別食が<wbr>作られます。</p></div></section>
 </div></body></html>
