@@ -27,7 +27,7 @@ body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:
 a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:999px;background:#fff;border:2px solid var(--leaf);color:var(--deep);text-decoration:none;font-weight:700;font-size:13px}
 .hand{font-family:"Yomogi","Zen Maru Gothic",cursive;font-weight:400}
 
-.top{position:relative;border-radius:26px;overflow:hidden;min-height:380px;display:flex;align-items:flex-end;padding:30px;margin-bottom:22px;background:#1e4d2b url(images/1b41192a608a.jpg) center top/cover}
+.top{position:relative;border-radius:26px;overflow:hidden;min-height:470px;display:flex;align-items:flex-end;padding:30px;margin-bottom:22px;background:#1e4d2b url(images/d37073e86117.jpg) center 4%/cover}
 .top::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,14,0) 25%,rgba(8,24,14,.78))}
 .top>div{position:relative}
 .top h1{margin:0;color:#c9f2a8;font-size:clamp(38px,6.5vw,60px);line-height:1.2;text-shadow:0 2px 10px rgba(0,0,0,.45)}
@@ -41,13 +41,13 @@ a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:99
 .sec{background:#fff;border:2px solid var(--line);border-radius:26px;padding:26px;margin-bottom:22px}
 
 /* intro */
-.intro{display:grid;grid-template-columns:1fr 250px;gap:22px;align-items:center}
+.intro{display:grid;grid-template-columns:1fr 330px;gap:22px;align-items:center}
 .intro p{margin:0 0 8px;font-size:15.5px}
 .intro .q{font-size:14px;color:var(--sub)}
-.intro .ph{position:relative}
+.intro .ph{position:relative;display:flex;align-items:center}
 .intro .ph img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px}
-.intro .ph img+img{position:absolute;width:56%;right:-10px;bottom:-18px;border:5px solid #fff;border-radius:16px;transform:rotate(4deg);box-shadow:0 6px 14px rgba(30,77,43,.18)}
-.intro .ph img:first-child{width:86%;transform:rotate(-2deg)}
+.intro .ph img+img{position:relative;z-index:1;width:52%;margin-left:3%;margin-top:30%;border:5px solid #fff;border-radius:16px;transform:rotate(4deg);box-shadow:0 6px 14px rgba(30,77,43,.18)}
+.intro .ph img:first-child{width:45%;aspect-ratio:3/4;transform:rotate(-2deg)}
 
 /* time & price ruler */
 .ruler-wrap{margin-top:4px}
@@ -128,10 +128,10 @@ a.back{display:inline-block;margin-bottom:20px;padding:9px 18px;border-radius:99
 .ct-call small{display:block;font-size:12.5px;color:#e6f2dd}
 
 @media(max-width:680px){
- .top{min-height:420px;padding:22px;background-position:86% top}
+ .top{min-height:420px;padding:22px;background-position:100% 0}
  .sec,.summer{padding:20px 16px}
  .intro{grid-template-columns:1fr}
- .intro .ph{max-width:300px;margin:4px auto 18px}
+ .intro .ph{max-width:340px;margin:4px auto 18px}
  .days{grid-template-columns:1fr}
  .st{grid-template-columns:1fr}
  .summer .sun{width:84px;right:-22px;top:-22px;opacity:.55}
@@ -160,7 +160,7 @@ h3.hand,h4.hand{font-weight:700!important}
 <div class="intro">
 <div><p>通常保育終了後に、園が責任をもって園児をお預かりし、園の先生がお世話するものです。在園児のみを対象にしています。</p>
 <p class="q">※預かり保育の時間は17時までとなっています。</p></div>
-<div class="ph"><img src="images/ebaedd38cde7.jpg" alt="お部屋でおもちゃで遊ぶ子ども" loading="lazy"><img src="images/10a533a3c1bd.jpg" alt="公園でなわとびをして遊ぶ子どもたち" loading="lazy"></div>
+<div class="ph"><img src="images/f9bdbdd17ddd.jpg" alt="お部屋で大きなブロックを高く積み上げて遊ぶ子どもたち" loading="lazy"><img src="images/10a533a3c1bd.jpg" alt="公園でなわとびをして遊ぶ子どもたち" loading="lazy"></div>
 </div>
 </section>
 
